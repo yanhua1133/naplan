@@ -31,7 +31,7 @@ This file is the human-verifiable, machine-readable source of truth for future p
 | 21 | `IMG_9320.jpg` | Conventions of Language | 1-9 | Advanced grammar and word choice; nine compact multiple-choice items. |
 | 22 | `IMG_9321.jpg` | Conventions of Language | 10-18 | Pronouns, agreement, tense and punctuation; nine compact items. |
 | 23 | `IMG_9322.jpg` | Conventions of Language | 19-25 | Commas, apostrophes, question marks, speech and sentence correctness; seven items. |
-| 24 | `IMG_9323.jpg` | Conventions of Language | 26-50 | Twenty-five spelling-response items with short answer boxes. |
+| 24 | `IMG_9323.jpg` | Conventions of Language | 26-50 | Mixed spelling page: 15 dictated words, five underlined-error sentences and five unmarked-error sentences. |
 | 25 | `IMG_9324.jpg` | Reading | 1-6 | Information text about forces and friction; vocabulary, literal and inferred meaning. |
 | 26 | `IMG_9325.jpg` | Reading | 7-12 | Procedure/experiment text; purpose, sequence, materials and inference. |
 | 27 | `IMG_9326.jpg` | Reading | 13-18 | Health information text; vocabulary, summary and inference. |
@@ -60,9 +60,10 @@ This file is the human-verifiable, machine-readable source of truth for future p
 
 ### Questions 26-50
 
-- One deliberately misspelt word per item.
-- Student supplies the complete corrected spelling.
-- Short sentence contexts; answer boxes are compact.
+- Questions 26–40 are dictated-word items. The student page shows only numbered writing lines; a teacher or parent reads each target word aloud.
+- Questions 41–45 are short sentences containing exactly one deliberately misspelt and visibly underlined word. The student writes the complete corrected spelling in a compact box.
+- Questions 46–50 are short sentences containing exactly one deliberately misspelt word without an underline. The student must identify the incorrect word and write its complete corrected spelling in a compact box.
+- The page therefore has an exact `15 dictation / 5 underlined correction / 5 identify-and-correct` distribution.
 - Includes common and less regular spelling patterns, prefixes, doubled consonants and unstressed vowels.
 
 ## Reference Reading Profile
@@ -104,4 +105,3 @@ These verified examples anchor wording length and difficulty. They are reference
 3. If hashes match, use this Markdown cache and the structured page map. Do not run OCR.
 4. Open individual scans only for targeted visual verification when the cache lacks a required diagram detail.
 5. If hashes differ, mark the cache invalid, document the changed file, then perform a new one-time OCR and manual verification cycle.
-

@@ -38,6 +38,24 @@ def word_count(value):
     return len(re.findall(r"[A-Za-z0-9]+", re.sub(r"</?[A-Za-z][^>]*>", " ", str(value))))
 
 
+def edit_distance(left, right):
+    previous = list(range(len(right) + 1))
+    for row, left_character in enumerate(left, start=1):
+        current = [row]
+        for column, right_character in enumerate(right, start=1):
+            current.append(min(
+                current[-1] + 1,
+                previous[column] + 1,
+                previous[column - 1] + (left_character != right_character),
+            ))
+        previous = current
+    return previous[-1]
+
+
+def plain_text(value):
+    return html.unescape(re.sub(r"</?[A-Za-z][^>]*>", "", str(value)))
+
+
 def structural_normalise(value):
     value = normalise(value)
     replacements = sorted(
@@ -189,6 +207,10 @@ def validate_content_model(papers):
         assert len(paper["reading_passages"]) == 5
         assert all(len(passage["questions"]) == 6 for passage in paper["reading_passages"])
         assert {question["id"] for question in numeracy if question.get("visual")} == visual_ids
+        assert " drew " in f" {normalise(language[0]['prompt'])} "
+        assert " belonging to " in f" {normalise(language[6]['prompt'])} "
+        assert "move towards the shelter" in normalise(answer_value(language[7]))
+        assert "was placed beside" in normalise(answer_value(language[17]))
 
         questions = language + reading + numeracy
         for question in questions:
@@ -212,11 +234,42 @@ def validate_content_model(papers):
                 assert question["answer"] in LETTERS
                 assert answer_value(question).strip()
 
-        for question in language[25:]:
-            underlined = re.findall(r"<u>(.*?)</u>", question["prompt"])
-            assert len(underlined) == 1, (number, question["id"])
-            assert normalise(underlined[0]) != normalise(question["answer"])
+        spelling = language[25:]
+        assert [question["spelling_type"] for question in spelling] == [
+            *(["dictation"] * 15),
+            *(["underlined"] * 5),
+            *(["identify"] * 5),
+        ]
+        for question in spelling[:15]:
+            assert question["spoken_word"] == question["answer"]
+            assert normalise(question["spoken_word"]) in normalise(question["spoken_sentence"])
+            assert "incorrect_word" not in question
+            assert "underline" not in normalise(question["prompt"])
+        for question in spelling[15:20]:
+            assert question["prompt"].count("text-decoration:underline") == 1
+            assert normalise(question["incorrect_word"]) != normalise(question["answer"])
+            assert normalise(question["incorrect_word"]) in normalise(question["prompt"])
+            assert normalise(question["answer"]) in normalise(question["correct_sentence"])
+        for question in spelling[20:]:
+            assert "text-decoration:underline" not in question["prompt"]
+            assert normalise(question["incorrect_word"]) != normalise(question["answer"])
+            assert normalise(question["incorrect_word"]) in normalise(question["prompt"])
+            assert normalise(question["answer"]) in normalise(question["correct_sentence"])
+        for question in spelling:
             assert normalise(question["answer"]) in normalise(question["explanation"])
+        for question in spelling[15:]:
+            wrong = question["incorrect_word"]
+            correct = question["answer"]
+            assert 1 <= edit_distance(wrong.lower(), correct.lower()) <= 2
+            assert not re.search(r"(.)\1\1", wrong.lower())
+            restored = re.sub(
+                rf"\b{re.escape(wrong)}\b",
+                correct,
+                plain_text(question["prompt"]),
+                count=1,
+                flags=re.IGNORECASE,
+            )
+            assert normalise(restored) == normalise(question["correct_sentence"])
 
         expected_answers = expected_numeracy_answers(number)
         actual_answers = [answer_value(question) for question in numeracy]
@@ -228,12 +281,24 @@ def validate_content_model(papers):
             assert key not in passage_registry
             passage_registry[key] = [number, passage["id"]]
             length_data[passage["id"]].append(word_count(body))
+            assert " the the " not in f" {body.lower()} "
+            assert not re.search(r"\b(\w+)\s+\1\b", plain_text(body), re.IGNORECASE)
+        narrative = paper["reading_passages"][2]
+        narrative_name = narrative["text"][0].split()[0]
+        assert f"when {narrative_name.lower()} noticed" not in narrative["text"][0]
+        assert "dust lay everywhere" not in normalise(passage_body(narrative))
+        poem = paper["reading_passages"][4]
+        assert normalise(answer_value(poem["questions"][4])) in normalise(" ".join(poem["lines"]))
+        assert "taps a" not in normalise(" ".join(poem["lines"]))
         writing_key = normalise(paper["writing"]["prompt"])
         assert writing_key not in writing_registry
         writing_registry[writing_key] = number
 
         length_data["grammar"].extend(word_count(question["prompt"] + " " + " ".join(question["options"])) for question in language[:25])
-        length_data["spelling"].extend(word_count(question["prompt"]) for question in language[25:])
+        length_data["spelling"].extend(
+            word_count(question["prompt"])
+            for question in language[40:]
+        )
         length_data["reading_questions"].extend(word_count(question["prompt"] + " " + " ".join(question["options"])) for question in reading)
         length_data["numeracy"].extend(word_count(question["prompt"] + " " + " ".join(question["options"])) for question in numeracy)
 
@@ -255,7 +320,7 @@ def validate_content_model(papers):
     assert len(passage_registry) == 100
     assert len(writing_registry) == 20
     assert min(length_data["grammar"]) >= 18 and max(length_data["grammar"]) <= 58
-    assert min(length_data["spelling"]) >= 19 and max(length_data["spelling"]) <= 30
+    assert min(length_data["spelling"]) >= 5 and max(length_data["spelling"]) <= 14
     assert min(length_data["reading_questions"]) >= 20 and max(length_data["reading_questions"]) <= 52
     assert min(length_data["numeracy"]) >= 16 and max(length_data["numeracy"]) <= 46
     bands = {"P1": (145, 180), "P2": (105, 140), "P3": (210, 245), "P4": (40, 70), "P5": (70, 100)}
@@ -309,7 +374,12 @@ def validate_pdf(paper):
     assert "answers and explanations" in normalise(extracted)
 
     questions = paper["language"] + [question for passage in paper["reading_passages"] for question in passage["questions"]] + paper["numeracy"]
-    missing_prompts = [question["id"] for question in questions if normalise(question["prompt"]) not in student_text]
+    missing_prompts = [
+        question["id"]
+        for question in questions
+        if question.get("spelling_type") != "dictation"
+        and normalise(question["prompt"]) not in student_text
+    ]
     missing_options = []
     for question in questions:
         for option in question.get("options", []):
@@ -329,6 +399,16 @@ def validate_pdf(paper):
     assert not missing_answers, (number, missing_answers)
     assert not missing_passage_fragments, (number, missing_passage_fragments)
     assert normalise(paper["writing"]["prompt"]) in student_text
+
+    dictation_area_text = normalise(
+        document[3].get_text(clip=fitz.Rect(31, 130, 564, 385))
+    )
+    for question in paper["language"][25:40]:
+        assert normalise(question["spoken_word"]) not in dictation_area_text, (
+            number,
+            question["id"],
+            question["spoken_word"],
+        )
 
     inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
     assert inventory["reference_student_pages"] == 20

@@ -20,9 +20,11 @@
     "papers": 20,
     "render_scale": 2,
     "checks": [
-      "all 25 prompts remain above their answer boxes",
-      "no prompt enters an adjacent item",
-      "no clipped prompt or answer box"
+      "questions 26–40 show 15 blank dictation lines and no leaked answers",
+      "questions 41–45 each show one visible underlined misspelling",
+      "questions 46–50 each show one unmarked misspelling",
+      "no clipped prompt or answer box",
+      "no prompt enters an adjacent item"
     ]
   },
   "papers": [
@@ -34,7 +36,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "9e2c4d904247bec739209e6e46cb7596400cedd03096064a36f63ce0dd440ac9",
+      "sha256": "15efa3df979146466278717a74b350d2d961006a8fc5a04b0f48c8b0e2803c08",
       "checks": [
         {
           "sheet": 1,
@@ -137,7 +139,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "a770cbef70618e033c69492aa65cd8aa9cc98938cd7b421296d00f24bbb621af",
+      "sha256": "870188e1938d9d9ab06156240eb3c43dc33ef0164f8d8e3dde0a2d914ac93b79",
       "checks": [
         {
           "sheet": 1,
@@ -240,7 +242,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "6404247915e9fa0ce7115a5fb01d4a0e6ca6fe75ad246448c573a1dee9bca25d",
+      "sha256": "58e789e6c0141ef5ba4385fc9a320b44e8b8e099be8c4938073bd6e2cff14320",
       "checks": [
         {
           "sheet": 1,
@@ -343,7 +345,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "6aba517e1e64980a20df3212e10f422ad8edac4f4b5ca374a3d86827bbd15576",
+      "sha256": "ea096614a1f8fb0948074ca97593b1089064814ab5efdb198a5a2252c435939d",
       "checks": [
         {
           "sheet": 1,
@@ -446,7 +448,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "71f0f388bb5758847d464870258b4cd33a2c2dc8bfe9a7ecbdb0e36c52cb091e",
+      "sha256": "7f915f457f3787afb7e4cc7a7d86eebc0c3c7438b7c1eb40d0d4007eb4ef88de",
       "checks": [
         {
           "sheet": 1,
@@ -549,7 +551,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "989ca6d364e6cecb43071625f19da449aee014719c8c252b47f6b08fb6c199ef",
+      "sha256": "49bd88f586a519d8c34ec67f61732b78ddda8a4bfcc9a57a23dc3bcf571bef31",
       "checks": [
         {
           "sheet": 1,
@@ -652,7 +654,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "8da953457b0289e323d69cb9fc1dbdf0fb6f72456378d59c0fcbd32521b53a0e",
+      "sha256": "99d67ebbf20a312f07d886819c17bbb952000537bd948f977f1b5c63cfa99a94",
       "checks": [
         {
           "sheet": 1,
@@ -755,7 +757,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "60a326fd66af557a17f43932bfe210272447435dd8146e7cdd82067735c12a08",
+      "sha256": "19150ec7bfa339cb3c7f51d2882119072655d3e33885aafbfb2dcd9267cd876c",
       "checks": [
         {
           "sheet": 1,
@@ -858,7 +860,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "c9781cbdfbed021eedd81a57bed58feb4287ec431e21aa620892e8e29deac94b",
+      "sha256": "113b177a3ff405a6c8cc75e8d506d902ce20bb93bb82d6c02cec6c147091ffd7",
       "checks": [
         {
           "sheet": 1,
@@ -961,7 +963,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "2dae690bbaff1985a27955c01774f19857c0840fb9a4442f0e9f96fc0d0ecbcb",
+      "sha256": "f4e54f124cef197b3164459cf4b02940a028f706f71c349cc4e3035ac8dfc72d",
       "checks": [
         {
           "sheet": 1,
@@ -1064,7 +1066,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "402da105562d1be5219d39f4d641650624a894a02b72f5bde88ba8c690f1294f",
+      "sha256": "27fc3451d0b6443a8a59c84488fd6faf6d62086d416dc813ef2dcc22fb08a6b5",
       "checks": [
         {
           "sheet": 1,
@@ -1167,7 +1169,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "ecd779b3785b8c6b997dc1b69b76c32d041daaedf45288bab9f3e84c9331dec3",
+      "sha256": "6477cc9c845ba55d9bf9eca797190a309168f1e61b1530b3a37ffb8633bb027b",
       "checks": [
         {
           "sheet": 1,
@@ -1270,7 +1272,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "27dcf091676ed975a889082d0fd935ba5841e5e449f5aaa1fd55da7e211e5688",
+      "sha256": "54da320b0af7ecabbe5b7623dc6bedf57e38c132358109d5d8ae5b3cd45c72da",
       "checks": [
         {
           "sheet": 1,
@@ -1373,7 +1375,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "eda366883d57ae3240c90621b451fbfb66182694cbf17b24a947e145a2289bc2",
+      "sha256": "59510c3510c24a842c41c3149349359958e0ee4d61095109a17e7f7cc26f0692",
       "checks": [
         {
           "sheet": 1,
@@ -1476,7 +1478,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "b55e4e4aeed64352904a846c315cdfd8832f66fc5d6c301301f972dbed32bf68",
+      "sha256": "61bcbcd0d7e05b3eb76ea875bd7a941b43ba549d2d57531cb9622e22ca4f3bac",
       "checks": [
         {
           "sheet": 1,
@@ -1579,7 +1581,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "f6e0700b501181b98edb2cdefed612302c2c1b5f6e61b1d2e2aa9d95ddbdb111",
+      "sha256": "cc11f403cea029d3fa8aca588138bebca37275cd63e374bcb4e8fc35596ceedb",
       "checks": [
         {
           "sheet": 1,
@@ -1682,7 +1684,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "d02f11e4aacb40dc1e644880f6623ad2a5f17456818b4447b0a48e169dfa4e11",
+      "sha256": "f818b73503783be9e2073e9518575368cd184e7301fb103ca09898d702bcad7b",
       "checks": [
         {
           "sheet": 1,
@@ -1785,7 +1787,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "482c2e581d783cdcd665b54c1d624c7fecb30c41346e9315cfb942e626c6bfe1",
+      "sha256": "89712ad212ca192cf5635f7f1c9ab75b47a5837b2de615b338bcc088d68d4b74",
       "checks": [
         {
           "sheet": 1,
@@ -1888,7 +1890,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "ec60b916ccce0bf84079e8468815687e7c812de8592f81d219b5068e94da3475",
+      "sha256": "54e02f523e389aaec41a80efd14d0dfb78c1cb49c6c86db5f4b3d6dba96b2895",
       "checks": [
         {
           "sheet": 1,
@@ -1991,7 +1993,7 @@
       "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "8577221362bfaa7efe26089d37fcb41fe5dfcf1cf99580234f9cd5df9a1f76ac",
+      "sha256": "9e67709e002701a1991e771bf8b262a04d47e06c85a57c28f6b7d5e07e3586c5",
       "checks": [
         {
           "sheet": 1,

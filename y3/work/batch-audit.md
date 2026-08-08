@@ -22,6 +22,8 @@
 - All 100 reading passages and all 20 writing prompts are unique.
 - All 20 PDF hashes and all 520 rendered-page hashes are unique.
 - All 600 Numeracy answers were independently recalculated from final generated parameters.
+- The spelling section is enforced per paper as 15 dictated words, five underlined proofreading sentences and five unmarked proofreading sentences. All 500 spelling answers are unique across the batch; all 200 proofreading misspellings are plausible one- or two-edit forms in natural context sentences.
+- Semantic guards reject incompatible verb–noun/adverb combinations, absurd article contexts, animal/plant template errors, stale passage wording, repeated adjacent words and reading answers unsupported by the final passage.
 - Minimum layout scale across the batch is 0.9865; no emergency shrinking or sub-minimum font size was used.
 - Minimum requested sizes are 7.4pt for student body text, 6.8pt for essential diagram labels, and 7.4pt for appendix entries.
 
@@ -30,6 +32,7 @@
 - Generated all papers and rendered all pages with `python3 y3/work/render_paper.py --all`.
 - Ran structural, semantic, source-hash, answer, uniqueness, length-band, PDF-text, and rendered-page checks with `python3 y3/work/validate_all.py`.
 - Visually inspected contact sheets covering every page of all 20 PDFs for clipping, overlap, blank or duplicate pages, visual branch failures, diagram placement, writing illustrations, and appendix density.
+- Separately rendered and inspected the final PDF sheet-2 right half for all 20 two-up papers to confirm the exact spelling subtype structure and visible underlines.
 - Machine-readable result: `y3/work/batch-validation.json` with status `passed`.
 
 ## Intentional Layout Departures

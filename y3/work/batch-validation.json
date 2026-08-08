@@ -20,17 +20,17 @@
     "grammar": {
       "min": 19,
       "max": 53,
-      "average": 30.89
+      "average": 31.41
     },
     "spelling": {
-      "min": 19,
-      "max": 28,
-      "average": 22.94
+      "min": 5,
+      "max": 12,
+      "average": 7.92
     },
     "reading_questions": {
       "min": 20,
-      "max": 49,
-      "average": 35.98
+      "max": 51,
+      "average": 36.17
     },
     "numeracy": {
       "min": 16,
@@ -38,29 +38,29 @@
       "average": 26.76
     },
     "P1": {
-      "min": 155,
-      "max": 164,
-      "average": 158.8
+      "min": 158,
+      "max": 168,
+      "average": 162.75
     },
     "P2": {
-      "min": 112,
-      "max": 124,
-      "average": 118.3
+      "min": 105,
+      "max": 117,
+      "average": 111.3
     },
     "P3": {
-      "min": 222,
-      "max": 229,
-      "average": 226.0
+      "min": 211,
+      "max": 218,
+      "average": 215.0
     },
     "P4": {
-      "min": 44,
-      "max": 48,
-      "average": 44.5
+      "min": 45,
+      "max": 49,
+      "average": 45.5
     },
     "P5": {
-      "min": 78,
-      "max": 79,
-      "average": 78.3
+      "min": 81,
+      "max": 84,
+      "average": 82.2
     }
   },
   "independently_recalculated_numeracy_answers": 600,
@@ -68,7 +68,7 @@
     {
       "paper": 1,
       "pdf": "y3/output/year3-naplan-style-practice-paper-01.pdf",
-      "bytes": 531244,
+      "bytes": 515979,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -78,12 +78,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "7ff1de9428d8066d4d0bc60b4cbd7fee470a71fb8b72e6a41452c16cc63cf03a"
+      "pdf_sha256": "02782b157ddf94e1ffa07a8e1eddfccec62b808f37955436aced13d62c154b7b"
     },
     {
       "paper": 2,
       "pdf": "y3/output/year3-naplan-style-practice-paper-02.pdf",
-      "bytes": 533268,
+      "bytes": 517969,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -93,12 +93,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "cf4f1dac25d8a7816a3d490e7a38a2787b7135870a55e1942195350e189b9a87"
+      "pdf_sha256": "41c51d2f4c5d06fb8397895cbc1a77265c64cd9919ec19166d82089542fcfb5f"
     },
     {
       "paper": 3,
       "pdf": "y3/output/year3-naplan-style-practice-paper-03.pdf",
-      "bytes": 530662,
+      "bytes": 515374,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -108,12 +108,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "84352f5408adfd312370254f07a9139b82fb00938a2ba920054a7fb5fde9ed00"
+      "pdf_sha256": "ed5c68ad72159eb2209a054bd044ad5c7eb608c044bc26d22d6e118587167f92"
     },
     {
       "paper": 4,
       "pdf": "y3/output/year3-naplan-style-practice-paper-04.pdf",
-      "bytes": 530675,
+      "bytes": 515282,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -123,12 +123,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "a9cd2112d7a8929f09d74aae8e20b9253a27b83de07fb28a66b6cc7a2ca424f2"
+      "pdf_sha256": "647f0558d4fd89e4f0d28ce3357ace6729adb110590b6607668bdf6274cd90c4"
     },
     {
       "paper": 5,
       "pdf": "y3/output/year3-naplan-style-practice-paper-05.pdf",
-      "bytes": 532345,
+      "bytes": 516973,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -138,12 +138,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "70a7bd878a4c043e221d3baafe62d7a915f8133a939ad3f3e0c8915df1e65a0d"
+      "pdf_sha256": "b6438bc0e98f74641e37654c8a5fe847c0fd3333c845852b74b09fdbb9c5cbc8"
     },
     {
       "paper": 6,
       "pdf": "y3/output/year3-naplan-style-practice-paper-06.pdf",
-      "bytes": 529854,
+      "bytes": 514568,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -153,12 +153,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "973611ae2457a979a82e67adbf236bdaa4a26462639f6f6788709a5847e80b0e"
+      "pdf_sha256": "7e13bffd70143dc5387293d4fabd51e42fd2b303e4b12a51736c84b2efe0a842"
     },
     {
       "paper": 7,
       "pdf": "y3/output/year3-naplan-style-practice-paper-07.pdf",
-      "bytes": 532380,
+      "bytes": 517090,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -168,12 +168,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "2b8beff0ad3cfc769a567d4718769684e73e3a4aa896e90a364d7b21311ad686"
+      "pdf_sha256": "491b01a3356352afda2c76fd15f0cc606af03f98814ff526019918e85aeef4fa"
     },
     {
       "paper": 8,
       "pdf": "y3/output/year3-naplan-style-practice-paper-08.pdf",
-      "bytes": 531445,
+      "bytes": 516072,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -183,12 +183,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "ea872daf52facabbde75adc35bb80de4909d70ec177f6577d47899bd5e65281b"
+      "pdf_sha256": "143d16bd6ef388371de03c07b064dfdc834477a02ecf98aca9c9fa46506e1362"
     },
     {
       "paper": 9,
       "pdf": "y3/output/year3-naplan-style-practice-paper-09.pdf",
-      "bytes": 529851,
+      "bytes": 514580,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -198,12 +198,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "31f47e40c2445f7db68eeae4014bdc2ad33c26b7dac47e94d7ae36548667d0e8"
+      "pdf_sha256": "93e5b181ee001d08b1218cec6d893a909d6f8632bcb79f9527f936d0258544fa"
     },
     {
       "paper": 10,
       "pdf": "y3/output/year3-naplan-style-practice-paper-10.pdf",
-      "bytes": 531636,
+      "bytes": 516279,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -213,12 +213,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "f12ef113c4706d6a3599b269a776e3c38f3f862e5e980470af5fec1087d13f8e"
+      "pdf_sha256": "acac8cb1463ca374664efcdd234a156242b8bbd106cd308dd4ae1c930a6d4dbd"
     },
     {
       "paper": 11,
       "pdf": "y3/output/year3-naplan-style-practice-paper-11.pdf",
-      "bytes": 534040,
+      "bytes": 518844,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -228,12 +228,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "a0560b0253d21917161202f9339b46ab2f04a90241490eefbd884e3f58321a54"
+      "pdf_sha256": "81ab9d4534bfc231b83a4bd685f5d3d536042922908907a4d37aaadc97d8be31"
     },
     {
       "paper": 12,
       "pdf": "y3/output/year3-naplan-style-practice-paper-12.pdf",
-      "bytes": 528834,
+      "bytes": 513648,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -243,12 +243,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "1dcc0792ffe69ce2491babdd70ef269d0225566d3b39e867ebdce0e6756fa3d6"
+      "pdf_sha256": "6a77cbb12935aa2c272a0d33e310baad85023d36573c0c05322508580fafb67b"
     },
     {
       "paper": 13,
       "pdf": "y3/output/year3-naplan-style-practice-paper-13.pdf",
-      "bytes": 530819,
+      "bytes": 515623,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -258,12 +258,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "b298b046393a25e85c325ca82f47b7f2cc99bdcb692ba4c2ddf0ab65cdfd80e1"
+      "pdf_sha256": "61b9a23955f8336e19a08a0571c932e2822e9516bc276397975f54f456b368cb"
     },
     {
       "paper": 14,
       "pdf": "y3/output/year3-naplan-style-practice-paper-14.pdf",
-      "bytes": 533457,
+      "bytes": 518254,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -273,12 +273,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "53210ee306d3d52896a9d6e495e0f9d1c7bfa02f03af4b8139c3d816a590819a"
+      "pdf_sha256": "51750772246adbc0e8c1e8e8bc73bc2fcfd5cb18a429b2009ac7fb697aafbaae"
     },
     {
       "paper": 15,
       "pdf": "y3/output/year3-naplan-style-practice-paper-15.pdf",
-      "bytes": 531742,
+      "bytes": 516497,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -288,12 +288,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "bb3533a423f7a81f440d77aeee03671bc6db09829acd2068aa3ffb6f8092c4bc"
+      "pdf_sha256": "4707ebb3919a48136f0f7fc8b607ac6d484a2a930bd30c6cce08e42ef863287e"
     },
     {
       "paper": 16,
       "pdf": "y3/output/year3-naplan-style-practice-paper-16.pdf",
-      "bytes": 530295,
+      "bytes": 514986,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -303,12 +303,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "d9e689e39ca4ff6eee83ad5da96d9ac66439aee525611afa9b5c686382126657"
+      "pdf_sha256": "bc044e0f03383010621cf5206428870632c24823e493e8efb0c8e1c7923bdea8"
     },
     {
       "paper": 17,
       "pdf": "y3/output/year3-naplan-style-practice-paper-17.pdf",
-      "bytes": 532244,
+      "bytes": 516999,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -318,12 +318,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "98ee0d12f420d8d7aeeb55ae6d1528b5d1cd5f55ee6ed13a7ec7f94d43a84363"
+      "pdf_sha256": "3c38789f333dd170ee8463c871373eba92e39e23859930c3c8246afbeed9586f"
     },
     {
       "paper": 18,
       "pdf": "y3/output/year3-naplan-style-practice-paper-18.pdf",
-      "bytes": 531089,
+      "bytes": 515753,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -333,12 +333,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 0.9865,
-      "pdf_sha256": "62d287de8621987bf4d7852c7971bee01ed39ac0f16a57b073f3a0a372ca9767"
+      "pdf_sha256": "b83afc2a9689e3ccb4fcdc6e8ce14d4f0097b6d5732cbbf701d08e437fca3ce4"
     },
     {
       "paper": 19,
       "pdf": "y3/output/year3-naplan-style-practice-paper-19.pdf",
-      "bytes": 532645,
+      "bytes": 517329,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -348,12 +348,12 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "959bcfe919c79ba84cb502402012b32945f0938e5d45187525d2fd22fdffe3de"
+      "pdf_sha256": "85eb2f9b08035836df818ee1e7447805ac1105e2f7dcb0be2ee354427baf71de"
     },
     {
       "paper": 20,
       "pdf": "y3/output/year3-naplan-style-practice-paper-20.pdf",
-      "bytes": 531623,
+      "bytes": 516379,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -363,7 +363,7 @@
       "questions": 110,
       "writing_tasks": 1,
       "minimum_scale": 1.0,
-      "pdf_sha256": "de182e01fc4873cc7b9e693a72085989ec770ea2921ab063fba35bcecfda1451"
+      "pdf_sha256": "493f161579ab382519ecc2147d2ca736efdd895807a4531b02778ccd923f413b"
     }
   ]
 }
