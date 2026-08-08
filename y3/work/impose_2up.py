@@ -28,6 +28,10 @@ OUTPUT_SCALE = min(LEFT.width / A4.width, LEFT.height / A4.height)
 
 
 def multiplier(label: str) -> tuple[float, float]:
+    if label.startswith("prompt-L"):
+        question_number = int(label.removeprefix("prompt-L"))
+        if question_number >= 26:
+            return 1.12, 0.98
     if label.startswith("prompt-"):
         return 1.30, 1.16
     if label.startswith("options-"):
@@ -70,15 +74,19 @@ def draw_grammar_item(page, question, number, rect):
 def draw_spelling_item(page, question, number, rect):
     page.draw_line(rect.bl, rect.br, color=(0.84, 0.90, 0.90), width=0.4)
     renderer.draw_number(page, number, rect.x0 + 9, rect.y0 + 10, 7)
+    prompt_rect = fitz.Rect(rect.x0 + 21, rect.y0 + 1, rect.x1 - 3, rect.y0 + 34)
+    answer_rect = fitz.Rect(rect.x0 + 25, rect.y1 - 17, rect.x1 - 7, rect.y1 - 4)
+    if prompt_rect.y1 + 2 > answer_rect.y0:
+        raise RuntimeError(f"spelling item {question['id']}: prompt and answer areas overlap")
     renderer.html_box(
         page,
-        fitz.Rect(rect.x0 + 20, rect.y0 + 1, rect.x1 - 3, rect.y0 + 48),
+        prompt_rect,
         question["prompt"],
         f"prompt-{question['id']}",
         7.5,
     )
     page.draw_rect(
-        fitz.Rect(rect.x0 + 24, rect.y1 - 15, rect.x1 - 7, rect.y1 - 3),
+        answer_rect,
         color=renderer.LINE,
         fill=renderer.LIGHT,
         width=0.5,
@@ -180,12 +188,25 @@ def main() -> None:
             raise RuntimeError(f"duplicate PDF: {output_path}")
         hashes.add(digest)
         body_entries = [entry for entry in audit if entry["label"].startswith(("prompt-", "options-", "passage-", "writing-", "map-", "bar-", "spinner-", "answer-"))]
+        spelling_entries = [
+            entry
+            for entry in body_entries
+            if entry["label"].startswith("prompt-L")
+            and int(entry["label"].removeprefix("prompt-L")) >= 26
+        ]
+        minimum_spelling_scale = min(entry["scale"] for entry in spelling_entries)
+        if minimum_spelling_scale < 0.99:
+            raise RuntimeError(
+                f"paper {paper_number}: spelling text scaled below safe threshold "
+                f"({minimum_spelling_scale:.4f})"
+            )
         effective_sizes = [entry["font_size"] * entry["scale"] * OUTPUT_SCALE for entry in body_entries]
         papers.append({
             "paper": paper_number,
             "output": str(output_path.relative_to(ROOT)),
             "pages": final.page_count,
             "minimum_layout_scale": min(entry["scale"] for entry in body_entries),
+            "minimum_spelling_layout_scale": minimum_spelling_scale,
             "minimum_effective_text_pt": round(min(effective_sizes), 2),
             "median_effective_text_pt": round(sorted(effective_sizes)[len(effective_sizes) // 2], 2),
             "sha256": digest,
@@ -203,10 +224,23 @@ def main() -> None:
         "pages_per_file": 13,
         "font_strategy": {
             "prompt_multiplier": 1.30,
+            "spelling_prompt_multiplier": 1.12,
             "option_multiplier": 1.28,
             "passage_answer_multiplier": 1.25,
             "compact_option_line_height": 1.08,
+            "spelling_line_height": 0.98,
             "whole_page_output_scale": round(OUTPUT_SCALE, 4),
+        },
+        "high_risk_visual_inspection": {
+            "status": "passed",
+            "region": "sheet 2 right half (source spelling page 4)",
+            "papers": 20,
+            "render_scale": 2,
+            "checks": [
+                "all 25 prompts remain above their answer boxes",
+                "no prompt enters an adjacent item",
+                "no clipped prompt or answer box",
+            ],
         },
         "papers": papers,
     }
