@@ -1,6 +1,6 @@
 ---
 cache_status: verified
-cache_version: 1
+cache_version: 2
 source_directory: y3/orig
 source_hashes: y3/source-cache/source-hashes.json
 raw_ocr_cache: y3/work/ocr
@@ -17,9 +17,9 @@ This file is the human-verifiable, machine-readable source of truth for future p
 
 - Total pages: **20 exactly**.
 - Conventions of Language: **50 questions**.
-- Reading: **30 questions** across five texts, six questions per text.
+- Reading: **39 questions** across seven texts.
 - Writing: **one narrative task**.
-- Numeracy: **30 questions**.
+- Numeracy: **36 questions**.
 - Overall level: Year 3 advanced practice; multi-step reasoning, inference, punctuation control and visual interpretation must remain represented.
 - Visual style: pale aqua section bars, compact rounded panels, approximately two-column workbook density, small but normal print text, and concise answer explanations.
 - Item-length rule: map new items to the reference item positions and review stem/option word-count differences above approximately 20%.
@@ -32,22 +32,22 @@ This file is the human-verifiable, machine-readable source of truth for future p
 | 22 | `IMG_9321.jpg` | Conventions of Language | 10-18 | Pronouns, agreement, tense and punctuation; nine compact items. |
 | 23 | `IMG_9322.jpg` | Conventions of Language | 19-25 | Commas, apostrophes, question marks, speech and sentence correctness; seven items. |
 | 24 | `IMG_9323.jpg` | Conventions of Language | 26-50 | Mixed spelling page: 15 dictated words, five underlined-error sentences and five unmarked-error sentences. |
-| 25 | `IMG_9324.jpg` | Reading | 1-6 | Information text about forces and friction; vocabulary, literal and inferred meaning. |
-| 26 | `IMG_9325.jpg` | Reading | 7-12 | Procedure/experiment text; purpose, sequence, materials and inference. |
-| 27 | `IMG_9326.jpg` | Reading | 13-18 | Health information text; vocabulary, summary and inference. |
-| 28 | `IMG_9327.jpg` | Reading | 19-24 | Sports table and graph; cross-reference and interpretation. |
-| 29 | `IMG_9328.jpg` | Reading | 25-30 | Nursery rhyme; explicit detail, sequence, text type and purpose. |
-| 30 | `IMG_9329.jpg` | Reading answers | 1-15 approximately | Dense two-column concise explanations. |
-| 31 | `IMG_9330.jpg` | Reading answers | remaining answers | Dense two-column concise explanations. |
+| 25 | `IMG_9324.jpg` | Reading | 1-6 | Science information text; literal, inference, true/false and force-diagram interpretation. |
+| 26 | `IMG_9325.jpg` | Reading | 7-12 | Related procedure/experiment; sequence, trial count, purpose, substitution and cross-text application. |
+| 27 | `IMG_9326.jpg` | Reading | 13-18 | Health information; vocabulary, matching, cloze, inference and summary. |
+| 28 | `IMG_9327.jpg` | Reading | 19-24 | Survey description, tally table and bar graph; matching, axes, purpose and cross-text classification. |
+| 29 | `IMG_9328.jpg` | Reading | 25-29 | Traditional rhyme; reference, cloze, vocabulary, text type and purpose. |
+| 30 | `IMG_9329.jpg` | Reading | 30-34 | Book review; bibliographic retrieval, purpose, two-answer selection, criticism and star rating. |
+| 31 | `IMG_9330.jpg` | Reading | 35-39 | Narrative; adjective matching, event order, character inference, cause and title meaning. |
 | 32 | `IMG_9331.jpg` | Writing | narrative task | Illustration-led imaginative prompt, planning guidance and writing lines. |
-| 33 | `IMG_9332.jpg` | Numeracy | 1-4 | Number sequence, place value and grouped-object reasoning. |
-| 34 | `IMG_9333.jpg` | Numeracy | 5-8 | Probability, top view, multiplication and data interpretation. |
-| 35 | `IMG_9334.jpg` | Numeracy | 9-12 | Shape properties, elapsed time, page totals and money table. |
-| 36 | `IMG_9335.jpg` | Numeracy | 13-16 | Time, fractions, transformations and money value. |
-| 37 | `IMG_9336.jpg` | Numeracy | 17-21 | 3D construction, mass, number properties and difference. |
-| 38 | `IMG_9337.jpg` | Numeracy | 22-25 | Volume/capacity, transport division, temperature change and cost. |
-| 39 | `IMG_9338.jpg` | Numeracy | 26-29 | Number line, pattern, similarity and equal grouping. |
-| 40 | `IMG_9339.jpg` | Numeracy | 30 and data items | Bar graph, probability spinner and money combinations. |
+| 33 | `IMG_9332.jpg` | Numeracy | 1-5 | Missing number, subset total, sequence, multiplication equivalence and visual covering. |
+| 34 | `IMG_9333.jpg` | Numeracy | 6-9 | Visual pattern, pictograph key, top view and constrained odd number. |
+| 35 | `IMG_9334.jpg` | Numeracy | 10-15 | One-third diagram, missing addend, elapsed time, addition, difference and money table. |
+| 36 | `IMG_9335.jpg` | Numeracy | 16-19 | Analogue time, spatial map, reflection symmetry and unit rate. |
+| 37 | `IMG_9336.jpg` | Numeracy | 20-23 | Equal areas, cube mass, two-answer pattern and digit constraint. |
+| 38 | `IMG_9337.jpg` | Numeracy | 24-27 | Composite solid, proportional cost, bus capacity and thermometer decrease. |
+| 39 | `IMG_9338.jpg` | Numeracy | 28-33 | Halfway distance, number line, dozens/remainder, scales, backward pattern and table total. |
+| 40 | `IMG_9339.jpg` | Numeracy | 34-36 | Bar graph, spinner probability and grouped coin total. |
 
 ## Reference Language Profile
 
@@ -68,11 +68,11 @@ This file is the human-verifiable, machine-readable source of truth for future p
 
 ## Reference Reading Profile
 
-- Five texts with six questions each.
-- Texts include information, procedure/experiment, health information, table/graph material and rhyme/poetry.
+- Seven texts with question ranges `1–6`, `7–12`, `13–18`, `19–24`, `25–29`, `30–34` and `35–39`.
+- Texts include science information, a related procedure/experiment, health information, survey/table/graph material, rhyme/poetry, a book review and a narrative.
 - Each page combines the text and its questions at compact workbook density.
 - Questions mix literal retrieval, vocabulary in context, reference words, purpose, sequence, inference, summary and visual-data interpretation.
-- New passages should remain close in length to their mapped reference text and retain a similar balance of explicit and inferred answers.
+- New passages should remain close in length to their mapped reference text and retain each mapped response form, including true/false, ordering, matching, cloze, visual options, cross-text questions and select-two items.
 
 ## Reference Writing Profile
 

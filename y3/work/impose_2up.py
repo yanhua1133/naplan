@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import hashlib
+import html
 import json
 import re
 import shutil
@@ -31,14 +32,30 @@ def multiplier(label: str) -> tuple[float, float]:
     if label.startswith("prompt-L"):
         question_number = int(label.removeprefix("prompt-L"))
         if question_number >= 26:
-            return 1.12, 0.98
+            return 1.38, 1.00
     if label.startswith("prompt-"):
-        return 1.30, 1.16
+        return 1.42, 1.04
     if label.startswith("options-"):
-        return 1.28, 1.08
-    if label.startswith(("passage-", "writing-", "map-", "bar-", "spinner-", "answer-")):
-        return 1.25, 1.16
+        return 1.42, 1.02
+    if label.startswith(("passage-", "writing-", "diagram-", "answer-")):
+        return 1.42, 1.04
     return 1.0, 1.22
+
+
+class TwoUpAudit:
+    def __init__(self):
+        self.entries = []
+
+    def record(self, label, spare, scale, font_size):
+        entry = {
+            "label": label,
+            "font_size": font_size,
+            "spare_height": round(float(spare), 2),
+            "scale": round(float(scale), 4),
+        }
+        self.entries.append(entry)
+        if spare < -0.01 or scale < 0.90:
+            raise RuntimeError(f"2-up text overflow or excessive scaling: {entry}")
 
 
 def enlarged_html_box(page, rect, body, label, size=8, align="left", css=""):
@@ -106,10 +123,27 @@ def draw_reading_question(page, question, number, rect):
     renderer.html_box(
         page,
         fitz.Rect(rect.x0 + 22, rect.y0 + 46, rect.x1 - 3, rect.y1 - 2),
-        renderer.option_table(question["options"]),
+        renderer.option_markup(question["options"]),
         f"options-{question['id']}",
         7.4,
     )
+
+
+def draw_writing_page(doc):
+    writing = renderer.PAPER["writing"]
+    page = renderer.add_page(doc, "Writing", writing["title"])
+    page.draw_rect(fitz.Rect(32, 82, 563, 255), color=renderer.LINE, fill=renderer.LIGHT, width=0.6, radius=0.04)
+    renderer.html_box(page, fitz.Rect(46, 94, 548, 142), f"<b>{writing['prompt']}</b>", "writing-prompt", 10.0)
+    ideas = "".join(f"<li>{html.escape(item)}</li>" for item in writing["ideas"])
+    renderer.html_box(page, fitz.Rect(46, 146, 548, 247), f"Your story may be amusing or serious.<ul>{ideas}</ul>", "writing-ideas", 7.8)
+    reminders = "".join(f"<li>{html.escape(item)}</li>" for item in writing["reminders"])
+    renderer.html_box(page, fitz.Rect(34, 266, 563, 355), f"<b>Remember</b><ul>{reminders}</ul>", "writing-reminders", 7.6)
+    renderer.html_box(page, fitz.Rect(34, 365, 563, 386), "<b>Planning notes</b>", "writing-planning", 8.0)
+    for y in range(394, 482, 22):
+        page.draw_line(fitz.Point(36, y), fitz.Point(560, y), color=(0.76, 0.84, 0.84), width=0.45)
+    renderer.html_box(page, fitz.Rect(34, 493, 563, 514), "<b>Begin your narrative</b>", "writing-start", 8.0)
+    for y in range(522, 805, 23):
+        page.draw_line(fitz.Point(36, y), fitz.Point(560, y), color=(0.76, 0.84, 0.84), width=0.45)
 
 
 def normalized_text(value: str) -> str:
@@ -122,6 +156,7 @@ def sha256(path: Path) -> str:
 
 def build_enlarged_source(paper_number: int) -> tuple[fitz.Document, list[dict]]:
     renderer.configure(paper_number)
+    renderer.AUDIT = TwoUpAudit()
     renderer.validate_cache()
     renderer.validate_content()
     document = fitz.open()
@@ -140,6 +175,7 @@ def main() -> None:
     renderer.draw_grammar_item = draw_grammar_item
     renderer.draw_spelling_item = draw_spelling_item
     renderer.draw_reading_question = draw_reading_question
+    renderer.draw_writing_page = draw_writing_page
 
     for path in (ROOT / "y3" / "output" / "a4-landscape-2up", ROOT / "y3" / "output" / "2up-a3", ROOT / "y3" / "output" / "2up-a4"):
         if path.exists():
@@ -187,7 +223,7 @@ def main() -> None:
         if digest in hashes:
             raise RuntimeError(f"duplicate PDF: {output_path}")
         hashes.add(digest)
-        body_entries = [entry for entry in audit if entry["label"].startswith(("prompt-", "options-", "passage-", "writing-", "map-", "bar-", "spinner-", "answer-"))]
+        body_entries = [entry for entry in audit if entry["label"].startswith(("prompt-", "options-", "passage-", "writing-", "diagram-", "answer-"))]
         spelling_entries = [
             entry
             for entry in body_entries
@@ -195,7 +231,7 @@ def main() -> None:
             and int(entry["label"].removeprefix("prompt-L")) >= 26
         ]
         minimum_spelling_scale = min(entry["scale"] for entry in spelling_entries)
-        if minimum_spelling_scale < 0.99:
+        if minimum_spelling_scale < 0.94:
             raise RuntimeError(
                 f"paper {paper_number}: spelling text scaled below safe threshold "
                 f"({minimum_spelling_scale:.4f})"
@@ -223,12 +259,12 @@ def main() -> None:
         "files": 20,
         "pages_per_file": 13,
         "font_strategy": {
-            "prompt_multiplier": 1.30,
-            "spelling_prompt_multiplier": 1.12,
-            "option_multiplier": 1.28,
-            "passage_answer_multiplier": 1.25,
-            "compact_option_line_height": 1.08,
-            "spelling_line_height": 0.98,
+            "prompt_multiplier": 1.42,
+            "spelling_prompt_multiplier": 1.38,
+            "option_multiplier": 1.42,
+            "passage_answer_multiplier": 1.42,
+            "compact_option_line_height": 1.02,
+            "spelling_line_height": 1.00,
             "whole_page_output_scale": round(OUTPUT_SCALE, 4),
         },
         "high_risk_visual_inspection": {

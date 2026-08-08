@@ -10,3631 +10,3397 @@
     {
       "label": "year-1",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-1",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-1",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-1",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-1",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-1",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-1-50.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-1-40.0-90.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L1",
-      "font_size": 8.4,
-      "spare_height": 13.5,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
-      "label": "options-L1",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-2-50.0-172.33333333333331",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-2-40.0-171.11111111111111",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L2",
-      "font_size": 8.4,
-      "spare_height": 13.5,
+      "font_size": 7.4,
+      "spare_height": 44.35,
       "scale": 1.0
     },
     {
-      "label": "options-L2",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-3-50.0-251.66666666666663",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-3-40.0-252.22222222222223",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L3",
-      "font_size": 8.4,
-      "spare_height": 13.5,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
-      "label": "options-L3",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-4-50.0-330.99999999999994",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-4-40.0-333.33333333333337",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L4",
-      "font_size": 8.4,
-      "spare_height": 13.5,
+      "font_size": 7.4,
+      "spare_height": 44.35,
       "scale": 1.0
     },
     {
-      "label": "options-L4",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-5-50.0-410.33333333333326",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-5-40.0-414.44444444444446",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L5",
-      "font_size": 8.4,
-      "spare_height": 23.75,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
-      "label": "options-L5",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-6-50.0-489.6666666666666",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-6-40.0-495.55555555555554",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L6",
-      "font_size": 8.4,
-      "spare_height": 13.5,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
-      "label": "options-L6",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-7-50.0-568.9999999999999",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-7-40.0-576.6666666666667",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L7",
-      "font_size": 8.4,
-      "spare_height": 13.5,
+      "font_size": 7.4,
+      "spare_height": 29.47,
       "scale": 1.0
     },
     {
-      "label": "options-L7",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-8-50.0-648.3333333333333",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-8-40.0-657.7777777777778",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L8",
-      "font_size": 8.4,
-      "spare_height": 23.75,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
-      "label": "options-L8",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-9-50.0-727.6666666666666",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-9-40.0-738.8888888888889",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L9",
-      "font_size": 8.4,
-      "spare_height": 23.75,
-      "scale": 1.0
-    },
-    {
-      "label": "options-L9",
-      "font_size": 7.6,
-      "spare_height": 5.79,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
       "label": "year-2",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-2",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-2",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-2",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-2",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-2",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-10-50.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-10-40.0-90.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L10",
-      "font_size": 8.4,
-      "spare_height": 13.5,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
-      "label": "options-L10",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-11-50.0-172.33333333333331",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-11-40.0-171.11111111111111",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L11",
-      "font_size": 8.4,
-      "spare_height": 23.75,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
-      "label": "options-L11",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-12-50.0-251.66666666666663",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-12-40.0-252.22222222222223",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L12",
-      "font_size": 8.4,
-      "spare_height": 23.75,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
-      "label": "options-L12",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-13-50.0-330.99999999999994",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-13-40.0-333.33333333333337",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L13",
-      "font_size": 8.4,
-      "spare_height": 23.75,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
-      "label": "options-L13",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-14-50.0-410.33333333333326",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-14-40.0-414.44444444444446",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L14",
-      "font_size": 8.4,
-      "spare_height": 23.75,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
-      "label": "options-L14",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-15-50.0-489.6666666666666",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-15-40.0-495.55555555555554",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L15",
-      "font_size": 8.4,
-      "spare_height": 23.75,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
-      "label": "options-L15",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-16-50.0-568.9999999999999",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-16-40.0-576.6666666666667",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L16",
-      "font_size": 8.4,
-      "spare_height": 13.5,
+      "font_size": 7.4,
+      "spare_height": 18.59,
       "scale": 1.0
     },
     {
-      "label": "options-L16",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-17-50.0-648.3333333333333",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-17-40.0-657.7777777777778",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L17",
-      "font_size": 8.4,
-      "spare_height": 13.5,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
-      "label": "options-L17",
-      "font_size": 7.6,
-      "spare_height": 5.79,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-18-50.0-727.6666666666666",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-18-40.0-738.8888888888889",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L18",
-      "font_size": 8.4,
-      "spare_height": 23.75,
-      "scale": 1.0
-    },
-    {
-      "label": "options-L18",
-      "font_size": 7.6,
-      "spare_height": 5.79,
+      "font_size": 7.4,
+      "spare_height": 27.47,
       "scale": 1.0
     },
     {
       "label": "year-3",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-3",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-3",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-3",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-3",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-3",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-19-50.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-19-40.0-90.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L19",
-      "font_size": 8.4,
-      "spare_height": 13.5,
+      "font_size": 7.4,
+      "spare_height": 50.65,
       "scale": 1.0
     },
     {
-      "label": "options-L19",
-      "font_size": 7.6,
-      "spare_height": 28.46,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-20-50.0-195.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-20-40.0-194.28571428571428",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L20",
-      "font_size": 8.4,
-      "spare_height": 13.5,
+      "font_size": 7.4,
+      "spare_height": 41.77,
       "scale": 1.0
     },
     {
-      "label": "options-L20",
-      "font_size": 7.6,
-      "spare_height": 28.46,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-21-50.0-297.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-21-40.0-298.57142857142856",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L21",
-      "font_size": 8.4,
-      "spare_height": 23.75,
+      "font_size": 7.4,
+      "spare_height": 50.65,
       "scale": 1.0
     },
     {
-      "label": "options-L21",
-      "font_size": 7.6,
-      "spare_height": 28.46,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-22-50.0-399.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-22-40.0-402.8571428571429",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L22",
-      "font_size": 8.4,
-      "spare_height": 13.5,
+      "font_size": 7.4,
+      "spare_height": 50.65,
       "scale": 1.0
     },
     {
-      "label": "options-L22",
-      "font_size": 7.6,
-      "spare_height": 28.46,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-23-50.0-501.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-23-40.0-507.14285714285717",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L23",
-      "font_size": 8.4,
-      "spare_height": 23.75,
+      "font_size": 7.4,
+      "spare_height": 50.65,
       "scale": 1.0
     },
     {
-      "label": "options-L23",
-      "font_size": 7.6,
-      "spare_height": 28.46,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-24-50.0-603.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-24-40.0-611.4285714285714",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L24",
-      "font_size": 8.4,
-      "spare_height": 23.75,
+      "font_size": 7.4,
+      "spare_height": 50.65,
       "scale": 1.0
     },
     {
-      "label": "options-L24",
-      "font_size": 7.6,
-      "spare_height": 28.46,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-25-50.0-705.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-25-40.0-715.7142857142858",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L25",
-      "font_size": 8.4,
-      "spare_height": 23.75,
-      "scale": 1.0
-    },
-    {
-      "label": "options-L25",
-      "font_size": 7.6,
-      "spare_height": 28.46,
+      "font_size": 7.4,
+      "spare_height": 41.77,
       "scale": 1.0
     },
     {
       "label": "year-4",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-4",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-4",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-4",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-4",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-4",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "spelling-dictation-instructions",
-      "font_size": 7.8,
-      "spare_height": 10.97,
+      "label": "spelling-directions-1",
+      "font_size": 7.6,
+      "spare_height": 13.88,
       "scale": 1.0
     },
     {
-      "label": "qnum-26-52.0-148.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-26-43-118",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-28-52.0-179.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-27-43-149",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-30-52.0-210.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-28-43-180",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-32-52.0-241.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-29-43-211",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-34-52.0-272.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-30-43-242",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-36-52.0-303.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-31-43-273",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-38-52.0-334.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-32-43-304",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-40-52.0-365.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-33-43-335",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-27-315.0-148.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-34-309-118",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-29-315.0-179.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-35-309-149",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-31-315.0-210.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-36-309-180",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-33-315.0-241.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-37-309-211",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-35-315.0-272.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-38-309-242",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-37-315.0-303.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-39-309-273",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-39-315.0-334.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-40-309-304",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "spelling-underlined-instructions",
-      "font_size": 7.8,
-      "spare_height": 22.48,
+      "label": "spelling-directions-2",
+      "font_size": 7.6,
+      "spare_height": 13.88,
       "scale": 1.0
     },
     {
-      "label": "qnum-41-52.0-438.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-41-42.0-410.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L41",
-      "font_size": 8.2,
-      "spare_height": 18.0,
+      "font_size": 7.4,
+      "spare_height": 20.12,
       "scale": 1.0
     },
     {
-      "label": "qnum-42-52.0-476.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-42-42.0-458.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L42",
-      "font_size": 8.2,
-      "spare_height": 18.0,
+      "font_size": 7.4,
+      "spare_height": 20.12,
       "scale": 1.0
     },
     {
-      "label": "qnum-43-52.0-514.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-43-42.0-506.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L43",
-      "font_size": 8.2,
-      "spare_height": 18.0,
+      "font_size": 7.4,
+      "spare_height": 20.12,
       "scale": 1.0
     },
     {
-      "label": "qnum-44-52.0-552.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-44-42.0-554.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L44",
-      "font_size": 8.2,
-      "spare_height": 18.0,
+      "font_size": 7.4,
+      "spare_height": 20.12,
       "scale": 1.0
     },
     {
-      "label": "qnum-45-52.0-590.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-45-42.0-602.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L45",
-      "font_size": 8.2,
-      "spare_height": 18.0,
+      "font_size": 7.4,
+      "spare_height": 20.12,
       "scale": 1.0
     },
     {
-      "label": "spelling-identify-instructions",
-      "font_size": 7.8,
-      "spare_height": 19.48,
+      "label": "spelling-directions-3",
+      "font_size": 7.6,
+      "spare_height": 13.88,
       "scale": 1.0
     },
     {
-      "label": "qnum-46-52.0-666.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-46-42.0-682.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L46",
-      "font_size": 8.2,
-      "spare_height": 11.0,
+      "font_size": 7.4,
+      "spare_height": 16.12,
       "scale": 1.0
     },
     {
-      "label": "qnum-47-52.0-695.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-47-309.0-682.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L47",
-      "font_size": 8.2,
-      "spare_height": 11.0,
+      "font_size": 7.4,
+      "spare_height": 16.12,
       "scale": 1.0
     },
     {
-      "label": "qnum-48-52.0-724.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-48-42.0-726.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L48",
-      "font_size": 8.2,
-      "spare_height": 11.0,
+      "font_size": 7.4,
+      "spare_height": 16.12,
       "scale": 1.0
     },
     {
-      "label": "qnum-49-52.0-753.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-49-309.0-726.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L49",
-      "font_size": 8.2,
-      "spare_height": 11.0,
+      "font_size": 7.4,
+      "spare_height": 16.12,
       "scale": 1.0
     },
     {
-      "label": "qnum-50-52.0-782.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-50-42.0-770.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-L50",
-      "font_size": 8.2,
-      "spare_height": 11.0,
+      "font_size": 7.4,
+      "spare_height": 16.12,
       "scale": 1.0
     },
     {
       "label": "year-5",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-5",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-5",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-5",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-5",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-5",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "passage-P1",
-      "font_size": 9.2,
-      "spare_height": 159.63,
+      "font_size": 8.0,
+      "spare_height": 142.0,
       "scale": 1.0
     },
     {
-      "label": "qnum-1-42.0-451.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-1-42.0-305.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R1",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R1",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-2-42.0-570.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-2-42.0-390.8333333333333",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R2",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R2",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-3-42.0-689.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-3-42.0-476.66666666666663",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R3",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R3",
       "font_size": 7.4,
-      "spare_height": 42.94,
+      "spare_height": 7.43,
       "scale": 1.0
     },
     {
-      "label": "qnum-4-311.0-451.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-4-42.0-562.5",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R4",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R4",
       "font_size": 7.4,
-      "spare_height": 42.94,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-5-311.0-570.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-5-42.0-648.3333333333333",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R5",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R5",
       "font_size": 7.4,
-      "spare_height": 42.94,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-6-311.0-689.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-6-42.0-734.1666666666666",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R6",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R6",
       "font_size": 7.4,
-      "spare_height": 42.94,
+      "spare_height": 6.55,
       "scale": 1.0
     },
     {
       "label": "year-6",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-6",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-6",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-6",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-6",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-6",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "passage-P2",
-      "font_size": 9.2,
-      "spare_height": 92.61,
+      "font_size": 8.0,
+      "spare_height": 123.04,
       "scale": 1.0
     },
     {
-      "label": "qnum-7-42.0-451.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-7-42.0-305.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R7",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R7",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 7.43,
       "scale": 1.0
     },
     {
-      "label": "qnum-8-42.0-570.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-8-42.0-390.8333333333333",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R8",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R8",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-9-42.0-689.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-9-42.0-476.66666666666663",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R9",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R9",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-10-311.0-451.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-10-42.0-562.5",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R10",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R10",
       "font_size": 7.4,
-      "spare_height": 42.94,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-11-311.0-570.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-11-42.0-648.3333333333333",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R11",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R11",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-12-311.0-689.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-12-42.0-734.1666666666666",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R12",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R12",
       "font_size": 7.4,
-      "spare_height": 33.92,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
       "label": "year-7",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-7",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-7",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-7",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-7",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-7",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "passage-P3",
-      "font_size": 9.2,
-      "spare_height": 132.08,
+      "font_size": 8.0,
+      "spare_height": 132.4,
       "scale": 1.0
     },
     {
-      "label": "qnum-13-42.0-451.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-13-42.0-305.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R13",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R13",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-14-42.0-570.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-14-42.0-390.8333333333333",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R14",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R14",
       "font_size": 7.4,
-      "spare_height": 42.94,
+      "spare_height": 37.9,
       "scale": 1.0
     },
     {
-      "label": "qnum-15-42.0-689.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-15-42.0-476.66666666666663",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R15",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R15",
       "font_size": 7.4,
-      "spare_height": 42.94,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-16-311.0-451.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-16-42.0-562.5",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R16",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R16",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 35.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-17-311.0-570.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-17-42.0-648.3333333333333",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R17",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R17",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-18-311.0-689.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-18-42.0-734.1666666666666",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R18",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R18",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
       "label": "year-8",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-8",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-8",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-8",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-8",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-8",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "passage-P4",
-      "font_size": 9.2,
-      "spare_height": 162.49,
+      "font_size": 8.0,
+      "spare_height": 204.4,
       "scale": 1.0
     },
     {
-      "label": "qnum-19-42.0-451.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "diagram-tally",
+      "font_size": 6.8,
+      "spare_height": 23.2,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-label-data-0",
+      "font_size": 6.8,
+      "spare_height": 2.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-label-data-1",
+      "font_size": 6.8,
+      "spare_height": 2.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-label-data-2",
+      "font_size": 6.8,
+      "spare_height": 2.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-label-data-3",
+      "font_size": 6.8,
+      "spare_height": 2.84,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-19-42.0-329.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R19",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R19",
       "font_size": 7.4,
-      "spare_height": 42.94,
+      "spare_height": 33.9,
       "scale": 1.0
     },
     {
-      "label": "qnum-20-42.0-570.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-20-42.0-410.8333333333333",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R20",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R20",
       "font_size": 7.4,
-      "spare_height": 42.94,
+      "spare_height": 29.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-21-42.0-689.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-21-42.0-492.66666666666663",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R21",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R21",
       "font_size": 7.4,
-      "spare_height": 42.94,
+      "spare_height": 29.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-22-311.0-451.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-22-42.0-574.5",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R22",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R22",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 29.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-23-311.0-570.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-23-42.0-656.3333333333333",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R23",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R23",
       "font_size": 7.4,
-      "spare_height": 42.94,
+      "spare_height": 29.19,
       "scale": 1.0
     },
     {
-      "label": "qnum-24-311.0-689.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-24-42.0-738.1666666666666",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R24",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R24",
       "font_size": 7.4,
-      "spare_height": 15.86,
+      "spare_height": 29.19,
       "scale": 1.0
     },
     {
       "label": "year-9",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-9",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-9",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-9",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-9",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-9",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "passage-P5",
-      "font_size": 9.2,
-      "spare_height": 147.56,
+      "font_size": 8.0,
+      "spare_height": 109.92,
       "scale": 1.0
     },
     {
-      "label": "qnum-25-42.0-451.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-25-42.0-305.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R25",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R25",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 50.36,
       "scale": 1.0
     },
     {
-      "label": "qnum-26-42.0-570.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-26-42.0-408.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R26",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R26",
       "font_size": 7.4,
-      "spare_height": 42.94,
+      "spare_height": 52.36,
       "scale": 1.0
     },
     {
-      "label": "qnum-27-42.0-689.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-27-42.0-511.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R27",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R27",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 50.36,
       "scale": 1.0
     },
     {
-      "label": "qnum-28-311.0-451.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-28-42.0-614.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R28",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R28",
       "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 50.36,
       "scale": 1.0
     },
     {
-      "label": "qnum-29-311.0-570.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-29-42.0-717.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-R29",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R29",
       "font_size": 7.4,
-      "spare_height": 42.94,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-30-311.0-689.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
-      "scale": 1.0
-    },
-    {
-      "label": "prompt-R30",
-      "font_size": 7.6,
-      "spare_height": 11.46,
-      "scale": 1.0
-    },
-    {
-      "label": "options-R30",
-      "font_size": 7.4,
-      "spare_height": 24.89,
+      "spare_height": 50.36,
       "scale": 1.0
     },
     {
       "label": "year-10",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-10",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-10",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-10",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-10",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-10",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "writing-prompt",
-      "font_size": 8.7,
-      "spare_height": 16.16,
-      "scale": 1.0
-    },
-    {
-      "label": "writing-ideas",
+      "label": "passage-P6",
       "font_size": 8.0,
-      "spare_height": 85.24,
+      "spare_height": 132.4,
       "scale": 1.0
     },
     {
-      "label": "writing-reminders",
-      "font_size": 8.0,
-      "spare_height": 49.24,
+      "label": "qnum-30-42.0-305.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "writing-check",
-      "font_size": 7.6,
-      "spare_height": 49.46,
+      "label": "prompt-R30",
+      "font_size": 7.4,
+      "spare_height": 50.36,
       "scale": 1.0
     },
     {
-      "label": "writing-space",
-      "font_size": 8.5,
-      "spare_height": 12.63,
+      "label": "qnum-31-42.0-408.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-R31",
+      "font_size": 7.4,
+      "spare_height": 50.36,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-32-42.0-511.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-R32",
+      "font_size": 7.4,
+      "spare_height": 50.36,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-33-42.0-614.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-R33",
+      "font_size": 7.4,
+      "spare_height": 50.36,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-34-42.0-717.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-R34",
+      "font_size": 7.4,
+      "spare_height": 50.36,
       "scale": 1.0
     },
     {
       "label": "year-11",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-11",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-11",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-11",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-11",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-11",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-1-44.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
-      "scale": 1.0
-    },
-    {
-      "label": "prompt-N1",
+      "label": "passage-P7",
       "font_size": 8.0,
-      "spare_height": 13.48,
+      "spare_height": 132.4,
       "scale": 1.0
     },
     {
-      "label": "options-N1",
-      "font_size": 7.8,
-      "spare_height": 155.97,
+      "label": "qnum-35-42.0-305.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-2-44.0-335.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "prompt-R35",
+      "font_size": 7.4,
+      "spare_height": 55.06,
       "scale": 1.0
     },
     {
-      "label": "prompt-N2",
-      "font_size": 8.0,
-      "spare_height": 23.24,
+      "label": "qnum-36-42.0-408.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "options-N2",
-      "font_size": 7.8,
-      "spare_height": 155.97,
+      "label": "prompt-R36",
+      "font_size": 7.4,
+      "spare_height": 24.6,
       "scale": 1.0
     },
     {
-      "label": "qnum-3-44.0-577.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-37-42.0-511.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "prompt-N3",
-      "font_size": 8.0,
-      "spare_height": 23.24,
+      "label": "prompt-R37",
+      "font_size": 7.4,
+      "spare_height": 50.36,
       "scale": 1.0
     },
     {
-      "label": "options-N3",
-      "font_size": 7.8,
-      "spare_height": 157.97,
+      "label": "qnum-38-42.0-614.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-R38",
+      "font_size": 7.4,
+      "spare_height": 50.36,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-39-42.0-717.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-R39",
+      "font_size": 7.4,
+      "spare_height": 50.36,
       "scale": 1.0
     },
     {
       "label": "year-12",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-12",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-12",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-12",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-12",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-12",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-4-44.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "writing-prompt",
+      "font_size": 10.0,
+      "spare_height": 22.0,
       "scale": 1.0
     },
     {
-      "label": "prompt-N4",
-      "font_size": 8.0,
-      "spare_height": 23.24,
-      "scale": 1.0
-    },
-    {
-      "label": "options-N4",
+      "label": "writing-ideas",
       "font_size": 7.8,
-      "spare_height": 155.97,
+      "spare_height": 2.32,
       "scale": 1.0
     },
     {
-      "label": "qnum-5-44.0-335.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "writing-reminders",
+      "font_size": 7.6,
+      "spare_height": 17.51,
       "scale": 1.0
     },
     {
-      "label": "prompt-N5",
+      "label": "writing-planning",
       "font_size": 8.0,
-      "spare_height": 23.24,
+      "spare_height": 7.4,
       "scale": 1.0
     },
     {
-      "label": "options-N5",
-      "font_size": 7.8,
-      "spare_height": 155.97,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-6-44.0-577.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
-      "scale": 1.0
-    },
-    {
-      "label": "prompt-N6",
+      "label": "writing-start",
       "font_size": 8.0,
-      "spare_height": 13.48,
-      "scale": 1.0
-    },
-    {
-      "label": "options-N6",
-      "font_size": 7.8,
-      "spare_height": 157.97,
+      "spare_height": 7.4,
       "scale": 1.0
     },
     {
       "label": "year-13",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-13",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-13",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-13",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-13",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-13",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-7-44.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-1-40.0-90.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "prompt-N7",
-      "font_size": 8.0,
-      "spare_height": 13.48,
+      "label": "prompt-N1",
+      "font_size": 7.4,
+      "spare_height": 83.48,
       "scale": 1.0
     },
     {
-      "label": "options-N7",
-      "font_size": 7.8,
-      "spare_height": 155.97,
+      "label": "qnum-2-40.0-236.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-8-44.0-335.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "prompt-N2",
+      "font_size": 7.4,
+      "spare_height": 118.12,
       "scale": 1.0
     },
     {
-      "label": "prompt-N8",
-      "font_size": 8.0,
-      "spare_height": 23.24,
+      "label": "qnum-3-40.0-382.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "options-N8",
-      "font_size": 7.8,
-      "spare_height": 155.97,
+      "label": "prompt-N3",
+      "font_size": 7.4,
+      "spare_height": 83.48,
       "scale": 1.0
     },
     {
-      "label": "qnum-9-44.0-577.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-4-40.0-528.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "prompt-N9",
-      "font_size": 8.0,
-      "spare_height": 13.48,
+      "label": "prompt-N4",
+      "font_size": 7.4,
+      "spare_height": 92.36,
       "scale": 1.0
     },
     {
-      "label": "options-N9",
-      "font_size": 7.8,
-      "spare_height": 157.97,
+      "label": "qnum-5-40.0-674.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N5",
+      "font_size": 7.4,
+      "spare_height": 92.36,
       "scale": 1.0
     },
     {
       "label": "year-14",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-14",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-14",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-14",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-14",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-14",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-10-44.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-6-40.0-90.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "prompt-N10",
-      "font_size": 8.0,
-      "spare_height": 13.48,
+      "label": "diagram-N6-3",
+      "font_size": 10,
+      "spare_height": 139.5,
       "scale": 1.0
     },
     {
-      "label": "options-N10",
-      "font_size": 7.8,
-      "spare_height": 155.97,
+      "label": "prompt-N6",
+      "font_size": 7.4,
+      "spare_height": 154.62,
       "scale": 1.0
     },
     {
-      "label": "qnum-11-44.0-335.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-7-40.0-272.5",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "prompt-N11",
-      "font_size": 8.0,
-      "spare_height": 23.24,
+      "label": "diagram-N7",
+      "font_size": 9.0,
+      "spare_height": 141.7,
       "scale": 1.0
     },
     {
-      "label": "options-N11",
-      "font_size": 7.8,
-      "spare_height": 155.97,
+      "label": "prompt-N7",
+      "font_size": 7.4,
+      "spare_height": 119.98,
       "scale": 1.0
     },
     {
-      "label": "qnum-12-44.0-577.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-8-40.0-455.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "prompt-N12",
-      "font_size": 8.0,
-      "spare_height": 23.24,
+      "label": "prompt-N8",
+      "font_size": 7.4,
+      "spare_height": 128.86,
       "scale": 1.0
     },
     {
-      "label": "options-N12",
-      "font_size": 7.8,
-      "spare_height": 157.97,
+      "label": "qnum-9-40.0-637.5",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N9",
+      "font_size": 7.4,
+      "spare_height": 128.86,
       "scale": 1.0
     },
     {
       "label": "year-15",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-15",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-15",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-15",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-15",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-15",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-13-44.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-10-40.0-90.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N10",
+      "font_size": 7.0,
+      "spare_height": 78.87,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N10",
+      "font_size": 7.4,
+      "spare_height": 68.03,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-11-40.0-211.66666666666669",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N11",
+      "font_size": 7.4,
+      "spare_height": 59.15,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-12-40.0-333.33333333333337",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N12",
+      "font_size": 7.4,
+      "spare_height": 68.03,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-13-40.0-455.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-N13",
-      "font_size": 8.0,
-      "spare_height": 23.24,
+      "font_size": 7.4,
+      "spare_height": 93.79,
       "scale": 1.0
     },
     {
-      "label": "options-N13",
-      "font_size": 7.8,
-      "spare_height": 155.97,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-14-44.0-335.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-14-40.0-576.6666666666667",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-N14",
-      "font_size": 8.0,
-      "spare_height": 23.24,
+      "font_size": 7.4,
+      "spare_height": 93.79,
       "scale": 1.0
     },
     {
-      "label": "options-N14",
-      "font_size": 7.8,
-      "spare_height": 155.97,
+      "label": "qnum-15-40.0-698.3333333333334",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-15-44.0-577.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "diagram-N15",
+      "font_size": 6.8,
+      "spare_height": 45.03,
       "scale": 1.0
     },
     {
       "label": "prompt-N15",
-      "font_size": 8.0,
-      "spare_height": 23.24,
-      "scale": 1.0
-    },
-    {
-      "label": "options-N15",
-      "font_size": 7.8,
-      "spare_height": 2.97,
+      "font_size": 7.4,
+      "spare_height": 68.03,
       "scale": 1.0
     },
     {
       "label": "year-16",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-16",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-16",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-16",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-16",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-16",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-16-44.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-16-40.0-90.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-N16",
-      "font_size": 8.0,
-      "spare_height": 23.24,
+      "font_size": 7.4,
+      "spare_height": 128.86,
       "scale": 1.0
     },
     {
-      "label": "options-N16",
-      "font_size": 7.8,
-      "spare_height": 155.97,
+      "label": "qnum-17-40.0-272.5",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-17-44.0-335.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "diagram-N17-0",
+      "font_size": 6.8,
+      "spare_height": 148.34,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N17-1",
+      "font_size": 6.8,
+      "spare_height": 148.34,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N17-2",
+      "font_size": 6.8,
+      "spare_height": 148.34,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N17-3",
+      "font_size": 6.8,
+      "spare_height": 148.34,
       "scale": 1.0
     },
     {
       "label": "prompt-N17",
-      "font_size": 8.0,
-      "spare_height": 13.48,
+      "font_size": 7.4,
+      "spare_height": 128.86,
       "scale": 1.0
     },
     {
-      "label": "options-N17",
-      "font_size": 7.8,
-      "spare_height": 146.45,
+      "label": "qnum-18-40.0-455.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-18-44.0-577.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "diagram-N18",
+      "font_size": 12,
+      "spare_height": 140.1,
       "scale": 1.0
     },
     {
       "label": "prompt-N18",
-      "font_size": 8.0,
-      "spare_height": 23.24,
+      "font_size": 7.4,
+      "spare_height": 128.86,
       "scale": 1.0
     },
     {
-      "label": "options-N18",
-      "font_size": 7.8,
-      "spare_height": 2.97,
+      "label": "qnum-19-40.0-637.5",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N19",
+      "font_size": 7.4,
+      "spare_height": 128.86,
       "scale": 1.0
     },
     {
       "label": "year-17",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-17",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-17",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-17",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-17",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-17",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-19-44.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-20-40.0-90.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "prompt-N19",
+      "label": "diagram-N20",
       "font_size": 8.0,
-      "spare_height": 23.24,
-      "scale": 1.0
-    },
-    {
-      "label": "options-N19",
-      "font_size": 7.8,
-      "spare_height": 155.97,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-20-44.0-335.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "spare_height": 139.3,
       "scale": 1.0
     },
     {
       "label": "prompt-N20",
-      "font_size": 8.0,
-      "spare_height": 23.24,
+      "font_size": 7.4,
+      "spare_height": 128.86,
       "scale": 1.0
     },
     {
-      "label": "options-N20",
-      "font_size": 7.8,
-      "spare_height": 2.97,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-21-44.0-577.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-21-40.0-272.5",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-N21",
-      "font_size": 8.0,
-      "spare_height": 23.24,
+      "font_size": 7.4,
+      "spare_height": 145.74,
       "scale": 1.0
     },
     {
-      "label": "options-N21",
-      "font_size": 7.8,
-      "spare_height": 157.97,
+      "label": "qnum-22-40.0-455.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N22",
+      "font_size": 7.4,
+      "spare_height": 128.86,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-23-40.0-637.5",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N23",
+      "font_size": 7.4,
+      "spare_height": 154.62,
       "scale": 1.0
     },
     {
       "label": "year-18",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-18",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-18",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-18",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-18",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-18",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-22-44.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
-      "scale": 1.0
-    },
-    {
-      "label": "prompt-N22",
-      "font_size": 8.0,
-      "spare_height": 23.24,
-      "scale": 1.0
-    },
-    {
-      "label": "options-N22",
-      "font_size": 7.8,
-      "spare_height": 2.97,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-23-44.0-335.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
-      "scale": 1.0
-    },
-    {
-      "label": "prompt-N23",
-      "font_size": 8.0,
-      "spare_height": 23.24,
-      "scale": 1.0
-    },
-    {
-      "label": "map-0-0-362.0",
-      "font_size": 6.8,
-      "spare_height": 10.0,
-      "scale": 1.0
-    },
-    {
-      "label": "map-0-1-362.0",
-      "font_size": 6.8,
-      "spare_height": 0.7,
-      "scale": 1.0
-    },
-    {
-      "label": "map-0-2-362.0",
-      "font_size": 6.8,
-      "spare_height": 0.7,
-      "scale": 1.0
-    },
-    {
-      "label": "map-0-3-362.0",
-      "font_size": 6.8,
-      "spare_height": 0.7,
-      "scale": 1.0
-    },
-    {
-      "label": "map-0-4-362.0",
-      "font_size": 6.8,
-      "spare_height": 0.7,
-      "scale": 1.0
-    },
-    {
-      "label": "map-1-0-362.0",
-      "font_size": 6.8,
-      "spare_height": 0.7,
-      "scale": 1.0
-    },
-    {
-      "label": "map-1-1-362.0",
-      "font_size": 6.8,
-      "spare_height": 0.7,
-      "scale": 1.0
-    },
-    {
-      "label": "map-1-2-362.0",
-      "font_size": 6.8,
-      "spare_height": 10.0,
-      "scale": 1.0
-    },
-    {
-      "label": "map-1-3-362.0",
-      "font_size": 6.8,
-      "spare_height": 0.7,
-      "scale": 1.0
-    },
-    {
-      "label": "map-1-4-362.0",
-      "font_size": 6.8,
-      "spare_height": 10.0,
-      "scale": 1.0
-    },
-    {
-      "label": "map-2-0-362.0",
-      "font_size": 6.8,
-      "spare_height": 0.7,
-      "scale": 1.0
-    },
-    {
-      "label": "map-2-1-362.0",
-      "font_size": 6.8,
-      "spare_height": 10.0,
-      "scale": 1.0
-    },
-    {
-      "label": "map-2-2-362.0",
-      "font_size": 6.8,
-      "spare_height": 0.7,
-      "scale": 1.0
-    },
-    {
-      "label": "map-2-3-362.0",
-      "font_size": 6.8,
-      "spare_height": 0.7,
-      "scale": 1.0
-    },
-    {
-      "label": "map-2-4-362.0",
-      "font_size": 6.8,
-      "spare_height": 10.0,
-      "scale": 1.0
-    },
-    {
-      "label": "map-3-0-362.0",
-      "font_size": 6.8,
-      "spare_height": 0.7,
-      "scale": 1.0
-    },
-    {
-      "label": "map-3-1-362.0",
-      "font_size": 6.8,
-      "spare_height": 10.0,
-      "scale": 1.0
-    },
-    {
-      "label": "map-3-2-362.0",
-      "font_size": 6.8,
-      "spare_height": 10.0,
-      "scale": 1.0
-    },
-    {
-      "label": "map-3-3-362.0",
-      "font_size": 6.8,
-      "spare_height": 10.0,
-      "scale": 1.0
-    },
-    {
-      "label": "map-3-4-362.0",
-      "font_size": 6.8,
-      "spare_height": 10.0,
-      "scale": 1.0
-    },
-    {
-      "label": "options-N23",
-      "font_size": 7.8,
-      "spare_height": 2.97,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-24-44.0-577.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-24-40.0-90.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
       "label": "prompt-N24",
-      "font_size": 8.0,
-      "spare_height": 13.48,
+      "font_size": 7.4,
+      "spare_height": 119.98,
       "scale": 1.0
     },
     {
-      "label": "options-N24",
-      "font_size": 7.8,
-      "spare_height": 157.97,
+      "label": "qnum-25-40.0-272.5",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N25",
+      "font_size": 7.4,
+      "spare_height": 154.62,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-26-40.0-455.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N26",
+      "font_size": 7.4,
+      "spare_height": 128.86,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-27-40.0-637.5",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N27-0",
+      "font_size": 6.8,
+      "spare_height": 4.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N27-1",
+      "font_size": 6.8,
+      "spare_height": 4.84,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N27",
+      "font_size": 7.4,
+      "spare_height": 145.74,
       "scale": 1.0
     },
     {
       "label": "year-19",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-19",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-19",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-19",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-19",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-19",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-25-44.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-28-40.0-90.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "prompt-N25",
-      "font_size": 8.0,
-      "spare_height": 13.48,
+      "label": "prompt-N28",
+      "font_size": 7.4,
+      "spare_height": 93.79,
       "scale": 1.0
     },
     {
-      "label": "bar-v-0-120.0",
+      "label": "qnum-29-40.0-211.66666666666669",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N29-0",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 63.51,
       "scale": 1.0
     },
     {
-      "label": "bar-l-0-120.0",
+      "label": "diagram-N29-1",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 63.51,
       "scale": 1.0
     },
     {
-      "label": "bar-v-1-120.0",
+      "label": "diagram-N29-2",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 63.51,
       "scale": 1.0
     },
     {
-      "label": "bar-l-1-120.0",
+      "label": "diagram-N29-3",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 63.51,
       "scale": 1.0
     },
     {
-      "label": "bar-v-2-120.0",
+      "label": "prompt-N29",
+      "font_size": 7.4,
+      "spare_height": 68.03,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-30-40.0-333.33333333333337",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N30",
+      "font_size": 7.4,
+      "spare_height": 68.03,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-31-40.0-455.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N31-0",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 3.84,
       "scale": 1.0
     },
     {
-      "label": "bar-l-2-120.0",
+      "label": "diagram-N31-1",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 3.84,
       "scale": 1.0
     },
     {
-      "label": "bar-v-3-120.0",
-      "font_size": 6.8,
-      "spare_height": 2.7,
+      "label": "prompt-N31",
+      "font_size": 7.4,
+      "spare_height": 68.03,
       "scale": 1.0
     },
     {
-      "label": "bar-l-3-120.0",
-      "font_size": 6.8,
-      "spare_height": 2.7,
+      "label": "qnum-32-40.0-576.6666666666667",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "options-N25",
-      "font_size": 7.8,
-      "spare_height": 2.97,
+      "label": "diagram-N32",
+      "font_size": 7.0,
+      "spare_height": 84.27,
       "scale": 1.0
     },
     {
-      "label": "qnum-26-44.0-335.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "prompt-N32",
+      "font_size": 7.4,
+      "spare_height": 68.03,
       "scale": 1.0
     },
     {
-      "label": "prompt-N26",
-      "font_size": 8.0,
-      "spare_height": 13.48,
+      "label": "qnum-33-40.0-698.3333333333334",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "spinner-0-362.0",
-      "font_size": 6.8,
-      "spare_height": 3.7,
+      "label": "diagram-N33",
+      "font_size": 7.0,
+      "spare_height": 84.27,
       "scale": 1.0
     },
     {
-      "label": "spinner-1-362.0",
-      "font_size": 6.8,
-      "spare_height": 3.7,
-      "scale": 1.0
-    },
-    {
-      "label": "spinner-2-362.0",
-      "font_size": 6.8,
-      "spare_height": 3.7,
-      "scale": 1.0
-    },
-    {
-      "label": "spinner-3-362.0",
-      "font_size": 6.8,
-      "spare_height": 3.7,
-      "scale": 1.0
-    },
-    {
-      "label": "spinner-4-362.0",
-      "font_size": 6.8,
-      "spare_height": 3.7,
-      "scale": 1.0
-    },
-    {
-      "label": "spinner-5-362.0",
-      "font_size": 6.8,
-      "spare_height": 3.7,
-      "scale": 1.0
-    },
-    {
-      "label": "spinner-6-362.0",
-      "font_size": 6.8,
-      "spare_height": 3.7,
-      "scale": 1.0
-    },
-    {
-      "label": "options-N26",
-      "font_size": 7.8,
-      "spare_height": 2.97,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-27-44.0-577.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
-      "scale": 1.0
-    },
-    {
-      "label": "prompt-N27",
-      "font_size": 8.0,
-      "spare_height": 13.48,
-      "scale": 1.0
-    },
-    {
-      "label": "options-N27",
-      "font_size": 7.8,
-      "spare_height": 157.97,
+      "label": "prompt-N33",
+      "font_size": 7.4,
+      "spare_height": 84.91,
       "scale": 1.0
     },
     {
       "label": "year-20",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-20",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-20",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-20",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-20",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-20",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-28-44.0-93.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-34-40.0-90.0",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "prompt-N28",
-      "font_size": 8.0,
-      "spare_height": 13.48,
+      "label": "diagram-N34-0",
+      "font_size": 6.8,
+      "spare_height": 1.84,
       "scale": 1.0
     },
     {
-      "label": "options-N28",
-      "font_size": 7.8,
-      "spare_height": 155.97,
+      "label": "diagram-N34-1",
+      "font_size": 6.8,
+      "spare_height": 1.84,
       "scale": 1.0
     },
     {
-      "label": "qnum-29-44.0-335.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "diagram-N34-2",
+      "font_size": 6.8,
+      "spare_height": 1.84,
       "scale": 1.0
     },
     {
-      "label": "prompt-N29",
-      "font_size": 8.0,
-      "spare_height": 13.48,
+      "label": "diagram-N34-3",
+      "font_size": 6.8,
+      "spare_height": 1.84,
       "scale": 1.0
     },
     {
-      "label": "options-N29",
-      "font_size": 7.8,
-      "spare_height": 155.97,
+      "label": "prompt-N34",
+      "font_size": 7.4,
+      "spare_height": 189.69,
       "scale": 1.0
     },
     {
-      "label": "qnum-30-44.0-577.0",
-      "font_size": 6.5,
-      "spare_height": 0.07,
+      "label": "qnum-35-40.0-333.33333333333337",
+      "font_size": 6.3,
+      "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "prompt-N30",
-      "font_size": 8.0,
-      "spare_height": 13.48,
+      "label": "diagram-N35-0",
+      "font_size": 6.8,
+      "spare_height": 1.84,
       "scale": 1.0
     },
     {
-      "label": "options-N30",
-      "font_size": 7.8,
-      "spare_height": 157.97,
+      "label": "diagram-N35-1",
+      "font_size": 6.8,
+      "spare_height": 1.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N35-2",
+      "font_size": 6.8,
+      "spare_height": 1.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N35-3",
+      "font_size": 6.8,
+      "spare_height": 1.84,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N35",
+      "font_size": 7.4,
+      "spare_height": 189.69,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-36-40.0-576.6666666666667",
+      "font_size": 6.3,
+      "spare_height": 0.14,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N36",
+      "font_size": 8,
+      "spare_height": 208.73,
+      "scale": 1.0
+    },
+    {
+      "label": "prompt-N36",
+      "font_size": 7.4,
+      "spare_height": 215.45,
       "scale": 1.0
     },
     {
       "label": "year-21",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-21",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-21",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-21",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-21",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-21",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "answer-L1",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L2",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L3",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L4",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L5",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L6",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L7",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L8",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L9",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L10",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 22.36,
       "scale": 1.0
     },
     {
       "label": "answer-L11",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L12",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L13",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L14",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L15",
       "font_size": 7.4,
-      "spare_height": 23.84,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L16",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L17",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 22.36,
       "scale": 1.0
     },
     {
       "label": "answer-L18",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L19",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L20",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L21",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 22.36,
       "scale": 1.0
     },
     {
       "label": "answer-L22",
       "font_size": 7.4,
-      "spare_height": 23.84,
+      "spare_height": 22.36,
       "scale": 1.0
     },
     {
       "label": "answer-L23",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L24",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L25",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 22.36,
       "scale": 1.0
     },
     {
       "label": "year-22",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-22",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-22",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-22",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-22",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-22",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "answer-L26",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L27",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L28",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L29",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L30",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L31",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L32",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L33",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L34",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L35",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L36",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L37",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L38",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L39",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L40",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L41",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L42",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L43",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L44",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L45",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L46",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L47",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L48",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L49",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "answer-L50",
       "font_size": 7.4,
-      "spare_height": 32.87,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
       "label": "year-23",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-23",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-23",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-23",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-23",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-23",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "answer-R1",
-      "font_size": 7.6,
-      "spare_height": 58.06,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R2",
-      "font_size": 7.6,
-      "spare_height": 58.06,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R3",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 39.16,
       "scale": 1.0
     },
     {
       "label": "answer-R4",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R5",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R6",
-      "font_size": 7.6,
-      "spare_height": 58.06,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R7",
-      "font_size": 7.6,
-      "spare_height": 58.06,
+      "font_size": 7.4,
+      "spare_height": 39.16,
       "scale": 1.0
     },
     {
       "label": "answer-R8",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R9",
-      "font_size": 7.6,
-      "spare_height": 58.06,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R10",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R11",
-      "font_size": 7.6,
-      "spare_height": 58.06,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R12",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 39.16,
       "scale": 1.0
     },
     {
       "label": "answer-R13",
-      "font_size": 7.6,
-      "spare_height": 58.06,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R14",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 39.16,
       "scale": 1.0
     },
     {
       "label": "answer-R15",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 48.04,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R16",
+      "font_size": 7.4,
+      "spare_height": 48.04,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R17",
+      "font_size": 7.4,
+      "spare_height": 39.16,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R18",
+      "font_size": 7.4,
+      "spare_height": 48.04,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R19",
+      "font_size": 7.4,
+      "spare_height": 48.04,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R20",
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "year-24",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-24",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-24",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-24",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-24",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-24",
       "font_size": 6.8,
-      "spare_height": 2.7,
-      "scale": 1.0
-    },
-    {
-      "label": "answer-R16",
-      "font_size": 7.6,
-      "spare_height": 58.06,
-      "scale": 1.0
-    },
-    {
-      "label": "answer-R17",
-      "font_size": 7.6,
-      "spare_height": 58.06,
-      "scale": 1.0
-    },
-    {
-      "label": "answer-R18",
-      "font_size": 7.6,
-      "spare_height": 58.06,
-      "scale": 1.0
-    },
-    {
-      "label": "answer-R19",
-      "font_size": 7.6,
-      "spare_height": 67.33,
-      "scale": 1.0
-    },
-    {
-      "label": "answer-R20",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "answer-R21",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R22",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R23",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R24",
-      "font_size": 7.6,
-      "spare_height": 58.06,
+      "font_size": 7.4,
+      "spare_height": 39.16,
       "scale": 1.0
     },
     {
       "label": "answer-R25",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R26",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R27",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R28",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
       "label": "answer-R29",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 39.16,
       "scale": 1.0
     },
     {
       "label": "answer-R30",
-      "font_size": 7.6,
-      "spare_height": 48.79,
+      "font_size": 7.4,
+      "spare_height": 48.04,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R31",
+      "font_size": 7.4,
+      "spare_height": 48.04,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R32",
+      "font_size": 7.4,
+      "spare_height": 39.16,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R33",
+      "font_size": 7.4,
+      "spare_height": 48.04,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R34",
+      "font_size": 7.4,
+      "spare_height": 48.04,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R35",
+      "font_size": 7.4,
+      "spare_height": 48.04,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R36",
+      "font_size": 7.4,
+      "spare_height": 39.16,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R37",
+      "font_size": 7.4,
+      "spare_height": 48.04,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R38",
+      "font_size": 7.4,
+      "spare_height": 48.04,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-R39",
+      "font_size": 7.4,
+      "spare_height": 39.16,
       "scale": 1.0
     },
     {
       "label": "year-25",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-25",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-25",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-25",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-25",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-25",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "answer-N1",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N2",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N3",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N4",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N5",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N6",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N7",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N8",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N9",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 47.25,
       "scale": 1.0
     },
     {
       "label": "answer-N10",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N11",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N12",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N13",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N14",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "answer-N15",
-      "font_size": 7.6,
-      "spare_height": 67.33,
+      "font_size": 7.4,
+      "spare_height": 56.13,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-N16",
+      "font_size": 7.4,
+      "spare_height": 56.13,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-N17",
+      "font_size": 7.4,
+      "spare_height": 47.25,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-N18",
+      "font_size": 7.4,
+      "spare_height": 56.13,
       "scale": 1.0
     },
     {
       "label": "year-26",
       "font_size": 7.1,
-      "spare_height": 1.34,
+      "spare_height": 1.48,
       "scale": 1.0
     },
     {
       "label": "section-26",
       "font_size": 8.6,
-      "spare_height": 3.51,
+      "spare_height": 3.68,
       "scale": 1.0
     },
     {
       "label": "paper-26",
       "font_size": 7.5,
-      "spare_height": 4.85,
+      "spare_height": 5.0,
       "scale": 1.0
     },
     {
       "label": "title-26",
-      "font_size": 10.5,
-      "spare_height": 4.19,
+      "font_size": 10.2,
+      "spare_height": 4.76,
       "scale": 1.0
     },
     {
       "label": "footer-26",
       "font_size": 6.8,
-      "spare_height": 2.7,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "page-26",
       "font_size": 6.8,
-      "spare_height": 2.7,
-      "scale": 1.0
-    },
-    {
-      "label": "answer-extra-Numeracy \u00b7 N16\u2013N30",
-      "font_size": 6.5,
-      "spare_height": 23.14,
-      "scale": 1.0
-    },
-    {
-      "label": "answer-N16",
-      "font_size": 7.6,
-      "spare_height": 58.58,
-      "scale": 1.0
-    },
-    {
-      "label": "answer-N17",
-      "font_size": 7.6,
-      "spare_height": 58.58,
-      "scale": 1.0
-    },
-    {
-      "label": "answer-N18",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "answer-N19",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "font_size": 7.4,
+      "spare_height": 49.24,
       "scale": 1.0
     },
     {
       "label": "answer-N20",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "font_size": 7.4,
+      "spare_height": 49.24,
       "scale": 1.0
     },
     {
       "label": "answer-N21",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "font_size": 7.4,
+      "spare_height": 49.24,
       "scale": 1.0
     },
     {
       "label": "answer-N22",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "font_size": 7.4,
+      "spare_height": 49.24,
       "scale": 1.0
     },
     {
       "label": "answer-N23",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "font_size": 7.4,
+      "spare_height": 49.24,
       "scale": 1.0
     },
     {
       "label": "answer-N24",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "font_size": 7.4,
+      "spare_height": 40.36,
       "scale": 1.0
     },
     {
       "label": "answer-N25",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "font_size": 7.4,
+      "spare_height": 49.24,
       "scale": 1.0
     },
     {
       "label": "answer-N26",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "font_size": 7.4,
+      "spare_height": 49.24,
       "scale": 1.0
     },
     {
       "label": "answer-N27",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "font_size": 7.4,
+      "spare_height": 49.24,
       "scale": 1.0
     },
     {
       "label": "answer-N28",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "font_size": 7.4,
+      "spare_height": 49.24,
       "scale": 1.0
     },
     {
       "label": "answer-N29",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "font_size": 7.4,
+      "spare_height": 49.24,
       "scale": 1.0
     },
     {
       "label": "answer-N30",
-      "font_size": 7.6,
-      "spare_height": 58.58,
+      "font_size": 7.4,
+      "spare_height": 49.24,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-N31",
+      "font_size": 7.4,
+      "spare_height": 49.24,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-N32",
+      "font_size": 7.4,
+      "spare_height": 49.24,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-N33",
+      "font_size": 7.4,
+      "spare_height": 49.24,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-N34",
+      "font_size": 7.4,
+      "spare_height": 49.24,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-N35",
+      "font_size": 7.4,
+      "spare_height": 49.24,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-N36",
+      "font_size": 7.4,
+      "spare_height": 49.24,
+      "scale": 1.0
+    },
+    {
+      "label": "answer-extra-Numeracy \u00b7 N19\u2013N36",
+      "font_size": 7.4,
+      "spare_height": 20.24,
       "scale": 1.0
     }
   ],
