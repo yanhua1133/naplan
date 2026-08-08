@@ -29,8 +29,25 @@ Read `references/quality-gates.md` before creating or approving any paper. Apply
 - Match the source question count exactly for every section and the complete paper. For the current Year 3 reference, require 50 Conventions of Language questions, 30 Reading questions, one Writing task, and 30 Numeracy questions.
 - Keep each new question's stem, options, passage dependency, reasoning steps, and visual footprint close to its corresponding source item. Treat a word-count difference greater than roughly 20% as a review trigger unless the source item is primarily visual.
 - Match the source test's section sequence, page density, column structure, question grouping, response-space proportions, and typographic hierarchy.
-- Require exactly 20 pages for the current Year 3 paper, including the answer-and-explanation appendix. Any other page count is a release-blocking error.
+- Require exactly 20 student-facing pages for the current Year 3 paper. The answer-and-explanation appendix is additional and must begin after page 20; appendix pages must never be counted toward the 20-page student-paper requirement.
 - Use font sizes and spacing comparable to the scans. Do not create oversized sparse pages or compress content into unreasonably small text. If content does not fit at reference-like density, revise the content or layout rather than silently changing the page count.
+- For the current Year 3 format, require at least 7.4pt for student prompts, options, passages, and writing guidance; at least 6.8pt for essential diagram labels; and at least 7.4pt for appendix answers and explanations. Headers, footers, page numbers, and circular question numbers may be smaller only when they remain clearly legible.
+- Record the requested font size for every rendered text box and validate minimum actual scale separately. A scale value of 1.0 does not prove readability when the template's requested font size is already too small.
+- If the answer appendix cannot fit at the minimum readable size, add appendix pages. Never shrink answers or explanations merely to preserve an arbitrary appendix page count.
+
+## Batch Generation and Convergence Rules
+
+- Generate and validate the complete requested batch before release. Passing one representative paper does not prove that every content or drawing branch works.
+- Enforce normalized cross-paper uniqueness for question prompts, reading passages, writing prompts, and final PDF hashes. Reject accidental repeats even when names or numbers differ superficially.
+- Reject duplicated answer options, tied probability outcomes, and distractors that create more than one defensible answer.
+- Exercise every passage, diagram, chart, and writing-illustration variant. Missing template branch coverage is a release-blocking defect.
+- Escape dynamic plain text, options, labels, answers, and explanations before inserting them into HTML or XML. Keep intentional markup separate from plain content.
+- For spelling items, require exactly one intentional underlined error, perform case-insensitive replacement, and verify that the keyed correction restores the sentence.
+- Use separate normalization rules for editable markup and extracted PDF text. Never apply a broad HTML-tag regex to mathematical comparison text because it can delete content between `<` and `>` symbols.
+- Recalculate every generated mathematics answer independently from the final parameters and verify the final option order, diagram data, units, and explanation.
+- Treat convergence as a loop: generate all, validate all, render all, inspect all, fix, then rerun every affected gate. A shared-generator fix requires a full-batch rerun.
+- Enforce fidelity per paper, not only as a batch average. Every Year 3 PDF must individually contain the exact section counts, reference-like item lengths and density, exactly 20 student-facing pages, and a separately counted appendix after page 20.
+- Reject unexplained font-size changes between otherwise equivalent questions, options, labels, or answer entries. Typography must follow a deliberate section-wide hierarchy rather than item-specific fitting.
 
 ## Workflow
 
