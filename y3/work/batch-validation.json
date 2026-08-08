@@ -17,7 +17,7 @@
     {
       "paper": 1,
       "pdf": "y3/output/year3-naplan-style-practice-paper-01.pdf",
-      "bytes": 784519,
+      "bytes": 784490,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -26,12 +26,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "424ec8a3fa9e8d3abc67f4304b7f7fcfc1e026e97659033d66bc8a3bd799153f"
+      "pdf_sha256": "fd7107b95ff4fc297f151573bd8650f8d3ee85cf62bec04658a89f7869105901"
     },
     {
       "paper": 2,
       "pdf": "y3/output/year3-naplan-style-practice-paper-02.pdf",
-      "bytes": 787535,
+      "bytes": 787506,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -40,12 +40,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "933c74041ffd78c83efd80d4c37a1fcfe5d9565361e5bff0d9293efdb7ee3c54"
+      "pdf_sha256": "4d4e804110edac64beefce50d938fea797a3594f01868338332ea174de767a24"
     },
     {
       "paper": 3,
       "pdf": "y3/output/year3-naplan-style-practice-paper-03.pdf",
-      "bytes": 788487,
+      "bytes": 788458,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -54,12 +54,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "548ad5b9df8533ff3e18826493d1266396b8a80d5b6d276d5ed5e766197bd855"
+      "pdf_sha256": "7db04cd2924e7e994baa18aa966edbe289582ae8788c5a4eef13a28a5dd67339"
     },
     {
       "paper": 4,
       "pdf": "y3/output/year3-naplan-style-practice-paper-04.pdf",
-      "bytes": 787742,
+      "bytes": 787714,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -68,12 +68,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "fecb620d8e572ee8d3ec855f6d446c81492e434b5f69276a5fd27f3dc3fbcb5a"
+      "pdf_sha256": "6d528019dd278860f1a0d81bab0a32d710459285369846db161a96ee86e500f3"
     },
     {
       "paper": 5,
       "pdf": "y3/output/year3-naplan-style-practice-paper-05.pdf",
-      "bytes": 786589,
+      "bytes": 786559,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -82,12 +82,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "ec73806c2aef5c63a6b0427b72f676934c72b5c315dcf51da37f6af7c04d8b8f"
+      "pdf_sha256": "6973148f0bed177b394b3589140578edc86c80fe5cacdbfd4b60604b471456c7"
     },
     {
       "paper": 6,
       "pdf": "y3/output/year3-naplan-style-practice-paper-06.pdf",
-      "bytes": 784161,
+      "bytes": 784133,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -96,12 +96,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "cf6b6c6d1fcda681c1c84c77fc6a245b6c3cd18eafb6a9c932becb1e3fe42c53"
+      "pdf_sha256": "c61899aee4351764fb6d93f0536ae69a6a13e5d7a2fb564f383825c55f1a7825"
     },
     {
       "paper": 7,
       "pdf": "y3/output/year3-naplan-style-practice-paper-07.pdf",
-      "bytes": 787001,
+      "bytes": 786972,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -110,12 +110,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "093b3f91980e0b6d6e2df6ca7d272adc07e422ab19254a7f9a75f1ead82af919"
+      "pdf_sha256": "51bace439b10b6822d3fc0524ab44eb014c1424167d5a92e0acb915121aabaff"
     },
     {
       "paper": 8,
       "pdf": "y3/output/year3-naplan-style-practice-paper-08.pdf",
-      "bytes": 785875,
+      "bytes": 785848,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -124,12 +124,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "c023d066ce115dd580af69b9ec49b00347f479e2660d7dd278daecfc164f1fc9"
+      "pdf_sha256": "999dbbe86cf6e6ec7220622283df8d83b8361b7173d24ddca9d0e71a0b1d9a49"
     },
     {
       "paper": 9,
       "pdf": "y3/output/year3-naplan-style-practice-paper-09.pdf",
-      "bytes": 787793,
+      "bytes": 787766,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -138,12 +138,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "6460faf36e44540b30f44b1bf5cfe267177323c7a5ab45860c15aeb18b559324"
+      "pdf_sha256": "d0678b4dfff6167068eb7036e0caf526eeb8bc629ddc5801a0161f62210b521e"
     },
     {
       "paper": 10,
       "pdf": "y3/output/year3-naplan-style-practice-paper-10.pdf",
-      "bytes": 786685,
+      "bytes": 786658,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -152,12 +152,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "2df94f8864423f38429fad33007086debdc6fc95e3bc965b606695247503a11a"
+      "pdf_sha256": "f6a9eb9712dead3998fbead2fd92d58a59c9687c673433b146e1cca708fd27ff"
     },
     {
       "paper": 11,
       "pdf": "y3/output/year3-naplan-style-practice-paper-11.pdf",
-      "bytes": 789152,
+      "bytes": 789123,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -166,12 +166,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "a8c704217ba10b40b9b50fe7ee8cb6bcbddb259e805664d463ba10aa1fd8f703"
+      "pdf_sha256": "13a08a51c7cb51428151383266e7d14ea108ca45701ee49a90682919eefb60fd"
     },
     {
       "paper": 12,
       "pdf": "y3/output/year3-naplan-style-practice-paper-12.pdf",
-      "bytes": 784042,
+      "bytes": 784017,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -180,12 +180,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "0f8d91ca1c051926a1b3ff3ccf0cf1f088462f5b40f9e9991d2319f25fdb1b9b"
+      "pdf_sha256": "efe869fccbb2a290037a31d8b734d4eeb6ebf31a6767bdf3cca011a6655fbd5a"
     },
     {
       "paper": 13,
       "pdf": "y3/output/year3-naplan-style-practice-paper-13.pdf",
-      "bytes": 786427,
+      "bytes": 786399,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -194,12 +194,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "c8925e25f90af2e892c677cd1ccde9c07752d9417294f42e5a44e838b03bda53"
+      "pdf_sha256": "39e32a6781da7d4fa14c7c6e068d2d9e7c8e87b40246d6dbbdb0012e87d8a1ff"
     },
     {
       "paper": 14,
       "pdf": "y3/output/year3-naplan-style-practice-paper-14.pdf",
-      "bytes": 788406,
+      "bytes": 788379,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -208,12 +208,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "15075c4e95949a2c5fd249f5ff6ac9967cd9cb820640da708af540a6c40dfbd0"
+      "pdf_sha256": "2924a2d96fd1496b624321567c121e44d824810a59da8418136f746ec724bfee"
     },
     {
       "paper": 15,
       "pdf": "y3/output/year3-naplan-style-practice-paper-15.pdf",
-      "bytes": 786590,
+      "bytes": 786562,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -222,12 +222,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "b5cde7521566c33819dd6957125cc9251f59fa8c353f93ac49a4688029d38dd7"
+      "pdf_sha256": "07f23936c4a722b3a5e9397954af0bf7a380137fbe927575992e1d2e1f248da7"
     },
     {
       "paper": 16,
       "pdf": "y3/output/year3-naplan-style-practice-paper-16.pdf",
-      "bytes": 785521,
+      "bytes": 785492,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -236,12 +236,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "79d47dd958d910f52fd5139542e468ad27c21039137abd86863a6d4cfbe77015"
+      "pdf_sha256": "2ec0e84c796d8b98e5f7ff9ec8584a006304c209d75777c9eb821962f8136946"
     },
     {
       "paper": 17,
       "pdf": "y3/output/year3-naplan-style-practice-paper-17.pdf",
-      "bytes": 788168,
+      "bytes": 788140,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -250,12 +250,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "045cbe5e7269347b9b06c86621a404cc719c63f2d8b4e10570848f8f44079a9d"
+      "pdf_sha256": "678a2fc6fedb86bca59aef7eb8f2bdd7fc523e36fb15eae04ea8cfa38760fbef"
     },
     {
       "paper": 18,
       "pdf": "y3/output/year3-naplan-style-practice-paper-18.pdf",
-      "bytes": 786068,
+      "bytes": 786039,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -264,12 +264,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "50a863bdaba115c4993edd9bce8611fd32940dbc7d9597c34aa2acb570fcc167"
+      "pdf_sha256": "ad80ee064af085d4b661030c6ed66cc38f2e698e5cea3f52bfab28c2d8f475d7"
     },
     {
       "paper": 19,
       "pdf": "y3/output/year3-naplan-style-practice-paper-19.pdf",
-      "bytes": 788467,
+      "bytes": 788439,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -278,12 +278,12 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "405df40d08ef7e283d5d07b7253d21a0f94dc473e2ab7d3ed56d14eb5cca2b4e"
+      "pdf_sha256": "ef0222289054cbd649da50fde3166ae4b5a9f6bf4254732b8589f212bdea1657"
     },
     {
       "paper": 20,
       "pdf": "y3/output/year3-naplan-style-practice-paper-20.pdf",
-      "bytes": 784072,
+      "bytes": 784044,
       "student_pages": 20,
       "appendix_pages": 6,
       "pages": 26,
@@ -292,7 +292,7 @@
       "minimum_diagram_font": 6.8,
       "minimum_appendix_font": 7.4,
       "minimum_scale": 1.0,
-      "pdf_sha256": "d9234b1008c39eb5bb218ddd019c37c16ae7bf4799ec7f91b1f91009cb65df2a"
+      "pdf_sha256": "409b8090442f4b5c3be32ef0062ef3bbbb504ea3a95b6cd98d44a85b6cbb449c"
     }
   ]
 }
