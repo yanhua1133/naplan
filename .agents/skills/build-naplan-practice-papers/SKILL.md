@@ -26,7 +26,9 @@ Read `references/quality-gates.md` before creating or approving any paper. Apply
 ## Mandatory Fidelity Constraints
 
 - Match the reference paper's difficulty distribution. Do not make the paper materially easier or harder overall, and do not replace advanced source items with routine one-step items.
-- Match the source question count exactly for every section and the complete paper. For the current Year 3 reference, require 50 Conventions of Language questions, 30 Reading questions, one Writing task, and 30 Numeracy questions.
+- Match the source question count exactly for every section and the complete paper. For the current Year 3 reference, require 50 Conventions of Language questions, 39 Reading questions across seven texts, one Writing task, and 36 Numeracy questions.
+- Treat `y3/source-cache/year3-reference-blueprint.md` as the position-by-position contract. Before generating content, verify every item ID against its source page, tested skill, response format, option count, visual burden, cross-text dependency and approximate length. Section totals alone are not sufficient.
+- Do not infer source structure from a partial OCR transcript. Reconcile the canonical cache against all 20 source scans, including pages OCR may have misclassified as answer pages. A disagreement between cache and scan is a release blocker and must be corrected before generation.
 - Keep each new question's stem, options, passage dependency, reasoning steps, and visual footprint close to its corresponding source item. Treat a word-count difference greater than roughly 20% as a review trigger unless the source item is primarily visual.
 - Match the source test's section sequence, page density, column structure, question grouping, response-space proportions, and typographic hierarchy.
 - Require exactly 20 student-facing pages for the current Year 3 paper. The answer-and-explanation appendix is additional and must begin after page 20; appendix pages must never be counted toward the 20-page student-paper requirement.
