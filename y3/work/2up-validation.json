@@ -7,10 +7,23 @@
   "pages_per_file": 13,
   "font_strategy": {
     "prompt_multiplier": 1.3,
+    "spelling_prompt_multiplier": 1.12,
     "option_multiplier": 1.28,
     "passage_answer_multiplier": 1.25,
     "compact_option_line_height": 1.08,
+    "spelling_line_height": 0.98,
     "whole_page_output_scale": 0.7067
+  },
+  "high_risk_visual_inspection": {
+    "status": "passed",
+    "region": "sheet 2 right half (source spelling page 4)",
+    "papers": 20,
+    "render_scale": 2,
+    "checks": [
+      "all 25 prompts remain above their answer boxes",
+      "no prompt enters an adjacent item",
+      "no clipped prompt or answer box"
+    ]
   },
   "papers": [
     {
@@ -18,9 +31,10 @@
       "output": "y3/output/2up/p01.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.9403,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "24782d6615eb0bba459e42c98da8a6ed711b3431e2afed16ed64cfc7b1ab8866",
+      "sha256": "9e2c4d904247bec739209e6e46cb7596400cedd03096064a36f63ce0dd440ac9",
       "checks": [
         {
           "sheet": 1,
@@ -120,9 +134,10 @@
       "output": "y3/output/2up/p02.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.8951,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "fbe7bc04b55952beec477d65ee747e19da3c2649951f1ae8a97d6212fbef6896",
+      "sha256": "a770cbef70618e033c69492aa65cd8aa9cc98938cd7b421296d00f24bbb621af",
       "checks": [
         {
           "sheet": 1,
@@ -222,9 +237,10 @@
       "output": "y3/output/2up/p03.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.9455,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "91fe3bfb2651f148769ec791651030dfa5426125b05efaa9b50eb14b0f21474c",
+      "sha256": "6404247915e9fa0ce7115a5fb01d4a0e6ca6fe75ad246448c573a1dee9bca25d",
       "checks": [
         {
           "sheet": 1,
@@ -324,9 +340,10 @@
       "output": "y3/output/2up/p04.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.8951,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "d757b5244a4c202a9ddba9f4f28bc48c02d815e6ec4e37a7c98b03fa13bf749f",
+      "sha256": "6aba517e1e64980a20df3212e10f422ad8edac4f4b5ca374a3d86827bbd15576",
       "checks": [
         {
           "sheet": 1,
@@ -426,9 +443,10 @@
       "output": "y3/output/2up/p05.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.8951,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "c370cc7c653a44b738acbc99086671bfa8d0216fc8048e27c14a808d13af0cc3",
+      "sha256": "71f0f388bb5758847d464870258b4cd33a2c2dc8bfe9a7ecbdb0e36c52cb091e",
       "checks": [
         {
           "sheet": 1,
@@ -528,9 +546,10 @@
       "output": "y3/output/2up/p06.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.8951,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "8fe3102ae56c993fabcb94db44b2edaf276bbd705e7d94897514cf374b314fcd",
+      "sha256": "989ca6d364e6cecb43071625f19da449aee014719c8c252b47f6b08fb6c199ef",
       "checks": [
         {
           "sheet": 1,
@@ -630,9 +649,10 @@
       "output": "y3/output/2up/p07.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.9403,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "be81a65d71ee8943b2ea3b999042e46ee3d0599c9d53e251a7934684c0da7b65",
+      "sha256": "8da953457b0289e323d69cb9fc1dbdf0fb6f72456378d59c0fcbd32521b53a0e",
       "checks": [
         {
           "sheet": 1,
@@ -732,9 +752,10 @@
       "output": "y3/output/2up/p08.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.8951,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "a1bbeaa4e42a2ad238c011754335441ffcafa003a3272aff5fc02c59a1042bb7",
+      "sha256": "60a326fd66af557a17f43932bfe210272447435dd8146e7cdd82067735c12a08",
       "checks": [
         {
           "sheet": 1,
@@ -834,9 +855,10 @@
       "output": "y3/output/2up/p09.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.9473,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "31c29a6d4c91f60eb22dc8dc3aaf5f61f82d6bff204c887031090903568dcdfd",
+      "sha256": "c9781cbdfbed021eedd81a57bed58feb4287ec431e21aa620892e8e29deac94b",
       "checks": [
         {
           "sheet": 1,
@@ -936,9 +958,10 @@
       "output": "y3/output/2up/p10.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.8951,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "e45aefa197ff891b0818a97f86569e272bf1bda501f06243c62846dba1e045f2",
+      "sha256": "2dae690bbaff1985a27955c01774f19857c0840fb9a4442f0e9f96fc0d0ecbcb",
       "checks": [
         {
           "sheet": 1,
@@ -1038,9 +1061,10 @@
       "output": "y3/output/2up/p11.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.9473,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "979fddc51924822bc14ac387263533950680808626c4fd2a0b253232057eaead",
+      "sha256": "402da105562d1be5219d39f4d641650624a894a02b72f5bde88ba8c690f1294f",
       "checks": [
         {
           "sheet": 1,
@@ -1140,9 +1164,10 @@
       "output": "y3/output/2up/p12.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.8951,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "16c6ad28fac0459a3b3935c5c06ec64bdbaec2ab0c0704e02bff585703d6bed0",
+      "sha256": "ecd779b3785b8c6b997dc1b69b76c32d041daaedf45288bab9f3e84c9331dec3",
       "checks": [
         {
           "sheet": 1,
@@ -1242,9 +1267,10 @@
       "output": "y3/output/2up/p13.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.9473,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "09b22ca6ea30a85e79aef8760b23e6d7c7a6ba74662fe28713a69799b652b057",
+      "sha256": "27dcf091676ed975a889082d0fd935ba5841e5e449f5aaa1fd55da7e211e5688",
       "checks": [
         {
           "sheet": 1,
@@ -1344,9 +1370,10 @@
       "output": "y3/output/2up/p14.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.8951,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "491f0a84857c9d06ace04b95b2a56a076fda332f0c01e7b76248b7c60c41ec6e",
+      "sha256": "eda366883d57ae3240c90621b451fbfb66182694cbf17b24a947e145a2289bc2",
       "checks": [
         {
           "sheet": 1,
@@ -1446,9 +1473,10 @@
       "output": "y3/output/2up/p15.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.9473,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "ed2db8b01cdd0aa11818c1dab5eec9213ae714a8b8569906346f3ff60b1ee01d",
+      "sha256": "b55e4e4aeed64352904a846c315cdfd8832f66fc5d6c301301f972dbed32bf68",
       "checks": [
         {
           "sheet": 1,
@@ -1548,9 +1576,10 @@
       "output": "y3/output/2up/p16.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.8951,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "32b28b1047700fb7bc24f35b18766522010e063c486fbd95979dc2995a7e0199",
+      "sha256": "f6e0700b501181b98edb2cdefed612302c2c1b5f6e61b1d2e2aa9d95ddbdb111",
       "checks": [
         {
           "sheet": 1,
@@ -1650,9 +1679,10 @@
       "output": "y3/output/2up/p17.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.9473,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "f64053c645c817c5d1cd636011c45e44c5017bb91a24371ecc4ad2ab1d6d38ab",
+      "sha256": "d02f11e4aacb40dc1e644880f6623ad2a5f17456818b4447b0a48e169dfa4e11",
       "checks": [
         {
           "sheet": 1,
@@ -1752,9 +1782,10 @@
       "output": "y3/output/2up/p18.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.8951,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "c2531db029bc4acdfcfe452ef42c1a381bf76f4c0502e8c491feba7540725829",
+      "sha256": "482c2e581d783cdcd665b54c1d624c7fecb30c41346e9315cfb942e626c6bfe1",
       "checks": [
         {
           "sheet": 1,
@@ -1854,9 +1885,10 @@
       "output": "y3/output/2up/p19.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.9473,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "335178393e43fe25513315fb6dde7a01a163908d67526d1b139a3b6253bfdf13",
+      "sha256": "ec60b916ccce0bf84079e8468815687e7c812de8592f81d219b5068e94da3475",
       "checks": [
         {
           "sheet": 1,
@@ -1956,9 +1988,10 @@
       "output": "y3/output/2up/p20.pdf",
       "pages": 13,
       "minimum_layout_scale": 0.8951,
+      "minimum_spelling_layout_scale": 1.0,
       "minimum_effective_text_pt": 5.74,
       "median_effective_text_pt": 6.71,
-      "sha256": "a8a44f02e515e29fbdd2d07a504fb261484c30688273c7aa0afb7780822037a1",
+      "sha256": "8577221362bfaa7efe26089d37fcb41fe5dfcf1cf99580234f9cd5df9a1f76ac",
       "checks": [
         {
           "sheet": 1,
@@ -2053,16 +2086,5 @@
         }
       ]
     }
-  ],
-  "visual_inspection": {
-    "status": "passed",
-    "pages": 260,
-    "checks": [
-      "no clipping",
-      "no overlap",
-      "no blank half-page",
-      "left-to-right order preserved",
-      "consistent enlarged typography"
-    ]
-  }
+  ]
 }
