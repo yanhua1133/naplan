@@ -1,8 +1,9 @@
 {
-  "paper": "Year 3 NAPLAN-Style Practice Paper 01",
-  "reference_pages": 20,
-  "student_pages": 17,
-  "appendix_pages": 3,
+  "paper": "Year 3 NAPLAN-Style Practice Paper 13",
+  "reference_student_pages": 20,
+  "student_pages": 20,
+  "appendix_pages": 6,
+  "total_pages": 26,
   "scored_question_counts": {
     "language": 50,
     "reading": 30,

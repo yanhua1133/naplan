@@ -64,6 +64,9 @@ Use this checklist for every paper. Record `pass`, `fail`, or `blocked` with evi
 - [ ] Page size, orientation, margins, and printable area are consistent.
 - [ ] No text, rule, image, or answer area is clipped or outside the printable region.
 - [ ] No content overlaps, overflows, disappears, or becomes too small to read.
+- [ ] Student prompts, options, passages, and writing guidance are at least 7.4pt; essential diagram labels are at least 6.8pt; appendix entries are at least 7.4pt.
+- [ ] Requested font sizes and actual layout scales are both audited; a nominal scale of 1.0 is not accepted as proof that a tiny requested font is readable.
+- [ ] Equivalent items use consistent typography; no isolated item or label is inexplicably smaller than its peers.
 - [ ] No unintended blank page or duplicate page exists.
 - [ ] Instructions, passages, questions, options, and answer spaces have a clear hierarchy.
 - [ ] Page breaks do not separate a question from essential options, data, or diagrams without a clear continuation treatment.
@@ -74,6 +77,7 @@ Use this checklist for every paper. Record `pass`, `fail`, or `blocked` with evi
 - [ ] Greyscale printing preserves distinctions needed to answer the questions.
 - [ ] Student response areas are appropriately sized and do not contain answer content.
 - [ ] The answer appendix begins only after the complete student paper.
+- [ ] The current Year 3 student paper occupies exactly pages 1–20; appendix pages begin at page 21 and are counted separately.
 
 ## 7. PDF Technical Gate
 
@@ -94,6 +98,20 @@ Use this checklist for every paper. Record `pass`, `fail`, or `blocked` with evi
 - [ ] All earlier corrections appear in the final rendered PDF.
 - [ ] No critical or major issue remains open.
 - [ ] Intentional deviations from the scan layout are documented and do not change meaning or difficulty.
+
+## 9. Batch Convergence Gate
+
+- [ ] Every requested paper was generated before release validation began.
+- [ ] Normalized question prompts, reading passages, and writing prompts are unique across the batch.
+- [ ] Final PDF hashes are unique and rendered-page hashes show no accidental duplicate pages.
+- [ ] No item contains duplicate options, tied single-answer outcomes, or more than one defensible answer.
+- [ ] Every content, visual, and illustration template branch appears in at least one validated paper.
+- [ ] Dynamic text was escaped without removing mathematical comparison symbols.
+- [ ] Every spelling item contains exactly one intentional underlined error and one verified correction.
+- [ ] Every generated mathematics answer was independently recalculated from final parameters.
+- [ ] Every paper individually passes the exact 20-page student-paper count, separately counted appendix, question-count, length-band, density, semantic, and visual gates.
+- [ ] Any shared-generator correction was followed by regeneration and revalidation of the complete batch.
+- [ ] The batch report records minimum student-body, diagram-label, and appendix font sizes for every paper.
 
 ## Severity and Release Decision
 
