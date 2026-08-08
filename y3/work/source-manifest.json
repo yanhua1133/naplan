@@ -1,0 +1,40 @@
+{
+  "source_set": "Year 3 photographed reference pages",
+  "source_directory": "y3/orig",
+  "scope": "Reference structure and visual language for Practice Paper 01",
+  "ordering_basis": [
+    "visible printed page numbers",
+    "section headings",
+    "question-number continuity",
+    "passage and section continuity"
+  ],
+  "pages": [
+    {"logical_page": 21, "source_file": "IMG_9320.jpg", "orientation": "portrait", "section": "Conventions of Language", "content_summary": "Questions 1-9; grammar and word choice", "ordering_evidence": "Printed page 21 and opening question sequence", "issues": ["photographed page has mild perspective distortion"]},
+    {"logical_page": 22, "source_file": "IMG_9321.jpg", "orientation": "portrait", "section": "Conventions of Language", "content_summary": "Questions 10-18; grammar and punctuation", "ordering_evidence": "Printed page 22 and question continuity", "issues": ["photographed page has mild page curvature"]},
+    {"logical_page": 23, "source_file": "IMG_9322.jpg", "orientation": "portrait", "section": "Conventions of Language", "content_summary": "Questions 19-25; punctuation and sentence structure", "ordering_evidence": "Printed page 23 and question continuity", "issues": ["photographed page has mild perspective distortion"]},
+    {"logical_page": 24, "source_file": "IMG_9323.jpg", "orientation": "portrait", "section": "Conventions of Language", "content_summary": "Questions 26-50; spelling response items", "ordering_evidence": "Printed page 24 and spelling transition", "issues": ["finger visible at outer margin; content remains legible"]},
+    {"logical_page": 25, "source_file": "IMG_9324.jpg", "orientation": "portrait", "section": "Reading", "content_summary": "Forces and friction passage; questions 1-6", "ordering_evidence": "Printed page 25 and Reading section start", "issues": ["page curvature near binding"]},
+    {"logical_page": 26, "source_file": "IMG_9325.jpg", "orientation": "portrait", "section": "Reading", "content_summary": "Friction experiment passage; questions 7-12", "ordering_evidence": "Printed page 26 and question continuity", "issues": ["finger visible at outer margin; content remains legible"]},
+    {"logical_page": 27, "source_file": "IMG_9326.jpg", "orientation": "portrait", "section": "Reading", "content_summary": "Getting fit passage; questions 13-18", "ordering_evidence": "Printed page 27 and question continuity", "issues": ["minor perspective distortion"]},
+    {"logical_page": 28, "source_file": "IMG_9327.jpg", "orientation": "portrait", "section": "Reading", "content_summary": "Sports table and graph; questions 19-24", "ordering_evidence": "Printed page 28 and question continuity", "issues": ["finger visible at outer margin; content remains legible"]},
+    {"logical_page": 29, "source_file": "IMG_9328.jpg", "orientation": "portrait", "section": "Reading", "content_summary": "Nursery rhyme; questions 25-30", "ordering_evidence": "Printed page 29 and Reading section end", "issues": ["minor shadow near lower edge"]},
+    {"logical_page": 30, "source_file": "IMG_9329.jpg", "orientation": "landscape photo; page rotated clockwise for reading", "section": "Reading answers and explanations", "content_summary": "Reading explanation page", "ordering_evidence": "Printed page 30 follows Reading questions", "issues": ["photo requires rotation"]},
+    {"logical_page": 31, "source_file": "IMG_9330.jpg", "orientation": "landscape photo; page rotated clockwise for reading", "section": "Reading answers and explanations", "content_summary": "Reading explanation continuation", "ordering_evidence": "Printed page 31 and answer continuity", "issues": ["photo requires rotation"]},
+    {"logical_page": 32, "source_file": "IMG_9331.jpg", "orientation": "landscape photo; page rotated clockwise for reading", "section": "Writing", "content_summary": "Narrative writing prompt and planning lines", "ordering_evidence": "Printed page 32 and Writing heading", "issues": ["photo requires rotation"]},
+    {"logical_page": 33, "source_file": "IMG_9332.jpg", "orientation": "landscape photo; page rotated clockwise for reading", "section": "Numeracy", "content_summary": "Questions 1-4", "ordering_evidence": "Printed page 33 and Numeracy section start", "issues": ["photo requires rotation"]},
+    {"logical_page": 34, "source_file": "IMG_9333.jpg", "orientation": "landscape photo; page rotated clockwise for reading", "section": "Numeracy", "content_summary": "Questions 5-8", "ordering_evidence": "Printed page 34 and question continuity", "issues": ["photo requires rotation"]},
+    {"logical_page": 35, "source_file": "IMG_9334.jpg", "orientation": "landscape photo; page rotated clockwise for reading", "section": "Numeracy", "content_summary": "Questions 9-12", "ordering_evidence": "Printed page 35 and question continuity", "issues": ["photo requires rotation"]},
+    {"logical_page": 36, "source_file": "IMG_9335.jpg", "orientation": "landscape photo; page rotated clockwise for reading", "section": "Numeracy", "content_summary": "Questions 13-16", "ordering_evidence": "Printed page 36 and question continuity", "issues": ["photo requires rotation"]},
+    {"logical_page": 37, "source_file": "IMG_9336.jpg", "orientation": "landscape photo; page rotated clockwise for reading", "section": "Numeracy", "content_summary": "Questions 17-21", "ordering_evidence": "Printed page 37 and question continuity", "issues": ["photo requires rotation"]},
+    {"logical_page": 38, "source_file": "IMG_9337.jpg", "orientation": "landscape photo; page rotated clockwise for reading", "section": "Numeracy", "content_summary": "Questions 22-25", "ordering_evidence": "Printed page 38 and question continuity", "issues": ["photo requires rotation"]},
+    {"logical_page": 39, "source_file": "IMG_9338.jpg", "orientation": "landscape photo; page rotated clockwise for reading", "section": "Numeracy", "content_summary": "Questions 26-29", "ordering_evidence": "Printed page 39 and question continuity", "issues": ["photo requires rotation"]},
+    {"logical_page": 40, "source_file": "IMG_9339.jpg", "orientation": "landscape photo; page rotated clockwise for reading", "section": "Numeracy", "content_summary": "Question 30 and final data questions", "ordering_evidence": "Printed page 40 and Numeracy section end", "issues": ["photo requires rotation"]}
+  ],
+  "confirmed_order": [
+    "IMG_9320.jpg", "IMG_9321.jpg", "IMG_9322.jpg", "IMG_9323.jpg",
+    "IMG_9324.jpg", "IMG_9325.jpg", "IMG_9326.jpg", "IMG_9327.jpg",
+    "IMG_9328.jpg", "IMG_9329.jpg", "IMG_9330.jpg", "IMG_9331.jpg",
+    "IMG_9332.jpg", "IMG_9333.jpg", "IMG_9334.jpg", "IMG_9335.jpg",
+    "IMG_9336.jpg", "IMG_9337.jpg", "IMG_9338.jpg", "IMG_9339.jpg"
+  ]
+}

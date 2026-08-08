@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build NAPLAN Practice Papers"
+  short_description: "Create and audit print-ready NAPLAN practice PDFs"
+  default_prompt: "Use $build-naplan-practice-papers to turn the Year 3 scans into rigorously checked practice-paper PDFs."

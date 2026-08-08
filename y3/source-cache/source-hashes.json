@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "cache_status": "verified",
+  "ocr_policy": "one-time",
+  "source_directory": "y3/orig",
+  "files": [
+    {
+      "logical_page": 21,
+      "file": "IMG_9320.jpg",
+      "sha256": "273a40f0425762ecebcd8072c3c93cf46dfe4658da5e4d5ed736f5baba8376dc",
+      "bytes": 1508620
+    },
+    {
+      "logical_page": 22,
+      "file": "IMG_9321.jpg",
+      "sha256": "ee3018e5d282ffde63b004bd3f5201ef73c48ae3e3945f6ef61b6561df452b68",
+      "bytes": 1523907
+    },
+    {
+      "logical_page": 23,
+      "file": "IMG_9322.jpg",
+      "sha256": "396ed3860a9004b5a7991f657d7d0413d7298ffd441ec96809f77fdd16915406",
+      "bytes": 1449635
+    },
+    {
+      "logical_page": 24,
+      "file": "IMG_9323.jpg",
+      "sha256": "a8f68040448bad8cbac7d983af885c86fa26d8af02347d395eed63264ef79932",
+      "bytes": 1319156
+    },
+    {
+      "logical_page": 25,
+      "file": "IMG_9324.jpg",
+      "sha256": "ccd0efe46f49df5da394a816b79d73fb57c1a835df99ff8b7f42527bf3378a7c",
+      "bytes": 1773805
+    },
+    {
+      "logical_page": 26,
+      "file": "IMG_9325.jpg",
+      "sha256": "58761f38ee8ae88d34595431eb2f4f3c588c9d86954323703aa433b5f43dace7",
+      "bytes": 1628801
+    },
+    {
+      "logical_page": 27,
+      "file": "IMG_9326.jpg",
+      "sha256": "2c57e9f40f56d2d3bffe8b3e73d4e66600ce2491ad1af483215e83dd0ef9bbbf",
+      "bytes": 1775087
+    },
+    {
+      "logical_page": 28,
+      "file": "IMG_9327.jpg",
+      "sha256": "516d22d4953c5d53c45da5151954b754f1f876e9b208b58b3e96f303659b9aab",
+      "bytes": 1626100
+    },
+    {
+      "logical_page": 29,
+      "file": "IMG_9328.jpg",
+      "sha256": "195179581c3b39e4c94400e3fd593fcf1fd7e6172f1421e3f35da68998fa81cb",
+      "bytes": 1436002
+    },
+    {
+      "logical_page": 30,
+      "file": "IMG_9329.jpg",
+      "sha256": "83f63d755f11e6e024af8310c0f79eb942d8b8b2f43b6e69ca49637b6cf26a51",
+      "bytes": 1684193
+    },
+    {
+      "logical_page": 31,
+      "file": "IMG_9330.jpg",
+      "sha256": "9f18a011cb87319d304cd605d6f5edf18238add2d5c0bcc0501d61de946ebeac",
+      "bytes": 1707498
+    },
+    {
+      "logical_page": 32,
+      "file": "IMG_9331.jpg",
+      "sha256": "fd95e79cda3be5f697837382fdc02dc172640d9385a083b4d1dce60ef81e5bfa",
+      "bytes": 1429595
+    },
+    {
+      "logical_page": 33,
+      "file": "IMG_9332.jpg",
+      "sha256": "cd6b78fa59a5925bae9f8f5d46583b816a8fe1d8787f0e771f1515cd8939f5af",
+      "bytes": 1326370
+    },
+    {
+      "logical_page": 34,
+      "file": "IMG_9333.jpg",
+      "sha256": "a9dcf2cfea346b895a3b679bc7a1cfb3d43252e09c692dd27446ebe90c02b8ff",
+      "bytes": 1208949
+    },
+    {
+      "logical_page": 35,
+      "file": "IMG_9334.jpg",
+      "sha256": "a5b211241ff471f3a239b9f7ede05c90a5ed300b22f7e47249e73e2ec068da45",
+      "bytes": 1324761
+    },
+    {
+      "logical_page": 36,
+      "file": "IMG_9335.jpg",
+      "sha256": "85c457edb16e926c6b492c15eaf5ef2613db96e2f1b0fbe66ade457200aedf65",
+      "bytes": 1316416
+    },
+    {
+      "logical_page": 37,
+      "file": "IMG_9336.jpg",
+      "sha256": "2b7ac56041819039313f756dac219e0a5a418896d6de1939107f461fc2044b6b",
+      "bytes": 1344555
+    },
+    {
+      "logical_page": 38,
+      "file": "IMG_9337.jpg",
+      "sha256": "aaaf3d322f1882cd257a7ff05b08acab2902c5c819027d18fcdfcb8c83c3b4a3",
+      "bytes": 1267965
+    },
+    {
+      "logical_page": 39,
+      "file": "IMG_9338.jpg",
+      "sha256": "3d651b1d01f0d6e958d052e6cfb71c945672de0f02616217af792c2777f49212",
+      "bytes": 1473117
+    },
+    {
+      "logical_page": 40,
+      "file": "IMG_9339.jpg",
+      "sha256": "737f60d5c6fe59f62869b72a98ac63f4b3cccb352d2d5cc95ddf2df1c01499ea",
+      "bytes": 1298898
+    }
+  ]
+}

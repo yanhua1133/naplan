@@ -1,0 +1,48 @@
+{
+  "reference": "y3/source-cache/year3-reference-test-2.md",
+  "source_hashes_verified": 20,
+  "ocr_rerun": false,
+  "required_total_pages": 20,
+  "required_counts": {
+    "language": 50,
+    "reading": 30,
+    "writing": 1,
+    "numeracy": 30
+  },
+  "actual_counts": {
+    "language": 50,
+    "reading": 30,
+    "writing": 1,
+    "numeracy": 30
+  },
+  "question_word_count_ranges": {
+    "language": {
+      "min": 11,
+      "max": 33,
+      "average": 18.22
+    },
+    "reading": {
+      "min": 11,
+      "max": 40,
+      "average": 27.97
+    },
+    "numeracy": {
+      "min": 8,
+      "max": 34,
+      "average": 16.7
+    }
+  },
+  "reading_passage_word_counts": [
+    181,
+    136,
+    238,
+    48,
+    79
+  ],
+  "difficulty_features": [
+    "grammar and punctuation control",
+    "25 contextual spelling corrections",
+    "literal, vocabulary, inference and purpose reading items",
+    "multi-step and visual numeracy items"
+  ]
+}
