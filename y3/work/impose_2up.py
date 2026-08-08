@@ -237,9 +237,11 @@ def main() -> None:
             "papers": 20,
             "render_scale": 2,
             "checks": [
-                "all 25 prompts remain above their answer boxes",
-                "no prompt enters an adjacent item",
+                "questions 26–40 show 15 blank dictation lines and no leaked answers",
+                "questions 41–45 each show one visible underlined misspelling",
+                "questions 46–50 each show one unmarked misspelling",
                 "no clipped prompt or answer box",
+                "no prompt enters an adjacent item",
             ],
         },
         "papers": papers,

@@ -1,10 +1,14 @@
 from __future__ import annotations
 
 from copy import deepcopy
+from html import escape
+import json
 import re
+from pathlib import Path
 
 
 LETTERS = "ABCD"
+SPELLING_BANK_PATH = Path(__file__).with_name("spelling-bank.json")
 NAMES = [
     "Ava", "Noah", "Mia", "Leo", "Ruby", "Eli", "Zoe", "Kai", "Nina", "Arlo",
     "Ivy", "Owen", "Lila", "Finn", "Maya", "Hugo", "Sara", "Jude", "Tara", "Max",
@@ -87,32 +91,36 @@ def diversity_frame(paper_number, prompt, offset=0):
 
 
 LANGUAGE_VERBS = [
-    "sorted", "painted", "folded", "polished", "carried", "planted", "labelled", "counted", "sketched", "washed",
-    "stacked", "opened", "mended", "collected", "packed", "tested", "measured", "watched", "filled", "checked",
+    "sorted", "painted", "folded", "polished", "carried", "collected", "labelled", "counted", "sketched", "washed",
+    "stacked", "folded", "mended", "displayed", "packed", "tested", "measured", "filled", "printed", "checked",
 ]
 LANGUAGE_NOUNS = [
     "shells", "tickets", "flags", "lanterns", "bandages", "samples", "models", "baskets", "clouds", "cones",
     "frames", "maps", "ropes", "posters", "instruments", "wings", "seedlings", "tanks", "photographs", "backpacks",
+]
+LANGUAGE_ANIMALS = [
+    "puppies", "kittens", "ducklings", "wallabies", "parrots", "dolphins", "lizards", "rabbits", "penguins", "koalas",
+    "wombats", "frogs", "horses", "possums", "turtles", "echidnas", "seals", "pelicans", "butterflies", "beetles",
 ]
 LANGUAGE_ADJECTIVES = [
     "striped", "golden", "wooden", "tiny", "clean", "river", "silver", "woven", "stormy", "bright",
     "square", "old", "strong", "colourful", "musical", "paper", "native", "shallow", "historic", "heavy",
 ]
 LANGUAGE_ADVERBS = [
-    "carefully", "quietly", "neatly", "gently", "quickly", "closely", "correctly", "evenly", "patiently", "eagerly",
-    "securely", "slowly", "firmly", "proudly", "softly", "safely", "regularly", "calmly", "respectfully", "steadily",
+    "carefully", "neatly", "evenly", "carefully", "gently", "carefully", "securely", "correctly", "carefully", "thoroughly",
+    "neatly", "carefully", "firmly", "proudly", "safely", "carefully", "regularly", "steadily", "clearly", "carefully",
 ]
 PAST_VERBS = [
     ("sort", "sorted", "sorts", "sorting"), ("paint", "painted", "paints", "painting"),
     ("fold", "folded", "folds", "folding"), ("polish", "polished", "polishes", "polishing"),
-    ("carry", "carried", "carries", "carrying"), ("plant", "planted", "plants", "planting"),
+    ("carry", "carried", "carries", "carrying"), ("collect", "collected", "collects", "collecting"),
     ("label", "labelled", "labels", "labelling"), ("count", "counted", "counts", "counting"),
     ("sketch", "sketched", "sketches", "sketching"), ("wash", "washed", "washes", "washing"),
-    ("stack", "stacked", "stacks", "stacking"), ("open", "opened", "opens", "opening"),
-    ("mend", "mended", "mends", "mending"), ("collect", "collected", "collects", "collecting"),
+    ("stack", "stacked", "stacks", "stacking"), ("fold", "folded", "folds", "folding"),
+    ("mend", "mended", "mends", "mending"), ("display", "displayed", "displays", "displaying"),
     ("pack", "packed", "packs", "packing"), ("test", "tested", "tests", "testing"),
-    ("measure", "measured", "measures", "measuring"), ("watch", "watched", "watches", "watching"),
-    ("fill", "filled", "fills", "filling"), ("check", "checked", "checks", "checking"),
+    ("measure", "measured", "measures", "measuring"), ("fill", "filled", "fills", "filling"),
+    ("print", "printed", "prints", "printing"), ("check", "checked", "checks", "checking"),
 ]
 CONTRACTIONS = [
     ("can't", "cannot"), ("won't", "will not"), ("isn't", "is not"), ("aren't", "are not"),
@@ -157,8 +165,24 @@ def diversify_language_core(question, paper_number):
         question["prompt"] = f"Which word correctly joins these ideas?<br><strong>{name} worked {adverb} ___ the {project} had to be ready that afternoon.</strong>"
         reset_language_mcq(question, "because", ["but", "or", "until"], "<em>Because</em> introduces the reason for working that way.", shift)
     elif number == 7:
-        question["prompt"] = f"The {adjective} {noun[:-1] if noun.endswith('s') else noun} belongs to {name} and {partner}. Which word can replace <strong>{name} and {partner}'s {noun[:-1] if noun.endswith('s') else noun}</strong>?"
+        singular_noun = noun[:-1] if noun.endswith("s") else noun
+        question["prompt"] = f"The {adjective} {singular_noun} belongs to {name} and {partner}. Which word can replace <strong>the {singular_noun} belonging to {name} and {partner}</strong>?"
         reset_language_mcq(question, "theirs", ["his", "hers", "ours"], "<em>Theirs</em> shows that the item belongs to the two named people.", shift)
+    elif number == 8:
+        plural_animal = LANGUAGE_ANIMALS[index]
+        singular_animal = plural_animal[:-3] + "y" if plural_animal.endswith("ies") else plural_animal[:-1]
+        question["prompt"] = f"Which sentence about the {plural_animal} has correct subject–verb agreement?"
+        reset_language_mcq(
+            question,
+            f"The {plural_animal} move towards the shelter.",
+            [
+                f"The {plural_animal} moves towards the shelter.",
+                f"The {singular_animal} move towards the shelter.",
+                f"The {plural_animal} moving towards the shelter.",
+            ],
+            f"The plural subject <em>{plural_animal}</em> agrees with the verb <em>move</em>.",
+            shift,
+        )
     elif number == 10:
         command = f"Please place the {noun} beside the {setting} desk___"
         question["prompt"] = f"Which punctuation mark correctly completes this calm command?<br><strong>{command}</strong>"
@@ -193,7 +217,7 @@ def diversify_language_core(question, paper_number):
         question["prompt"] = f"Which word completes the sentence about the {project}?<br><strong>___ {noun} won a special award.</strong>"
         reset_language_mcq(question, "Their", ["There", "They're", "Theirs"], "<em>Their</em> shows that the items belong to a group.", shift)
     elif number == 18:
-        complete = f"The {adjective} {noun[:-1] if noun.endswith('s') else noun} stood beside the {setting}."
+        complete = f"The {adjective} {noun[:-1] if noun.endswith('s') else noun} was placed beside the {setting}."
         question["prompt"] = f"Which option is a complete sentence connected with the {project}?"
         reset_language_mcq(question, complete, [f"Beside the {setting}.", f"Because the {project} finished.", f"Carrying the {noun} carefully."], "The correct option has a subject, a verb and a complete idea.", shift)
     elif number == 19:
@@ -218,7 +242,10 @@ def diversify_language_core(question, paper_number):
         question["prompt"] = f"Which sentence correctly reports what {name} said during the {project}?"
         reset_language_mcq(question, f"“{words}” called {name}.", [f"“{words}”, called {name}.", f"“{words}” Called {name}.", f"“{words} called {name}.”"], "The comma stays inside the closing speech mark before the reporting clause.", shift)
     elif number == 25:
-        adjective_end = ["damaged", "missing", "empty", "unlabelled", "open"][index % 5]
+        adjective_end = [
+            "damaged", "missing", "torn", "unlit", "clean", "labelled", "complete", "empty", "dark", "damaged",
+            "square", "missing", "frayed", "finished", "damaged", "folded", "dry", "empty", "blurred", "open",
+        ][index]
         singular = noun[:-1] if noun.endswith("s") else noun
         question["prompt"] = f"Which sentence has correct agreement for the {project}?"
         reset_language_mcq(question, f"Neither of the {noun} is {adjective_end}.", [f"Neither of the {noun} are {adjective_end}.", f"Neither of the {singular} is {adjective_end}.", f"Neither the {noun} are {adjective_end}."], "The singular subject <em>neither</em> agrees with <em>is</em>.", shift)
@@ -231,16 +258,6 @@ def diversify_language_questions(questions, paper_number):
         if number <= 25:
             diversify_language_core(question, paper_number)
             question["prompt"] = diversity_frame(paper_number, question["prompt"], number)
-        else:
-            _, sentence = question["prompt"].split("<br>", 1)
-            varied_instruction = [
-                "Carefully find the underlined spelling error and write its correction.",
-                "Correct the one underlined word in this sentence for the class.",
-                "Read the sentence, then write the correct spelling of the underlined word.",
-                "The underlined word is misspelt. Write its correct spelling on the line.",
-                "Replace the single underlined error with its correct spelling for the final copy.",
-            ][(paper_number + number) % 5]
-            question["prompt"] = diversity_frame(paper_number, f"{varied_instruction}<br>{sentence}", number)
     return questions
 
 
@@ -348,13 +365,13 @@ def build_language(paper_number):
         ("spring, autumn and winter", "seasons", ["tools", "birds", "vehicles"]),
     ][index]
     q = []
-    q.append(mcq("L1", f"Which word correctly completes this sentence?<br><strong>{name} packed ___ {article_noun} before visiting {place}.</strong>", "an", ["a", "some", "many"], f"Use <em>an</em> before the vowel sound at the start of <em>{article_noun}</em>.", index + 1))
+    q.append(mcq("L1", f"Which word correctly completes this sentence?<br><strong>{name} drew ___ {article_noun} on a card before visiting {place}.</strong>", "an", ["a", "some", "many"], f"Use <em>an</em> before the vowel sound at the start of <em>{article_noun}</em>.", index + 1))
     q.append(mcq("L2", f"Which word is the verb in this sentence?<br><strong>{partner} measured the bright banner carefully.</strong>", "measured", [partner, "bright", "banner"], f"<em>Measured</em> tells what {partner} did, so it is the verb.", index + 2))
     q.append(mcq("L3", f"Which word correctly completes this sentence?<br><strong>Yesterday, {name} ___ the heavy basket into {place}.</strong>", "carried", ["carry", "carries", "carrying"], "The word <em>Yesterday</em> shows that the action happened in the past, so <em>carried</em> is correct.", index + 3))
     q.append(mcq("L4", f"Which word tells how the action was done?<br><strong>The group waited patiently beside {place}.</strong>", "patiently", ["group", "waited", "beside"], "<em>Patiently</em> describes how the group waited, so it is an adverb.", index + 4))
-    q.append(mcq("L5", f"Which sentence about {name} and {partner} is correct?", f"{name} and I planted the seeds.", [f"{name} and me planted the seeds.", f"Me and {name} planted the seeds.", f"{name} and myself planted the seeds."], "The subject pronoun <em>I</em> is correct because the speaker is part of the subject.", index + 5))
+    q.append(mcq("L5", "Which sentence is correct?", f"{name} and I planted the seeds.", [f"{name} and me planted the seeds.", f"Me and {name} planted the seeds.", f"{name} and myself planted the seeds."], "The subject pronoun <em>I</em> is correct because the speaker is part of the subject.", index + 5))
     q.append(mcq("L6", f"Which word correctly joins these ideas?<br><strong>{name} wore a hat ___ the afternoon was sunny at {place}.</strong>", "because", ["but", "or", "until"], "<em>Because</em> introduces the reason for wearing the hat.", index + 6))
-    q.append(mcq("L7", f"The striped backpack belongs to {partner}. Which word can replace <strong>{partner}'s backpack</strong>?", "his", ["hers", "ours", "theirs"], f"<em>His</em> shows that the backpack belongs to {partner}.", index + 7))
+    q.append(mcq("L7", f"Which word correctly completes this sentence?<br><strong>{partner} packed ___ striped backpack.</strong>", "their", ["there", "they're", "theirs"], f"<em>Their</em> is the possessive word that shows the backpack belongs to {partner}.", index + 7))
     q.append(mcq("L8", f"Which sentence about the {animal} is correct?", f"The {animal} chase the ball.", [f"The {animal} chases the ball.", f"The {animal} chases the balls.", f"The {animal} chasing the ball."], f"The plural subject <em>{animal}</em> agrees with the verb <em>chase</em>.", index + 8))
     category_words, category_answer, category_distractors = category
     q.append(mcq("L9", f"Which word can be used instead of <strong>{category_words}</strong>?", category_answer, category_distractors, f"All three examples are {category_answer}.", index + 9))
@@ -385,90 +402,62 @@ def build_language(paper_number):
     q.append(mcq("L24", f"Which sentence uses speech punctuation correctly when {name} calls to {partner}?", f"“Wait for me,” called {name}.", [f"“Wait for me”, called {name}.", f"“Wait for me” called {name}.", f"“Wait for me called {name}.”"], "The comma belongs inside the closing speech mark before the reporting clause.", index + 24))
     q.append(mcq("L25", f"Which sentence about the boxes at {place} is correct?", "Neither of the boxes is empty.", ["Neither of the boxes are empty.", "Neither of the box is empty.", "Neither the boxes are empty."], "The singular subject <em>neither</em> agrees with <em>is</em>.", index + 25))
 
-    spelling_pool = [
-        ("becaus", "because", "{name} carried a jacket because the wind was cool."),
-        ("freind", "friend", "{name}'s friend waited beside the noticeboard."),
-        ("diferent", "different", "Each shell had a different pattern."),
-        ("tommorow", "tomorrow", "The class will finish the model tomorrow."),
-        ("beautifull", "beautiful", "A beautiful rainbow appeared above the oval."),
-        ("finaly", "finally", "The hikers finally reached the lookout."),
-        ("surprize", "surprise", "The parcel contained a wonderful surprise."),
-        ("seperate", "separate", "Please place the cups in a separate row."),
-        ("goverment", "government", "The government repaired the footpath."),
-        ("cupbord", "cupboard", "Put the cereal in the cupboard."),
-        ("egde", "edge", "Do not stand near the cliff edge."),
-        ("exsept", "except", "Every answer was correct except one."),
-        ("kees", "keys", "{name} could not find the house keys."),
-        ("misunderstod", "misunderstood", "{name} misunderstood the directions."),
-        ("doe", "dough", "The baker left the bread dough to rise."),
-        ("freindly", "friendly", "The new neighbour was very friendly."),
-        ("cleening", "cleaning", "{partner} spent the morning cleaning the room."),
-        ("adobt", "adopt", "The family decided to adopt a rescue dog."),
-        ("recieve", "receive", "Did you receive my message?"),
-        ("neccessary", "necessary", "Bring all the necessary equipment."),
-        ("begining", "beginning", "The story has an exciting beginning."),
-        ("faverite", "favourite", "Blue is {name}'s favourite colour."),
-        ("calender", "calendar", "Write the date on the calendar."),
-        ("definately", "definitely", "The answer is definitely correct."),
-        ("wich", "which", "Which path leads to the visitor centre?"),
-        ("untill", "until", "Wait until the signal turns green."),
-        ("acommodate", "accommodate", "The hall can accommodate many families."),
-        ("adress", "address", "Check the address before posting the letter."),
-        ("appearence", "appearance", "The costume's appearance changed under the lights."),
-        ("arguement", "argument", "The friends settled their argument calmly."),
-        ("buisness", "business", "The bakery is a small family business."),
-        ("comming", "coming", "A storm is coming from the west."),
-        ("decission", "decision", "The team made a careful decision."),
-        ("enviroment", "environment", "We can protect the environment by reducing waste."),
-        ("exersise", "exercise", "Regular exercise helps keep bodies healthy."),
-        ("familar", "familiar", "The song sounded familiar to {partner}."),
-        ("febuary", "February", "The swimming carnival is held in February."),
-        ("foriegn", "foreign", "The museum displayed a foreign coin."),
-        ("fourty", "forty", "The bus carried forty passengers."),
-        ("grammer", "grammar", "{name} checked the sentence's grammar."),
-        ("happend", "happened", "Nobody knew what happened after sunset."),
-        ("immediatly", "immediately", "The alarm rang and everyone stopped immediately."),
-        ("knowlege", "knowledge", "The quiz tested our knowledge of animals."),
-        ("libary", "library", "{partner} returned the book to the library."),
-        ("medecine", "medicine", "The medicine was stored safely by an adult."),
-        ("naturaly", "naturally", "The smooth stone formed naturally in the river."),
-        ("ocassion", "occasion", "The concert was a special occasion."),
-        ("oposite", "opposite", "The bank is on the opposite side of the road."),
-        ("possable", "possible", "Is it possible to finish before lunch?"),
-        ("probly", "probably", "It will probably rain this afternoon."),
-        ("remeber", "remember", "Remember to return the borrowed ruler."),
-        ("simmilar", "similar", "The two leaves have a similar shape."),
-        ("strenght", "strength", "The bridge's strength was tested with blocks."),
-        ("succesful", "successful", "The school fair was successful."),
-        ("thier", "their", "The players packed their equipment."),
-        ("truley", "truly", "The cave was truly enormous."),
-        ("usualy", "usually", "{name} usually walks home with {partner}."),
-        ("vegtable", "vegetable", "A carrot is a root vegetable."),
-        ("wierd", "weird", "A weird shadow crossed the wall."),
-        ("writting", "writing", "The class practised writing clear paragraphs."),
-    ]
-    start = (index * 11) % len(spelling_pool)
-    selected = [spelling_pool[(start + offset * 7) % len(spelling_pool)] for offset in range(25)]
-    for offset, (wrong, correct, sentence) in enumerate(selected, start=26):
-        sentence = sentence.format(name=name, partner=partner)
-        pattern = re.compile(re.escape(correct), re.IGNORECASE)
-        def mark_misspelling(match):
-            replacement = wrong.capitalize() if match.group(0)[0].isupper() else wrong
-            return f"<u>{replacement}</u>"
-        marked, replacements = pattern.subn(mark_misspelling, sentence, count=1)
-        if replacements != 1:
-            raise ValueError(f"Could not place spelling target {correct!r} in {sentence!r}")
+    bank = json.loads(SPELLING_BANK_PATH.read_text(encoding="utf-8"))
+    if bank["status"] != "verified" or len(bank["entries"]) != 500:
+        raise ValueError("Spelling bank is not verified or has the wrong size")
+    dictation_start = index * 15
+    proofreading_start = 300 + index * 10
+    dictation_entries = bank["entries"][dictation_start:dictation_start + 15]
+    proofreading_entries = bank["entries"][proofreading_start:proofreading_start + 10]
+
+    for offset, entry in enumerate(dictation_entries, start=26):
+        correct = entry["word"]
         q.append({
             "id": f"L{offset}",
-            "prompt": f"In {name}'s class near {place}, the spelling mistake is underlined. Write the word correctly.<br><strong>{marked}</strong>",
+            "spelling_type": "dictation",
+            "prompt": f"Teacher or parent spelling word: <strong>{correct}</strong>.",
+            "spoken_word": correct,
+            "spoken_sentence": f"Your spelling word is {correct}.",
             "answer": correct,
-            "explanation": f"The correct spelling is <em>{correct}</em>.",
+            "explanation": f"Teacher script: say <em>{correct}</em>, pause, then repeat <em>{correct}</em>.",
+        })
+
+    for item_index, entry in enumerate(proofreading_entries):
+        offset = 41 + item_index
+        correct = entry["word"]
+        wrong = entry["wrong"]
+        sentence = entry["sentence"]
+        if sentence.lower().count(correct.lower()) != 1:
+            raise ValueError(f"Proofreading sentence must contain {correct!r} exactly once")
+        escaped_sentence = escape(sentence)
+        token = escape(wrong)
+        if offset <= 45:
+            token = (
+                '<span style="text-decoration:underline;'
+                'text-decoration-thickness:1.2px;text-underline-offset:1px">'
+                f"{token}</span>"
+            )
+        prompt = re.sub(
+            rf"\b{re.escape(correct)}\b",
+            lambda _: token,
+            escaped_sentence,
+            count=1,
+            flags=re.IGNORECASE,
+        )
+        q.append({
+            "id": f"L{offset}",
+            "spelling_type": "underlined" if offset <= 45 else "identify",
+            "prompt": prompt,
+            "correct_sentence": sentence,
+            "incorrect_word": wrong,
+            "answer": correct,
+            "explanation": f"The incorrect word <em>{wrong}</em> should be spelled <em>{correct}</em>.",
         })
     return diversify_language_questions(q, paper_number)
 
 
 INFO_RECORDS = [
-    ("Leaf-Tailed Geckos", "leaf-tailed geckos", "rainforest trees", "mottled skin and a flat tail", "blend with bark", "small insects", "tree clearing", "protecting old forest"),
+    ("Leaf-Tailed Geckos", "leaf-tailed geckos", "rainforest trees", "mottled skin and flat tails", "blend with bark", "small insects", "tree clearing", "protecting old forest"),
     ("City Microbats", "microbats", "tree hollows and roof spaces", "high-pitched calls", "find insects in darkness", "moths and mosquitoes", "loss of safe roosts", "keeping old hollow trees"),
     ("Rockpool Crabs", "rockpool crabs", "shallow pools beside the sea", "hard shells and strong claws", "stay safe between tides", "algae and tiny animals", "plastic litter", "taking rubbish home"),
     ("Busy Blue-Banded Bees", "blue-banded bees", "gardens and bushland", "rapidly vibrating wings", "shake pollen from flowers", "nectar and pollen", "fewer flowering plants", "planting native flowers"),
@@ -554,26 +543,26 @@ TABLE_ITEMS = [
 
 
 POEM_RECORDS = [
-    ("After the Rain", "gutter", "silver", "clouds", "puddle", "boots", "street", "curious and delighted"),
-    ("Morning at the Jetty", "rope", "golden", "mist", "harbour", "shoes", "jetty", "calm and observant"),
-    ("Wind in the Orchard", "branches", "green", "clouds", "water trough", "feet", "orchard", "playful and alert"),
-    ("Evening on the Oval", "flag", "purple", "birds", "wet grass", "runners", "oval", "peaceful and thoughtful"),
-    ("Moon over the Creek", "reeds", "pale", "mist", "creek", "stones", "track", "quiet and amazed"),
-    ("Sunrise at the Beach", "waves", "orange", "gulls", "rockpool", "sandals", "shore", "hopeful and excited"),
-    ("Fog in the Garden", "leaves", "white", "mist", "birdbath", "boots", "path", "careful and curious"),
-    ("Night at the Station", "rails", "blue", "clouds", "window", "steps", "platform", "patient and watchful"),
-    ("Storm Leaving Town", "roofs", "copper", "clouds", "drain", "boots", "lane", "relieved and interested"),
-    ("Dawn in the Bush", "magpies", "gold", "mist", "billabong", "shoes", "trail", "awake and delighted"),
-    ("Light on the River", "water", "silver", "clouds", "river bend", "paddles", "bank", "calm and thankful"),
-    ("Autumn in the Park", "leaves", "bronze", "clouds", "fountain", "feet", "path", "cheerful and thoughtful"),
-    ("Rain on the Roof", "roof", "tin", "clouds", "window", "socks", "room", "safe and relaxed"),
-    ("Stars above the Camp", "fire", "amber", "smoke", "billy can", "boots", "clearing", "peaceful and amazed"),
-    ("Tide at Twilight", "shells", "pink", "gulls", "rockpool", "feet", "beach", "curious and content"),
-    ("Winter at the Lookout", "rail", "grey", "clouds", "telescope lens", "gloves", "lookout", "cold but excited"),
-    ("Spring beside the Lake", "frogs", "green", "clouds", "lake", "shoes", "boardwalk", "lively and pleased"),
-    ("Shadows in the Lane", "fence", "violet", "clouds", "window", "steps", "lane", "curious and brave"),
-    ("Quiet in the Library", "pages", "cream", "dust", "glass case", "shoes", "library", "calm and absorbed"),
-    ("Clouds over the Farm", "windmill", "pearl", "clouds", "dam", "boots", "field", "hopeful and observant"),
+    ("After the Rain", "rain in the gutter", "silver", "clouds", "puddle", "boots", "street", "curious and delighted"),
+    ("Morning at the Jetty", "ropes against the jetty", "golden", "mist", "harbour", "shoes", "jetty", "calm and observant"),
+    ("Wind in the Orchard", "wind in the branches", "green", "clouds", "water trough", "feet", "orchard", "playful and alert"),
+    ("Evening on the Oval", "the flag in the breeze", "purple", "birds", "wet grass", "shoes", "oval", "peaceful and thoughtful"),
+    ("Moon over the Creek", "reeds beside the water", "pale", "mist", "creek", "boots", "track", "quiet and amazed"),
+    ("Sunrise at the Beach", "waves on the shore", "orange", "gulls", "rockpool", "sandals", "shore", "hopeful and excited"),
+    ("Fog in the Garden", "leaves in the breeze", "white", "mist", "birdbath", "boots", "path", "careful and curious"),
+    ("Night at the Station", "wheels on the rails", "blue", "clouds", "window", "steps", "platform", "patient and watchful"),
+    ("Storm Leaving Town", "rain on the roofs", "copper", "clouds", "drain", "boots", "lane", "relieved and interested"),
+    ("Dawn in the Bush", "magpies in the trees", "gold", "mist", "billabong", "shoes", "trail", "awake and delighted"),
+    ("Light on the River", "water against the bank", "silver", "clouds", "river bend", "paddles", "bank", "calm and thankful"),
+    ("Autumn in the Park", "leaves under my feet", "bronze", "clouds", "fountain", "feet", "path", "cheerful and thoughtful"),
+    ("Rain on the Roof", "rain on the roof", "silver", "clouds", "window", "socks", "room", "safe and relaxed"),
+    ("Stars above the Camp", "wood in the fire", "amber", "smoke", "billy can", "boots", "clearing", "peaceful and amazed"),
+    ("Tide at Twilight", "shells in the wash", "pink", "gulls", "rockpool", "feet", "beach", "curious and content"),
+    ("Winter at the Lookout", "wind along the rail", "grey", "clouds", "telescope lens", "gloves", "lookout", "cold but excited"),
+    ("Spring beside the Lake", "frogs beside the lake", "green", "clouds", "lake", "shoes", "boardwalk", "lively and pleased"),
+    ("Shadows in the Lane", "wind against the fence", "violet", "clouds", "window", "steps", "lane", "curious and brave"),
+    ("Quiet in the Library", "turning pages", "cream", "dust", "glass case", "shoes", "library", "calm and absorbed"),
+    ("Clouds over the Farm", "the turning windmill", "pearl", "clouds", "dam", "boots", "field", "hopeful and observant"),
 ]
 
 
@@ -581,14 +570,14 @@ def build_information_passage(paper_number, start_id=1):
     title, subject, habitat, feature, benefit, food, threat, action = INFO_RECORDS[paper_number - 1]
     text = [
         f"{subject.capitalize()} live in {habitat}. They are well suited to this place, but they still need food, water and shelter to survive. Conditions can change across the day and through the seasons, so safe resting places are important.",
-        f"Their {feature} help them {benefit}. This adaptation makes everyday tasks easier and can also help them avoid danger. Young animals learn where to feed and shelter by following adults or responding to their surroundings.",
-        f"They feed on {food}. As they move through their habitat, they also become part of a larger food web that connects plants and animals. Changes to one part of this web can affect many other living things.",
-        f"One challenge is {threat}. People can help by {action}, observing wildlife from a distance and leaving natural shelters undisturbed. Small, repeated actions can protect the habitat without preventing people from learning about it.",
+        f"Features such as {feature} help them {benefit}. These adaptations make everyday tasks easier and can also help them avoid danger. Young organisms survive best when their surroundings provide suitable food or nutrients and shelter.",
+        f"They obtain what they need from {food}. As they live and grow in their habitat, they also become part of a larger food web that connects plants and animals. Changes to one part of this web can affect many other living things.",
+        f"One challenge is {threat}. People can help by {action}, observing living things responsibly and leaving natural shelters undisturbed. Small, repeated actions can protect the habitat without preventing people from learning about it.",
     ]
     q = []
     q.append(mcq(f"R{start_id}", f"What is the main purpose of <strong>{title}</strong>?", f"to explain how {subject} live and survive", [f"to tell a fantasy story about {subject}", f"to give instructions for catching {subject}", "to advertise a wildlife toy"], f"The text gives factual information about the habitat, features, food and needs of {subject}.", paper_number + start_id))
     q.append(mcq(f"R{start_id+1}", f"In <strong>{title}</strong>, what does <strong>adaptation</strong> mean?", "a feature that helps a living thing survive", ["a sudden loud warning", "a place where tickets are sold", "a change in the weather forecast"], "The passage explains that the feature helps the living thing complete tasks and avoid danger.", paper_number + start_id + 1))
-    q.append(mcq(f"R{start_id+2}", f"How does the {feature} help {subject}?", benefit, ["make their habitat disappear", "turn their food into water", "stop every kind of danger"], f"Paragraph 2 states that the feature helps them {benefit}.", paper_number + start_id + 2))
+    q.append(mcq(f"R{start_id+2}", f"How do features such as {feature} help {subject}?", benefit, ["make their habitat disappear", "turn their food into water", "stop every kind of danger"], f"Paragraph 2 states that these features help them {benefit}.", paper_number + start_id + 2))
     q.append(mcq(f"R{start_id+3}", f"Which change would probably cause the greatest problem for {subject}?", threat, ["a protected shelter", "more suitable food", "careful wildlife watching"], f"The final paragraph identifies {threat} as a challenge.", paper_number + start_id + 3))
     q.append(mcq(f"R{start_id+4}", f"In paragraph 2 of <strong>{title}</strong>, who does <strong>them</strong> refer to?", subject, ["the people", "the natural shelters", "the food sources"], f"The pronoun <em>them</em> refers back to {subject}.", paper_number + start_id + 4))
     q.append(mcq(f"R{start_id+5}", f"Which heading would best suit the final paragraph of <strong>{title}</strong>?", f"Helping {subject.title()}", ["A Make-Believe Adventure", "How to Build a Toy", "A List of Australian Cities"], f"The paragraph describes a threat and actions people can take to help {subject}.", paper_number + start_id + 5))
@@ -597,14 +586,20 @@ def build_information_passage(paper_number, start_id=1):
 
 def build_procedure_passage(paper_number, start_id=7):
     title, purpose, materials, step1, step2, step3, step4 = PROCEDURE_RECORDS[paper_number - 1]
-    intro = f"Follow these steps to make {purpose}. Work carefully and ask an adult for help whenever a material needs cutting or a location must be checked for safety. Read every step before beginning so the equipment can be arranged in the correct order."
-    steps = [step1.capitalize() + ".", step2.capitalize() + ". Check that it is secure before continuing.", step3.capitalize() + ". Use the same method each time so the result is fair.", step4.capitalize() + ".", "Record the result clearly, compare it with the earlier observation, then pack away all equipment."]
+    intro = f"Follow these steps to make {purpose}. Work carefully and ask an adult for help whenever a material needs cutting or a location must be checked for safety. Read every step before beginning so the equipment can be arranged in the correct order. Keep the workspace tidy and use each material only as described. Check each observation before recording it."
+    steps = [
+        step1.capitalize() + ".",
+        step2.capitalize() + ".",
+        step3.capitalize() + ".",
+        step4.capitalize() + ".",
+        "Record the result clearly, then pack away all equipment.",
+    ]
     q = []
     q.append(mcq(f"R{start_id}", f"What is the purpose of <strong>{title}</strong>?", f"to make {purpose}", ["to write a fictional story", "to advertise expensive equipment", "to decorate a party invitation"], f"The introduction states that the steps are used to make {purpose}.", paper_number + start_id))
     q.append(mcq(f"R{start_id+1}", f"What should be done first in <strong>{title}</strong>?", step1, [step2, step3, "pack away all equipment"], f"The first numbered step says to {step1}.", paper_number + start_id + 1))
-    q.append(mcq(f"R{start_id+2}", f"Why should the instructions for <strong>{title}</strong> be followed in order?", "so the equipment is prepared before the result is measured", ["so the title becomes longer", "so the materials change colour", "so no observations are recorded"], "The earlier steps prepare the equipment, while the later steps produce and record the result.", paper_number + start_id + 2))
+    q.append(mcq(f"R{start_id+2}", f"Why should the instructions for <strong>{title}</strong> be followed in order?", "so each stage is completed before the next one begins", ["so the title becomes longer", "so the materials change colour", "so no observations are recorded"], "The earlier steps prepare the activity, while the later steps produce and record the result.", paper_number + start_id + 2))
     q.append(mcq(f"R{start_id+3}", f"What does <strong>record</strong> mean in the final step of <strong>{title}</strong>?", "write down", ["hide", "erase", "guess"], "Here, <em>record</em> means to write down the observation or result.", paper_number + start_id + 3))
-    q.append(mcq(f"R{start_id+4}", f"Why does <strong>{title}</strong> ask for careful measurements or repeated observations?", "to make the comparison or result more reliable", ["to make the equipment heavier", "to use every material at once", "to prevent the title from changing"], "Careful, consistent observations make a test or measurement more dependable.", paper_number + start_id + 4))
+    q.append(mcq(f"R{start_id+4}", f"Why should the result in <strong>{title}</strong> be recorded carefully?", "to make the result easier to check and compare", ["to make the equipment heavier", "to use every material at once", "to prevent the title from changing"], "A clear record makes an observation or result easier to check and compare.", paper_number + start_id + 4))
     q.append(mcq(f"R{start_id+5}", f"Which text feature most clearly shows that <strong>{title}</strong> is a procedure?", "a materials list and numbered steps", ["characters speaking to each other", "rhyming lines", "a labelled story setting"], "Procedures commonly use a materials list and ordered steps.", paper_number + start_id + 5))
     return {"id": "P2", "title": title, "type": "procedure", "intro": intro, "materials": materials, "steps": steps, "questions": q}
 
@@ -612,8 +607,8 @@ def build_procedure_passage(paper_number, start_id=7):
 def build_narrative_passage(paper_number, start_id=13):
     title, name, item, location, problem, action, ending = NARRATIVE_RECORDS[paper_number - 1]
     text = [
-        f"{name} was helping to tidy {location} when {name.lower()} noticed {item}. It looked ordinary at first, but a tiny mark on its side seemed freshly scratched. Dust lay everywhere except beneath the object, as though it had recently been moved.",
-        f"As soon as {name} picked it up, {problem}. {name} hesitated. The discovery was exciting, yet it might belong to someone else or be too delicate to handle alone. A hurried choice could damage both the object and the clues around it.",
+        f"{name} was helping near {location} when {name} noticed {item}. It looked ordinary at first, but one detail seemed new. {name} looked around for clues before touching or moving anything.",
+        f"As {name} examined it more closely, {problem}. {name} hesitated. The discovery was exciting, yet it might belong to someone else or be too delicate to handle alone. A hurried choice could damage both the object and the clues around it.",
         f"Instead of rushing ahead, {name} {action}. Each new clue matched something already visible in {location}, so the search became careful rather than wild. {name} paused after every step to record what had changed.",
         f"At last, {ending}. {name} wrote a short note explaining where the object had been found and what had happened. The note included the order of the clues so another person could check the discovery.",
         f"By the end of the afternoon, the discovery had become part of the place's story. {name} was proud, not because the object was valuable, but because patience and careful thinking had protected it. The adults agreed that the object should stay with a clear label for future visitors.",
@@ -634,7 +629,7 @@ def build_table_passage(paper_number, start_id=19):
     masses = [18 + index, 24 + 8 * (index % 3), 15 + 5 * (index % 4), 32 + 4 * (index % 5)]
     baskets = [6, 8, 5, 4]
     title = f"{NAMES[index]}'s Community Collection"
-    intro = f"The Year 3 team weighed four groups of donated supplies for the {PLACES[index]} community project. The supplies were packed into containers before delivery."
+    intro = f"The Year 3 team weighed four groups of donated supplies for a community project at {PLACES[index]}. The supplies were packed into containers before delivery."
     table = [["Supply", "Total mass", "Containers"]] + [[item, f"{mass} kg", str(count)] for item, mass, count in zip(items, masses, baskets)]
     greatest_index = max(range(4), key=lambda i: masses[i])
     combined = masses[0] + masses[2]
@@ -656,25 +651,25 @@ def build_table_passage(paper_number, start_id=19):
 def build_poem_passage(paper_number, start_id=25):
     title, sound, colour, moving, mirror, movement, place, mood = POEM_RECORDS[paper_number - 1]
     lines = [
-        f"The {sound} taps a {colour} tune,",
-        f"while {moving} drift beyond the moon.",
-        f"The {mirror} holds the evening sky",
-        "and lets one crooked star float by.",
+        f"A {colour} light spreads through the air,",
+        f"while {moving} drift across the sky.",
+        f"The sound of {sound} rises there,",
+        f"and the {mirror} reflects the sky.",
         f"Small surfaces shine beneath the light;",
-        "each one has borrowed jewels tonight.",
-        f"My {movement} make shapes, dark and round,",
+        "each one wears borrowed jewels bright.",
+        f"My {movement} cast shapes, dark and round,",
         "then scatter them across the ground.",
         f"The {place}, so noisy in the day,",
         "grows soft as busy sounds fade away.",
-        "I move more slowly, just to see",
+        f"I feel {mood} as I see",
         "the changing world in front of me.",
     ]
     q = []
-    q.append(mcq(f"R{start_id}", f"Which line in <strong>{title}</strong> shows that something is moving away?", f"while {moving} drift beyond the moon", [f"The {sound} taps a {colour} tune", f"My {movement} make shapes, dark and round", "I move more slowly, just to see"], f"The words <em>{moving} drift beyond</em> show movement away from the scene.", paper_number + start_id))
+    q.append(mcq(f"R{start_id}", f"Which line in <strong>{title}</strong> shows that something is moving?", f"while {moving} drift across the sky", [f"A {colour} light spreads through the air", f"My {movement} cast shapes, dark and round", f"I feel {mood} as I see"], f"The words <em>{moving} drift across</em> describe movement through the sky.", paper_number + start_id))
     q.append(mcq(f"R{start_id+1}", f"What are the <strong>borrowed jewels</strong> in <strong>{title}</strong>?", "drops or bright reflections on surfaces", ["small hidden insects", "pieces of broken glass", "painted yellow flowers"], "The shining drops or reflections look like jewels under the light.", paper_number + start_id + 1))
-    q.append(mcq(f"R{start_id+2}", f"In <strong>{title}</strong>, why does the poet say the <strong>{mirror} holds the evening sky</strong>?", f"The {mirror} reflects the sky.", [f"The {mirror} is above the clouds.", "The sky has fallen to the ground.", f"The {mirror} is completely dry."], "A reflective surface can show an image of the sky like a mirror.", paper_number + start_id + 2))
-    q.append(mcq(f"R{start_id+3}", f"Which detail from <strong>{title}</strong> appeals most strongly to hearing?", f"The {sound} taps a {colour} tune.", [f"The {mirror} holds the evening sky.", "One crooked star floats by.", "Small surfaces shine beneath the light."], "The words <em>taps</em> and <em>tune</em> describe sound.", paper_number + start_id + 3))
-    q.append(mcq(f"R{start_id+4}", f"How does the speaker feel in <strong>{title}</strong>?", mood, ["angry and frightened", "bored and impatient", "sleepy and confused"], f"The speaker slows down to notice the scene, showing a {mood} response.", paper_number + start_id + 4))
+    q.append(mcq(f"R{start_id+2}", f"In <strong>{title}</strong>, why does the poet say the <strong>{mirror} reflects the sky</strong>?", f"The {mirror} shows an image of the sky.", [f"The {mirror} is above the clouds.", "The sky has fallen to the ground.", f"The {mirror} is completely dry."], "A reflective surface can show an image of the sky like a mirror.", paper_number + start_id + 2))
+    q.append(mcq(f"R{start_id+3}", f"Which detail from <strong>{title}</strong> appeals most strongly to hearing?", f"The sound of {sound} rises there.", [f"The {mirror} reflects the sky.", "Borrowed jewels shine brightly.", "Small surfaces shine beneath the light."], "This line directly describes a sound in the scene.", paper_number + start_id + 3))
+    q.append(mcq(f"R{start_id+4}", f"How does the speaker feel in <strong>{title}</strong>?", mood, ["angry and frightened", "bored and impatient", "sleepy and confused"], f"The poem directly says that the speaker feels {mood}.", paper_number + start_id + 4))
     q.append(mcq(f"R{start_id+5}", f"What is the main idea of <strong>{title}</strong>?", "An ordinary place can look special when light, weather or time changes.", ["Walking outdoors is always dangerous.", "Busy sounds should never become quiet.", "Reflections make every surface impossible to see."], "The poem notices how familiar surroundings become beautiful and interesting.", paper_number + start_id + 5))
     return {"id": "P5", "title": title, "type": "poem", "lines": lines, "questions": q}
 

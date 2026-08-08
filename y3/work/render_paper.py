@@ -113,11 +113,82 @@ def draw_grammar_item(page, question, number, rect):
     html_box(page, fitz.Rect(rect.x0 + 25, rect.y0 + 38, rect.x1 - 3, rect.y1 - 3), option_table(question["options"]), f"options-{question['id']}", 7.6)
 
 
-def draw_spelling_item(page, question, number, rect):
-    page.draw_line(rect.bl, rect.br, color=(0.84, 0.90, 0.90), width=0.4)
-    draw_number(page, number, rect.x0 + 9, rect.y0 + 10, 7)
-    html_box(page, fitz.Rect(rect.x0 + 21, rect.y0 + 1, rect.x1 - 3, rect.y0 + 34), question["prompt"], f"prompt-{question['id']}", 7.5)
-    page.draw_rect(fitz.Rect(rect.x0 + 25, rect.y1 - 17, rect.x1 - 7, rect.y1 - 4), color=LINE, fill=LIGHT, width=0.5)
+def draw_dictation_item(page, question, number, rect):
+    draw_number(page, number, rect.x0 + 9, rect.y0 + 11, 7)
+    page.draw_line(
+        fitz.Point(rect.x0 + 23, rect.y1 - 5),
+        fitz.Point(rect.x1 - 4, rect.y1 - 5),
+        color=LINE,
+        width=0.7,
+    )
+
+
+def draw_sentence_spelling_item(page, question, number, rect):
+    draw_number(page, number, rect.x0 + 9, rect.y0 + 13, 7)
+    html_box(
+        page,
+        fitz.Rect(rect.x0 + 23, rect.y0 + 2, rect.x1 - 117, rect.y1 - 2),
+        question["prompt"],
+        f"prompt-{question['id']}",
+        8.2,
+    )
+    page.draw_rect(
+        fitz.Rect(rect.x1 - 108, rect.y0 + 3, rect.x1 - 3, rect.y1 - 3),
+        color=LINE,
+        fill=LIGHT,
+        width=0.6,
+    )
+
+
+def draw_spelling_page(doc):
+    page = add_page(doc, "Conventions of Language", "Spelling · Questions 26–50")
+    questions = PAPER["language"][25:]
+    dictation = questions[:15]
+    underlined = questions[15:20]
+    identify = questions[20:]
+
+    page.draw_rect(fitz.Rect(31, 75, 564, 806), color=LINE, fill=(1, 1, 1), radius=0.025, width=0.7)
+    page.draw_rect(fitz.Rect(39, 83, 556, 127), color=None, fill=PALE, radius=0.05)
+    html_box(
+        page,
+        fitz.Rect(49, 89, 546, 121),
+        "<b>To the student</b><br>Ask your teacher or parent to read the spelling words aloud. "
+        "Write the correct spelling of each word on the lines below.",
+        "spelling-dictation-instructions",
+        7.8,
+        "center",
+    )
+
+    left = dictation[::2]
+    right = dictation[1::2]
+    for column, column_questions in enumerate((left, right)):
+        x0, x1 = (43, 293) if column == 0 else (306, 556)
+        for row, question in enumerate(column_questions):
+            y0 = 137 + row * 31
+            draw_dictation_item(page, question, int(question["id"][1:]), fitz.Rect(x0, y0, x1, y0 + 27))
+
+    html_box(
+        page,
+        fitz.Rect(43, 389, 552, 423),
+        "<b>Read the sentences.</b> The spelling mistake in each sentence is underlined. "
+        "Write the correct spelling of the underlined word in the box.",
+        "spelling-underlined-instructions",
+        7.8,
+    )
+    for row, question in enumerate(underlined):
+        y0 = 425 + row * 38
+        draw_sentence_spelling_item(page, question, int(question["id"][1:]), fitz.Rect(43, y0, 556, y0 + 34))
+
+    html_box(
+        page,
+        fitz.Rect(43, 619, 552, 650),
+        "<b>Each line has one word that is incorrect.</b> Write the correct spelling of the word in the box.",
+        "spelling-identify-instructions",
+        7.8,
+    )
+    for row, question in enumerate(identify):
+        y0 = 653 + row * 29
+        draw_sentence_spelling_item(page, question, int(question["id"][1:]), fitz.Rect(43, y0, 556, y0 + 27))
 
 
 def draw_language_pages(doc):
@@ -132,17 +203,7 @@ def draw_language_pages(doc):
             draw_grammar_item(page, question, int(question["id"][1:]), fitz.Rect(40, y, 555, y + item_height - 2))
             y += item_height
 
-    page = add_page(doc, "Conventions of Language", "Spelling · Questions 26–50")
-    page.draw_rect(fitz.Rect(31, 75, 564, 806), color=LINE, fill=(1, 1, 1), radius=0.025, width=0.7)
-    questions = PAPER["language"][25:]
-    columns = [questions[:13], questions[13:]]
-    for column, column_questions in enumerate(columns):
-        x0, x1 = (39, 295) if column == 0 else (302, 556)
-        item_height = 712 / len(column_questions)
-        y = 83
-        for question in column_questions:
-            draw_spelling_item(page, question, int(question["id"][1:]), fitz.Rect(x0, y, x1, y + item_height - 1))
-            y += item_height
+    draw_spelling_page(doc)
 
 
 def passage_markup(passage):
@@ -452,6 +513,22 @@ def validate_content():
         assert question["answer"] and question["explanation"]
         if "options" in question:
             assert len(question["options"]) == 4 and question["answer"] in "ABCD"
+    spelling = language[25:]
+    assert [question["spelling_type"] for question in spelling] == [
+        *(["dictation"] * 15),
+        *(["underlined"] * 5),
+        *(["identify"] * 5),
+    ]
+    for question in spelling[:15]:
+        assert question["spoken_word"] == question["answer"]
+        assert question["spoken_word"].casefold() in question["spoken_sentence"].casefold()
+        assert "incorrect_word" not in question
+    for question in spelling[15:20]:
+        assert question["prompt"].count("text-decoration:underline") == 1
+        assert question["incorrect_word"].casefold() in question["prompt"].casefold()
+    for question in spelling[20:]:
+        assert "text-decoration:underline" not in question["prompt"]
+        assert question["incorrect_word"].casefold() in question["prompt"].casefold()
     return language, reading, numeracy
 
 
