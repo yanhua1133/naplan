@@ -1,23 +1,16 @@
-# Batch Convergence Issue Log
+# Batch Issue Log
 
-All issues below were found during generation or validation, fixed, and followed by a complete batch regeneration and validation pass.
+Status: all critical and major issues found during the source-structure audit are closed.
 
-| Issue | Risk | Resolution | Prevention added to skill |
-| --- | --- | --- | --- |
-| Unsupported drawing helper used by one visual branch | A later paper could fail although Paper 01 rendered | Replaced it with supported primitive lines and exercised all branches | Validate the complete batch and require visual branch coverage |
-| Spinner values produced a tied probability outcome | More than one defensible answer | Changed generated sector data and added uniqueness checks | Reject tied single-answer outcomes |
-| Several generated items contained duplicate options | Ambiguous or invalid multiple choice | Rebuilt distractors and asserted option uniqueness | Reject duplicate options across every paper |
-| Some normalized prompts repeated across papers | Papers differed only superficially | Added deterministic context variation and cross-paper prompt checks | Enforce normalized batch uniqueness |
-| Early reading passages were shorter than the reference bands | Material difficulty and response burden drifted | Expanded each passage family to reference-like lengths | Enforce length bands per passage and paper |
-| Spelling replacement was case-sensitive | The intended misspelling was not always underlined | Used case-insensitive one-time replacement and exact-error assertions | Require exactly one verified underlined error |
-| All 25 spelling items were incorrectly generated as underlined sentence corrections | The output did not match the source page's 15/5/5 dictation, underlined-error and unmarked-error structure; instructions also referred to underlining that was not reliably visible | Added explicit spelling item types, rebuilt the page in three source-matched sections and added rendered underline/type-count checks | Never infer a section's item type from its total count; encode and validate every source subgroup separately |
-| Proofreading misspellings and sentences were mechanically generated | Triple-letter forms and word-list sentences were technically detectable but unlike authentic Year 3 proofreading items | Replaced all 200 proofreading entries with plausible one- or two-edit misspellings in natural context sentences and verified exact sentence restoration | Reject arbitrary nonwords, triple-letter artefacts and meta-spelling contexts |
-| Language templates combined incompatible verbs, nouns and modifiers | Items could have a unique grammatical answer while describing actions such as packing an iceberg, beetles chasing a ball or photographs standing | Rebuilt incompatible lexical pairs and added semantic guard checks for the affected item families | Validate semantic compatibility, not answer-key uniqueness alone |
-| Reading templates mixed animal and plant behaviour and contained stale wording | Plants were described as feeding or moving, names were lowercased, duplicate articles appeared, and poem questions referred to lines no longer present | Rewrote shared passage templates, added direct evidence for mood answers and blocked known stale phrases and repeated words | Require scientific accuracy, final-passage evidence and post-substitution text checks |
-| A stale two-up render directory showed an older spelling layout | Visual review could accidentally approve obsolete pages rather than the final PDF | Recreated contact sheets directly from final PDF files and removed the stale directory | Generate visual evidence from final output hashes and reject stale render paths |
-| Dynamic `<` comparison text was interpreted as markup | Options or answers could disappear from PDFs | HTML-escaped plain dynamic values before typesetting | Escape dynamic text and separate markup from content |
-| Validator removed text between `<` and `>` as if it were an HTML tag | A real PDF defect could be hidden by validation | Narrowed markup normalization to known tags only | Use separate safe normalization for markup and PDF text |
-| Some writing illustration variants lacked renderer branches | Generic or missing prompt art in later papers | Added every generated illustration variant and inspected all 20 writing pages | Require complete illustration branch coverage |
-| The 20-page requirement incorrectly included the appendix | Student papers were only 17 pages | Rebuilt every paper as 20 student pages plus a separately counted 3-page appendix | State explicitly that appendix pages begin after student page 20 and never count toward it |
-| Templates requested fonts as small as 4.0–6.7pt | Some options and diagram labels looked inexplicably tiny even though layout scale was 1.0 | Raised section-wide minimum sizes and expanded the appendix from 3 to 6 pages | Audit requested font size as well as scale; enforce minimum body, diagram, and appendix sizes |
-| Literal prompts were unique but 73.6% belonged to repeated parameter-swapped templates | Papers reused the same tested sentence or mathematics structure with only names, places or numbers changed | Rebuilt language core sentences and options, added distinct project contexts and 20 phrasing structures, then enforced 2,200 structurally unique prompts and a maximum mean same-position similarity below 0.90 | Treat parameter swaps and wrapper-only changes as duplicates; require structural normalization and near-duplicate checks |
+## Closed root causes
+
+- Replaced the incorrect cached structure of 30 Reading and 30 Numeracy items with the scan-verified 39 Reading and 36 Numeracy items.
+- Restored seven Reading texts and eight Numeracy pages so the student paper is exactly 20 pages before the appendix.
+- Restored non-MCQ response forms: circle-word, cloze, true/false, ordering, matching, select-two and open response.
+- Corrected spelling prompts so every underlined item visibly underlines exactly one error and every correction restores its sentence.
+- Removed duplicate complete questions across the 20-paper batch.
+- Added independent position-by-position answer recalculation and final-PDF text/layout checks.
+
+## Source limitation
+
+- The teacher dictation list corresponding to source questions L26–L40 was not supplied in the 20 student-page scans. The generated words therefore match the visible Year 3 spelling format and difficulty but cannot reproduce an unavailable teacher list.
