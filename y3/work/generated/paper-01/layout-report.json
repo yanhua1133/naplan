@@ -352,7 +352,7 @@
     {
       "label": "prompt-L20",
       "font_size": 7.4,
-      "spare_height": 41.77,
+      "spare_height": 32.89,
       "scale": 1.0
     },
     {
@@ -412,7 +412,7 @@
     {
       "label": "prompt-L25",
       "font_size": 7.4,
-      "spare_height": 41.77,
+      "spare_height": 32.89,
       "scale": 1.0
     },
     {
@@ -452,109 +452,193 @@
       "scale": 1.0
     },
     {
-      "label": "spelling-directions-1",
+      "label": "spelling-directions",
       "font_size": 7.6,
-      "spare_height": 13.88,
+      "spare_height": 16.88,
       "scale": 1.0
     },
     {
-      "label": "qnum-26-43-118",
+      "label": "qnum-26-42.0-120.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-27-43-149",
+      "label": "prompt-L26",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-27-42.0-173.84615384615384",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-28-43-180",
+      "label": "prompt-L27",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-28-42.0-227.69230769230768",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-29-43-211",
+      "label": "prompt-L28",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-29-42.0-281.53846153846155",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-30-43-242",
+      "label": "prompt-L29",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-30-42.0-335.38461538461536",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-31-43-273",
+      "label": "prompt-L30",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-31-42.0-389.2307692307692",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-32-43-304",
+      "label": "prompt-L31",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-32-42.0-443.0769230769231",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-33-43-335",
+      "label": "prompt-L32",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-33-42.0-496.9230769230769",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-34-309-118",
+      "label": "prompt-L33",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-34-42.0-550.7692307692307",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-35-309-149",
+      "label": "prompt-L34",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-35-42.0-604.6153846153846",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-36-309-180",
+      "label": "prompt-L35",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-36-42.0-658.4615384615385",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-37-309-211",
+      "label": "prompt-L36",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-37-42.0-712.3076923076923",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-38-309-242",
+      "label": "prompt-L37",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-38-42.0-766.1538461538462",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-39-309-273",
+      "label": "prompt-L38",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-39-309.0-120.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "qnum-40-309-304",
+      "label": "prompt-L39",
+      "font_size": 7.4,
+      "spare_height": 26.97,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-40-309.0-173.84615384615384",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
     },
     {
-      "label": "spelling-directions-2",
-      "font_size": 7.6,
-      "spare_height": 13.88,
+      "label": "prompt-L40",
+      "font_size": 7.4,
+      "spare_height": 26.97,
       "scale": 1.0
     },
     {
-      "label": "qnum-41-42.0-410.0",
+      "label": "qnum-41-309.0-227.69230769230768",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -562,11 +646,11 @@
     {
       "label": "prompt-L41",
       "font_size": 7.4,
-      "spare_height": 20.12,
+      "spare_height": 18.09,
       "scale": 1.0
     },
     {
-      "label": "qnum-42-42.0-458.0",
+      "label": "qnum-42-309.0-281.53846153846155",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -574,11 +658,11 @@
     {
       "label": "prompt-L42",
       "font_size": 7.4,
-      "spare_height": 20.12,
+      "spare_height": 18.09,
       "scale": 1.0
     },
     {
-      "label": "qnum-43-42.0-506.0",
+      "label": "qnum-43-309.0-335.38461538461536",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -586,11 +670,11 @@
     {
       "label": "prompt-L43",
       "font_size": 7.4,
-      "spare_height": 20.12,
+      "spare_height": 18.09,
       "scale": 1.0
     },
     {
-      "label": "qnum-44-42.0-554.0",
+      "label": "qnum-44-309.0-389.2307692307692",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -598,11 +682,11 @@
     {
       "label": "prompt-L44",
       "font_size": 7.4,
-      "spare_height": 20.12,
+      "spare_height": 18.09,
       "scale": 1.0
     },
     {
-      "label": "qnum-45-42.0-602.0",
+      "label": "qnum-45-309.0-443.0769230769231",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -610,17 +694,11 @@
     {
       "label": "prompt-L45",
       "font_size": 7.4,
-      "spare_height": 20.12,
+      "spare_height": 18.09,
       "scale": 1.0
     },
     {
-      "label": "spelling-directions-3",
-      "font_size": 7.6,
-      "spare_height": 13.88,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-46-42.0-682.0",
+      "label": "qnum-46-309.0-496.9230769230769",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -628,11 +706,11 @@
     {
       "label": "prompt-L46",
       "font_size": 7.4,
-      "spare_height": 7.24,
+      "spare_height": 18.09,
       "scale": 1.0
     },
     {
-      "label": "qnum-47-309.0-682.0",
+      "label": "qnum-47-309.0-550.7692307692307",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -640,11 +718,11 @@
     {
       "label": "prompt-L47",
       "font_size": 7.4,
-      "spare_height": 16.12,
+      "spare_height": 18.09,
       "scale": 1.0
     },
     {
-      "label": "qnum-48-42.0-726.0",
+      "label": "qnum-48-309.0-604.6153846153846",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -652,11 +730,11 @@
     {
       "label": "prompt-L48",
       "font_size": 7.4,
-      "spare_height": 16.12,
+      "spare_height": 18.09,
       "scale": 1.0
     },
     {
-      "label": "qnum-49-309.0-726.0",
+      "label": "qnum-49-309.0-658.4615384615385",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -664,11 +742,11 @@
     {
       "label": "prompt-L49",
       "font_size": 7.4,
-      "spare_height": 16.12,
+      "spare_height": 18.09,
       "scale": 1.0
     },
     {
-      "label": "qnum-50-42.0-770.0",
+      "label": "qnum-50-309.0-712.3076923076923",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -676,7 +754,7 @@
     {
       "label": "prompt-L50",
       "font_size": 7.4,
-      "spare_height": 16.12,
+      "spare_height": 18.09,
       "scale": 1.0
     },
     {
@@ -718,7 +796,7 @@
     {
       "label": "passage-P1",
       "font_size": 8.0,
-      "spare_height": 142.0,
+      "spare_height": 151.6,
       "scale": 1.0
     },
     {
@@ -754,7 +832,7 @@
     {
       "label": "prompt-R3",
       "font_size": 7.4,
-      "spare_height": 7.43,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
@@ -790,7 +868,7 @@
     {
       "label": "prompt-R6",
       "font_size": 7.4,
-      "spare_height": 6.55,
+      "spare_height": 7.43,
       "scale": 1.0
     },
     {
@@ -832,11 +910,11 @@
     {
       "label": "passage-P2",
       "font_size": 8.0,
-      "spare_height": 123.04,
+      "spare_height": 50.24,
       "scale": 1.0
     },
     {
-      "label": "qnum-7-42.0-305.0",
+      "label": "qnum-7-42.0-247.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -844,11 +922,11 @@
     {
       "label": "prompt-R7",
       "font_size": 7.4,
-      "spare_height": 7.43,
+      "spare_height": 42.86,
       "scale": 1.0
     },
     {
-      "label": "qnum-8-42.0-390.8333333333333",
+      "label": "qnum-8-42.0-342.5",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -856,11 +934,11 @@
     {
       "label": "prompt-R8",
       "font_size": 7.4,
-      "spare_height": 33.19,
+      "spare_height": 42.86,
       "scale": 1.0
     },
     {
-      "label": "qnum-9-42.0-476.66666666666663",
+      "label": "qnum-9-42.0-438.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -868,11 +946,11 @@
     {
       "label": "prompt-R9",
       "font_size": 7.4,
-      "spare_height": 33.19,
+      "spare_height": 42.86,
       "scale": 1.0
     },
     {
-      "label": "qnum-10-42.0-562.5",
+      "label": "qnum-10-42.0-533.5",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -880,11 +958,11 @@
     {
       "label": "prompt-R10",
       "font_size": 7.4,
-      "spare_height": 33.19,
+      "spare_height": 42.86,
       "scale": 1.0
     },
     {
-      "label": "qnum-11-42.0-648.3333333333333",
+      "label": "qnum-11-42.0-629.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -892,11 +970,11 @@
     {
       "label": "prompt-R11",
       "font_size": 7.4,
-      "spare_height": 33.19,
+      "spare_height": 47.56,
       "scale": 1.0
     },
     {
-      "label": "qnum-12-42.0-734.1666666666666",
+      "label": "qnum-12-42.0-724.5",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -904,7 +982,7 @@
     {
       "label": "prompt-R12",
       "font_size": 7.4,
-      "spare_height": 33.19,
+      "spare_height": 42.86,
       "scale": 1.0
     },
     {
@@ -946,7 +1024,7 @@
     {
       "label": "passage-P3",
       "font_size": 8.0,
-      "spare_height": 132.4,
+      "spare_height": 151.6,
       "scale": 1.0
     },
     {
@@ -970,7 +1048,7 @@
     {
       "label": "prompt-R14",
       "font_size": 7.4,
-      "spare_height": 37.9,
+      "spare_height": 33.19,
       "scale": 1.0
     },
     {
@@ -994,7 +1072,7 @@
     {
       "label": "prompt-R16",
       "font_size": 7.4,
-      "spare_height": 35.19,
+      "spare_height": 7.43,
       "scale": 1.0
     },
     {
@@ -1060,41 +1138,11 @@
     {
       "label": "passage-P4",
       "font_size": 8.0,
-      "spare_height": 204.4,
+      "spare_height": 96.4,
       "scale": 1.0
     },
     {
-      "label": "diagram-tally",
-      "font_size": 6.8,
-      "spare_height": 23.2,
-      "scale": 1.0
-    },
-    {
-      "label": "diagram-label-data-0",
-      "font_size": 6.8,
-      "spare_height": 2.84,
-      "scale": 1.0
-    },
-    {
-      "label": "diagram-label-data-1",
-      "font_size": 6.8,
-      "spare_height": 2.84,
-      "scale": 1.0
-    },
-    {
-      "label": "diagram-label-data-2",
-      "font_size": 6.8,
-      "spare_height": 2.84,
-      "scale": 1.0
-    },
-    {
-      "label": "diagram-label-data-3",
-      "font_size": 6.8,
-      "spare_height": 2.84,
-      "scale": 1.0
-    },
-    {
-      "label": "qnum-19-42.0-329.0",
+      "label": "qnum-19-42.0-295.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1102,11 +1150,11 @@
     {
       "label": "prompt-R19",
       "font_size": 7.4,
-      "spare_height": 33.9,
+      "spare_height": 34.86,
       "scale": 1.0
     },
     {
-      "label": "qnum-20-42.0-410.8333333333333",
+      "label": "qnum-20-42.0-382.5",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1114,11 +1162,11 @@
     {
       "label": "prompt-R20",
       "font_size": 7.4,
-      "spare_height": 29.19,
+      "spare_height": 34.86,
       "scale": 1.0
     },
     {
-      "label": "qnum-21-42.0-492.66666666666663",
+      "label": "qnum-21-42.0-470.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1126,11 +1174,11 @@
     {
       "label": "prompt-R21",
       "font_size": 7.4,
-      "spare_height": 29.19,
+      "spare_height": 9.1,
       "scale": 1.0
     },
     {
-      "label": "qnum-22-42.0-574.5",
+      "label": "qnum-22-42.0-557.5",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1138,11 +1186,11 @@
     {
       "label": "prompt-R22",
       "font_size": 7.4,
-      "spare_height": 29.19,
+      "spare_height": 34.86,
       "scale": 1.0
     },
     {
-      "label": "qnum-23-42.0-656.3333333333333",
+      "label": "qnum-23-42.0-645.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1150,11 +1198,11 @@
     {
       "label": "prompt-R23",
       "font_size": 7.4,
-      "spare_height": 29.19,
+      "spare_height": 34.86,
       "scale": 1.0
     },
     {
-      "label": "qnum-24-42.0-738.1666666666666",
+      "label": "qnum-24-42.0-732.5",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1162,7 +1210,7 @@
     {
       "label": "prompt-R24",
       "font_size": 7.4,
-      "spare_height": 29.19,
+      "spare_height": 34.86,
       "scale": 1.0
     },
     {
@@ -1204,11 +1252,11 @@
     {
       "label": "passage-P5",
       "font_size": 8.0,
-      "spare_height": 109.92,
+      "spare_height": 118.72,
       "scale": 1.0
     },
     {
-      "label": "qnum-25-42.0-305.0",
+      "label": "qnum-25-42.0-265.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1216,11 +1264,11 @@
     {
       "label": "prompt-R25",
       "font_size": 7.4,
-      "spare_height": 50.36,
+      "spare_height": 58.36,
       "scale": 1.0
     },
     {
-      "label": "qnum-26-42.0-408.0",
+      "label": "qnum-26-42.0-376.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1228,11 +1276,11 @@
     {
       "label": "prompt-R26",
       "font_size": 7.4,
-      "spare_height": 52.36,
+      "spare_height": 32.6,
       "scale": 1.0
     },
     {
-      "label": "qnum-27-42.0-511.0",
+      "label": "qnum-27-42.0-487.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1240,11 +1288,11 @@
     {
       "label": "prompt-R27",
       "font_size": 7.4,
-      "spare_height": 50.36,
+      "spare_height": 58.36,
       "scale": 1.0
     },
     {
-      "label": "qnum-28-42.0-614.0",
+      "label": "qnum-28-42.0-598.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1252,11 +1300,11 @@
     {
       "label": "prompt-R28",
       "font_size": 7.4,
-      "spare_height": 50.36,
+      "spare_height": 58.36,
       "scale": 1.0
     },
     {
-      "label": "qnum-29-42.0-717.0",
+      "label": "qnum-29-42.0-709.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1264,7 +1312,7 @@
     {
       "label": "prompt-R29",
       "font_size": 7.4,
-      "spare_height": 50.36,
+      "spare_height": 58.36,
       "scale": 1.0
     },
     {
@@ -1306,11 +1354,11 @@
     {
       "label": "passage-P6",
       "font_size": 8.0,
-      "spare_height": 132.4,
+      "spare_height": 66.28,
       "scale": 1.0
     },
     {
-      "label": "qnum-30-42.0-305.0",
+      "label": "qnum-30-42.0-261.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1318,11 +1366,11 @@
     {
       "label": "prompt-R30",
       "font_size": 7.4,
-      "spare_height": 50.36,
+      "spare_height": 59.16,
       "scale": 1.0
     },
     {
-      "label": "qnum-31-42.0-408.0",
+      "label": "qnum-31-42.0-372.8",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1330,11 +1378,11 @@
     {
       "label": "prompt-R31",
       "font_size": 7.4,
-      "spare_height": 50.36,
+      "spare_height": 59.16,
       "scale": 1.0
     },
     {
-      "label": "qnum-32-42.0-511.0",
+      "label": "qnum-32-42.0-484.6",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1342,11 +1390,11 @@
     {
       "label": "prompt-R32",
       "font_size": 7.4,
-      "spare_height": 50.36,
+      "spare_height": 59.16,
       "scale": 1.0
     },
     {
-      "label": "qnum-33-42.0-614.0",
+      "label": "qnum-33-42.0-596.4",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1354,11 +1402,11 @@
     {
       "label": "prompt-R33",
       "font_size": 7.4,
-      "spare_height": 50.36,
+      "spare_height": 59.16,
       "scale": 1.0
     },
     {
-      "label": "qnum-34-42.0-717.0",
+      "label": "qnum-34-42.0-708.2",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1366,7 +1414,7 @@
     {
       "label": "prompt-R34",
       "font_size": 7.4,
-      "spare_height": 50.36,
+      "spare_height": 59.16,
       "scale": 1.0
     },
     {
@@ -1408,11 +1456,41 @@
     {
       "label": "passage-P7",
       "font_size": 8.0,
-      "spare_height": 132.4,
+      "spare_height": 204.4,
       "scale": 1.0
     },
     {
-      "label": "qnum-35-42.0-305.0",
+      "label": "diagram-tally",
+      "font_size": 6.8,
+      "spare_height": 23.2,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-label-data-0",
+      "font_size": 6.8,
+      "spare_height": 7.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-label-data-1",
+      "font_size": 6.8,
+      "spare_height": 7.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-label-data-2",
+      "font_size": 6.8,
+      "spare_height": 7.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-label-data-3",
+      "font_size": 6.8,
+      "spare_height": 7.84,
+      "scale": 1.0
+    },
+    {
+      "label": "qnum-35-42.0-329.0",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1420,11 +1498,11 @@
     {
       "label": "prompt-R35",
       "font_size": 7.4,
-      "spare_height": 55.06,
+      "spare_height": 45.56,
       "scale": 1.0
     },
     {
-      "label": "qnum-36-42.0-408.0",
+      "label": "qnum-36-42.0-427.2",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1432,11 +1510,11 @@
     {
       "label": "prompt-R36",
       "font_size": 7.4,
-      "spare_height": 24.6,
+      "spare_height": 45.56,
       "scale": 1.0
     },
     {
-      "label": "qnum-37-42.0-511.0",
+      "label": "qnum-37-42.0-525.4",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1444,11 +1522,11 @@
     {
       "label": "prompt-R37",
       "font_size": 7.4,
-      "spare_height": 50.36,
+      "spare_height": 45.56,
       "scale": 1.0
     },
     {
-      "label": "qnum-38-42.0-614.0",
+      "label": "qnum-38-42.0-623.6",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1456,11 +1534,11 @@
     {
       "label": "prompt-R38",
       "font_size": 7.4,
-      "spare_height": 50.36,
+      "spare_height": 45.56,
       "scale": 1.0
     },
     {
-      "label": "qnum-39-42.0-717.0",
+      "label": "qnum-39-42.0-721.8",
       "font_size": 6.3,
       "spare_height": 0.14,
       "scale": 1.0
@@ -1468,7 +1546,7 @@
     {
       "label": "prompt-R39",
       "font_size": 7.4,
-      "spare_height": 50.36,
+      "spare_height": 45.56,
       "scale": 1.0
     },
     {
@@ -1594,7 +1672,7 @@
     {
       "label": "prompt-N2",
       "font_size": 7.4,
-      "spare_height": 118.12,
+      "spare_height": 109.24,
       "scale": 1.0
     },
     {
@@ -1618,7 +1696,7 @@
     {
       "label": "prompt-N4",
       "font_size": 7.4,
-      "spare_height": 92.36,
+      "spare_height": 83.48,
       "scale": 1.0
     },
     {
@@ -1684,7 +1762,7 @@
     {
       "label": "prompt-N6",
       "font_size": 7.4,
-      "spare_height": 154.62,
+      "spare_height": 145.74,
       "scale": 1.0
     },
     {
@@ -1714,7 +1792,7 @@
     {
       "label": "prompt-N8",
       "font_size": 7.4,
-      "spare_height": 128.86,
+      "spare_height": 119.98,
       "scale": 1.0
     },
     {
@@ -1726,7 +1804,7 @@
     {
       "label": "prompt-N9",
       "font_size": 7.4,
-      "spare_height": 128.86,
+      "spare_height": 119.98,
       "scale": 1.0
     },
     {
@@ -1772,15 +1850,39 @@
       "scale": 1.0
     },
     {
-      "label": "diagram-N10",
-      "font_size": 7.0,
-      "spare_height": 78.87,
+      "label": "diagram-N10-A",
+      "font_size": 6.8,
+      "spare_height": 1.34,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N10-B",
+      "font_size": 6.8,
+      "spare_height": 1.34,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N10-C",
+      "font_size": 6.8,
+      "spare_height": 1.34,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N10-D",
+      "font_size": 6.8,
+      "spare_height": 1.34,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N10-E",
+      "font_size": 6.8,
+      "spare_height": 1.34,
       "scale": 1.0
     },
     {
       "label": "prompt-N10",
       "font_size": 7.4,
-      "spare_height": 68.03,
+      "spare_height": 59.15,
       "scale": 1.0
     },
     {
@@ -1894,7 +1996,7 @@
     {
       "label": "prompt-N16",
       "font_size": 7.4,
-      "spare_height": 128.86,
+      "spare_height": 119.98,
       "scale": 1.0
     },
     {
@@ -1930,7 +2032,7 @@
     {
       "label": "prompt-N17",
       "font_size": 7.4,
-      "spare_height": 128.86,
+      "spare_height": 119.98,
       "scale": 1.0
     },
     {
@@ -1948,7 +2050,7 @@
     {
       "label": "prompt-N18",
       "font_size": 7.4,
-      "spare_height": 128.86,
+      "spare_height": 119.98,
       "scale": 1.0
     },
     {
@@ -1960,7 +2062,7 @@
     {
       "label": "prompt-N19",
       "font_size": 7.4,
-      "spare_height": 128.86,
+      "spare_height": 119.98,
       "scale": 1.0
     },
     {
@@ -2006,15 +2108,33 @@
       "scale": 1.0
     },
     {
-      "label": "diagram-N20",
-      "font_size": 8.0,
-      "spare_height": 139.3,
+      "label": "diagram-N20-A",
+      "font_size": 6.8,
+      "spare_height": 3.34,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N20-B",
+      "font_size": 6.8,
+      "spare_height": 3.34,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N20-C",
+      "font_size": 6.8,
+      "spare_height": 3.34,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N20-D",
+      "font_size": 6.8,
+      "spare_height": 3.34,
       "scale": 1.0
     },
     {
       "label": "prompt-N20",
       "font_size": 7.4,
-      "spare_height": 128.86,
+      "spare_height": 119.98,
       "scale": 1.0
     },
     {
@@ -2026,7 +2146,7 @@
     {
       "label": "prompt-N21",
       "font_size": 7.4,
-      "spare_height": 145.74,
+      "spare_height": 154.62,
       "scale": 1.0
     },
     {
@@ -2050,7 +2170,7 @@
     {
       "label": "prompt-N23",
       "font_size": 7.4,
-      "spare_height": 154.62,
+      "spare_height": 145.74,
       "scale": 1.0
     },
     {
@@ -2098,7 +2218,7 @@
     {
       "label": "prompt-N24",
       "font_size": 7.4,
-      "spare_height": 119.98,
+      "spare_height": 111.1,
       "scale": 1.0
     },
     {
@@ -2122,7 +2242,7 @@
     {
       "label": "prompt-N26",
       "font_size": 7.4,
-      "spare_height": 128.86,
+      "spare_height": 119.98,
       "scale": 1.0
     },
     {
@@ -2206,25 +2326,25 @@
     {
       "label": "diagram-N29-0",
       "font_size": 6.8,
-      "spare_height": 63.51,
+      "spare_height": 61.51,
       "scale": 1.0
     },
     {
       "label": "diagram-N29-1",
       "font_size": 6.8,
-      "spare_height": 63.51,
+      "spare_height": 61.51,
       "scale": 1.0
     },
     {
       "label": "diagram-N29-2",
       "font_size": 6.8,
-      "spare_height": 63.51,
+      "spare_height": 61.51,
       "scale": 1.0
     },
     {
       "label": "diagram-N29-3",
       "font_size": 6.8,
-      "spare_height": 63.51,
+      "spare_height": 61.51,
       "scale": 1.0
     },
     {
@@ -2242,7 +2362,7 @@
     {
       "label": "prompt-N30",
       "font_size": 7.4,
-      "spare_height": 68.03,
+      "spare_height": 59.15,
       "scale": 1.0
     },
     {
@@ -2254,13 +2374,13 @@
     {
       "label": "diagram-N31-0",
       "font_size": 6.8,
-      "spare_height": 3.84,
+      "spare_height": 4.84,
       "scale": 1.0
     },
     {
       "label": "diagram-N31-1",
       "font_size": 6.8,
-      "spare_height": 3.84,
+      "spare_height": 4.84,
       "scale": 1.0
     },
     {
@@ -2273,12 +2393,6 @@
       "label": "qnum-32-40.0-576.6666666666667",
       "font_size": 6.3,
       "spare_height": 0.14,
-      "scale": 1.0
-    },
-    {
-      "label": "diagram-N32",
-      "font_size": 7.0,
-      "spare_height": 84.27,
       "scale": 1.0
     },
     {
@@ -2302,7 +2416,7 @@
     {
       "label": "prompt-N33",
       "font_size": 7.4,
-      "spare_height": 84.91,
+      "spare_height": 93.79,
       "scale": 1.0
     },
     {
@@ -2348,27 +2462,51 @@
       "scale": 1.0
     },
     {
+      "label": "diagram-N34-value-0",
+      "font_size": 6.8,
+      "spare_height": 2.84,
+      "scale": 1.0
+    },
+    {
       "label": "diagram-N34-0",
       "font_size": 6.8,
-      "spare_height": 1.84,
+      "spare_height": 2.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N34-value-1",
+      "font_size": 6.8,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "diagram-N34-1",
       "font_size": 6.8,
-      "spare_height": 1.84,
+      "spare_height": 2.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N34-value-2",
+      "font_size": 6.8,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "diagram-N34-2",
       "font_size": 6.8,
-      "spare_height": 1.84,
+      "spare_height": 2.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N34-value-3",
+      "font_size": 6.8,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
       "label": "diagram-N34-3",
       "font_size": 6.8,
-      "spare_height": 1.84,
+      "spare_height": 2.84,
       "scale": 1.0
     },
     {
@@ -2410,7 +2548,7 @@
     {
       "label": "prompt-N35",
       "font_size": 7.4,
-      "spare_height": 189.69,
+      "spare_height": 180.81,
       "scale": 1.0
     },
     {
@@ -2420,15 +2558,75 @@
       "scale": 1.0
     },
     {
-      "label": "diagram-N36",
-      "font_size": 8,
-      "spare_height": 208.73,
+      "label": "diagram-N36-0-0",
+      "font_size": 6.8,
+      "spare_height": 5.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N36-0-1",
+      "font_size": 6.8,
+      "spare_height": 5.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N36-0-2",
+      "font_size": 6.8,
+      "spare_height": 5.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N36-0-3",
+      "font_size": 6.8,
+      "spare_height": 5.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N36-0-4",
+      "font_size": 6.8,
+      "spare_height": 5.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N36-1-0",
+      "font_size": 6.8,
+      "spare_height": 5.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N36-2-0",
+      "font_size": 6.8,
+      "spare_height": 5.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N36-2-1",
+      "font_size": 6.8,
+      "spare_height": 5.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N36-2-2",
+      "font_size": 6.8,
+      "spare_height": 5.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N36-2-3",
+      "font_size": 6.8,
+      "spare_height": 5.84,
+      "scale": 1.0
+    },
+    {
+      "label": "diagram-N36-2-4",
+      "font_size": 6.8,
+      "spare_height": 5.84,
       "scale": 1.0
     },
     {
       "label": "prompt-N36",
       "font_size": 7.4,
-      "spare_height": 215.45,
+      "spare_height": 206.57,
       "scale": 1.0
     },
     {
@@ -2506,7 +2704,7 @@
     {
       "label": "answer-L7",
       "font_size": 7.4,
-      "spare_height": 31.24,
+      "spare_height": 22.36,
       "scale": 1.0
     },
     {
@@ -2596,7 +2794,7 @@
     {
       "label": "answer-L22",
       "font_size": 7.4,
-      "spare_height": 22.36,
+      "spare_height": 31.24,
       "scale": 1.0
     },
     {
@@ -2854,7 +3052,7 @@
     {
       "label": "answer-R3",
       "font_size": 7.4,
-      "spare_height": 39.16,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
@@ -2878,7 +3076,7 @@
     {
       "label": "answer-R7",
       "font_size": 7.4,
-      "spare_height": 39.16,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
@@ -2908,7 +3106,7 @@
     {
       "label": "answer-R12",
       "font_size": 7.4,
-      "spare_height": 39.16,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
@@ -2920,7 +3118,7 @@
     {
       "label": "answer-R14",
       "font_size": 7.4,
-      "spare_height": 39.16,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
@@ -2938,7 +3136,7 @@
     {
       "label": "answer-R17",
       "font_size": 7.4,
-      "spare_height": 39.16,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
@@ -3016,7 +3214,7 @@
     {
       "label": "answer-R24",
       "font_size": 7.4,
-      "spare_height": 39.16,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
@@ -3046,7 +3244,7 @@
     {
       "label": "answer-R29",
       "font_size": 7.4,
-      "spare_height": 39.16,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
@@ -3064,7 +3262,7 @@
     {
       "label": "answer-R32",
       "font_size": 7.4,
-      "spare_height": 39.16,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
@@ -3088,7 +3286,7 @@
     {
       "label": "answer-R36",
       "font_size": 7.4,
-      "spare_height": 39.16,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
@@ -3106,7 +3304,7 @@
     {
       "label": "answer-R39",
       "font_size": 7.4,
-      "spare_height": 39.16,
+      "spare_height": 48.04,
       "scale": 1.0
     },
     {
@@ -3405,5 +3603,724 @@
     }
   ],
   "minimum_scale": 1.0,
-  "negative_spare_entries": []
+  "negative_spare_entries": [],
+  "diagram_visuals": [
+    {
+      "label": "N5",
+      "kind": "l_grid",
+      "page": 13,
+      "rect": [
+        405.0,
+        667.0,
+        560.0,
+        799.0
+      ]
+    },
+    {
+      "label": "N6",
+      "kind": "circle_pattern",
+      "page": 14,
+      "rect": [
+        405.0,
+        83.0,
+        560.0,
+        251.5
+      ]
+    },
+    {
+      "label": "N7",
+      "kind": "pictograph",
+      "page": 14,
+      "rect": [
+        405.0,
+        265.5,
+        560.0,
+        434.0
+      ]
+    },
+    {
+      "label": "N8",
+      "kind": "top_view",
+      "page": 14,
+      "rect": [
+        405.0,
+        448.0,
+        560.0,
+        616.5
+      ]
+    },
+    {
+      "label": "N10",
+      "kind": "fractions",
+      "page": 15,
+      "rect": [
+        405.0,
+        83.0,
+        560.0,
+        190.67
+      ]
+    },
+    {
+      "label": "N15",
+      "kind": "money_table",
+      "page": 15,
+      "rect": [
+        405.0,
+        691.33,
+        560.0,
+        799.0
+      ]
+    },
+    {
+      "label": "N16",
+      "kind": "clock",
+      "page": 16,
+      "rect": [
+        405.0,
+        83.0,
+        560.0,
+        251.5
+      ]
+    },
+    {
+      "label": "N17",
+      "kind": "room_map",
+      "page": 16,
+      "rect": [
+        405.0,
+        265.5,
+        560.0,
+        434.0
+      ]
+    },
+    {
+      "label": "N18",
+      "kind": "letters",
+      "page": 16,
+      "rect": [
+        405.0,
+        448.0,
+        560.0,
+        616.5
+      ]
+    },
+    {
+      "label": "N20",
+      "kind": "equal_area",
+      "page": 17,
+      "rect": [
+        405.0,
+        83.0,
+        560.0,
+        251.5
+      ]
+    },
+    {
+      "label": "N21",
+      "kind": "cubes",
+      "page": 17,
+      "rect": [
+        405.0,
+        265.5,
+        560.0,
+        434.0
+      ]
+    },
+    {
+      "label": "N24",
+      "kind": "composite_solid",
+      "page": 18,
+      "rect": [
+        405.0,
+        83.0,
+        560.0,
+        251.5
+      ]
+    },
+    {
+      "label": "N27",
+      "kind": "thermometers",
+      "page": 18,
+      "rect": [
+        405.0,
+        630.5,
+        560.0,
+        799.0
+      ]
+    },
+    {
+      "label": "N29",
+      "kind": "number_line",
+      "page": 19,
+      "rect": [
+        405.0,
+        204.67,
+        560.0,
+        312.33
+      ]
+    },
+    {
+      "label": "N31",
+      "kind": "scales",
+      "page": 19,
+      "rect": [
+        405.0,
+        448.0,
+        560.0,
+        555.67
+      ]
+    },
+    {
+      "label": "N32",
+      "kind": "backward_line",
+      "page": 19,
+      "rect": [
+        405.0,
+        569.67,
+        560.0,
+        677.33
+      ]
+    },
+    {
+      "label": "N33",
+      "kind": "total_table",
+      "page": 19,
+      "rect": [
+        405.0,
+        691.33,
+        560.0,
+        799.0
+      ]
+    },
+    {
+      "label": "N34",
+      "kind": "bar_chart",
+      "page": 20,
+      "rect": [
+        405.0,
+        83.0,
+        560.0,
+        312.33
+      ]
+    },
+    {
+      "label": "N35",
+      "kind": "spinners",
+      "page": 20,
+      "rect": [
+        405.0,
+        326.33,
+        560.0,
+        555.67
+      ]
+    },
+    {
+      "label": "N36",
+      "kind": "coins",
+      "page": 20,
+      "rect": [
+        405.0,
+        569.67,
+        560.0,
+        799.0
+      ]
+    }
+  ],
+  "diagram_geometry_checks": [
+    {
+      "label": "diagram-gap-N10-A",
+      "shape_rect": [
+        430.0,
+        110.58,
+        464.0,
+        119.08
+      ],
+      "text_rect": [
+        412.0,
+        109.58,
+        427.0,
+        121.08
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 3.0
+    },
+    {
+      "label": "diagram-gap-N10-B",
+      "shape_rect": [
+        430.0,
+        121.08,
+        481.0,
+        129.58
+      ],
+      "text_rect": [
+        412.0,
+        120.08,
+        427.0,
+        131.58
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 3.0
+    },
+    {
+      "label": "diagram-gap-N10-C",
+      "shape_rect": [
+        430.0,
+        131.58,
+        481.0,
+        140.08
+      ],
+      "text_rect": [
+        412.0,
+        130.58,
+        427.0,
+        142.08
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 3.0
+    },
+    {
+      "label": "diagram-gap-N10-D",
+      "shape_rect": [
+        430.0,
+        142.08,
+        472.5,
+        150.58
+      ],
+      "text_rect": [
+        412.0,
+        141.08,
+        427.0,
+        152.58
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 3.0
+    },
+    {
+      "label": "diagram-gap-N10-E",
+      "shape_rect": [
+        430.0,
+        152.58,
+        498.0,
+        161.08
+      ],
+      "text_rect": [
+        412.0,
+        151.58,
+        427.0,
+        163.08
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 3.0
+    },
+    {
+      "label": "diagram-gap-N20-A",
+      "shape_rect": [
+        429.0,
+        132.17,
+        471.0,
+        142.67
+      ],
+      "text_rect": [
+        413.0,
+        131.17,
+        427.0,
+        144.67
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 2.0
+    },
+    {
+      "label": "diagram-gap-N20-B",
+      "shape_rect": [
+        506.5,
+        132.17,
+        538.0,
+        142.67
+      ],
+      "text_rect": [
+        490.5,
+        131.17,
+        504.5,
+        144.67
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 2.0
+    },
+    {
+      "label": "diagram-gap-N20-C",
+      "shape_rect": [
+        429.0,
+        191.83,
+        471.0,
+        202.33
+      ],
+      "text_rect": [
+        413.0,
+        190.83,
+        427.0,
+        204.33
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 2.0
+    },
+    {
+      "label": "diagram-gap-N20-D",
+      "shape_rect": [
+        506.5,
+        191.83,
+        559.0,
+        202.33
+      ],
+      "text_rect": [
+        490.5,
+        190.83,
+        504.5,
+        204.33
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 2.0
+    },
+    {
+      "label": "diagram-gap-N27-0",
+      "shape_rect": [
+        440.4,
+        644.5,
+        458.4,
+        776.0
+      ],
+      "text_rect": [
+        418.4,
+        782.0,
+        478.4,
+        797.0
+      ],
+      "minimum_gap": 4.0,
+      "actual_gap": 6.0
+    },
+    {
+      "label": "diagram-gap-N27-1",
+      "shape_rect": [
+        508.6,
+        644.5,
+        526.6,
+        776.0
+      ],
+      "text_rect": [
+        486.6,
+        782.0,
+        546.6,
+        797.0
+      ],
+      "minimum_gap": 4.0,
+      "actual_gap": 6.0
+    },
+    {
+      "label": "diagram-gap-N29-0",
+      "shape_rect": [
+        420.0,
+        223.67,
+        545.0,
+        235.67
+      ],
+      "text_rect": [
+        410.0,
+        238.67,
+        440.0,
+        310.33
+      ],
+      "minimum_gap": 3.0,
+      "actual_gap": 3.0
+    },
+    {
+      "label": "diagram-gap-N29-1",
+      "shape_rect": [
+        420.0,
+        223.67,
+        545.0,
+        235.67
+      ],
+      "text_rect": [
+        448.33,
+        238.67,
+        478.33,
+        310.33
+      ],
+      "minimum_gap": 3.0,
+      "actual_gap": 3.0
+    },
+    {
+      "label": "diagram-gap-N29-2",
+      "shape_rect": [
+        420.0,
+        223.67,
+        545.0,
+        235.67
+      ],
+      "text_rect": [
+        486.67,
+        238.67,
+        516.67,
+        310.33
+      ],
+      "minimum_gap": 3.0,
+      "actual_gap": 3.0
+    },
+    {
+      "label": "diagram-gap-N29-3",
+      "shape_rect": [
+        420.0,
+        223.67,
+        545.0,
+        235.67
+      ],
+      "text_rect": [
+        525.0,
+        238.67,
+        555.0,
+        310.33
+      ],
+      "minimum_gap": 3.0,
+      "actual_gap": 3.0
+    },
+    {
+      "label": "diagram-gap-N31-0",
+      "shape_rect": [
+        439.0,
+        460.0,
+        464.5,
+        533.67
+      ],
+      "text_rect": [
+        423.0,
+        538.67,
+        472.5,
+        553.67
+      ],
+      "minimum_gap": 5.0,
+      "actual_gap": 5.0
+    },
+    {
+      "label": "diagram-gap-N31-1",
+      "shape_rect": [
+        516.5,
+        460.0,
+        542.0,
+        533.67
+      ],
+      "text_rect": [
+        500.5,
+        538.67,
+        550.0,
+        553.67
+      ],
+      "minimum_gap": 5.0,
+      "actual_gap": 5.0
+    },
+    {
+      "label": "diagram-gap-N34-value-0",
+      "shape_rect": [
+        424.0,
+        163.44,
+        447.25,
+        294.33
+      ],
+      "text_rect": [
+        420.0,
+        148.44,
+        451.25,
+        161.44
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 2.0
+    },
+    {
+      "label": "diagram-gap-N34-category-0",
+      "shape_rect": [
+        424.0,
+        163.44,
+        447.25,
+        294.33
+      ],
+      "text_rect": [
+        420.0,
+        298.33,
+        451.25,
+        311.33
+      ],
+      "minimum_gap": 4.0,
+      "actual_gap": 4.0
+    },
+    {
+      "label": "diagram-gap-N34-value-1",
+      "shape_rect": [
+        455.25,
+        98.0,
+        478.5,
+        294.33
+      ],
+      "text_rect": [
+        451.25,
+        83.0,
+        482.5,
+        96.0
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 2.0
+    },
+    {
+      "label": "diagram-gap-N34-category-1",
+      "shape_rect": [
+        455.25,
+        98.0,
+        478.5,
+        294.33
+      ],
+      "text_rect": [
+        451.25,
+        298.33,
+        482.5,
+        311.33
+      ],
+      "minimum_gap": 4.0,
+      "actual_gap": 4.0
+    },
+    {
+      "label": "diagram-gap-N34-value-2",
+      "shape_rect": [
+        486.5,
+        189.62,
+        509.75,
+        294.33
+      ],
+      "text_rect": [
+        482.5,
+        174.62,
+        513.75,
+        187.62
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 2.0
+    },
+    {
+      "label": "diagram-gap-N34-category-2",
+      "shape_rect": [
+        486.5,
+        189.62,
+        509.75,
+        294.33
+      ],
+      "text_rect": [
+        482.5,
+        298.33,
+        513.75,
+        311.33
+      ],
+      "minimum_gap": 4.0,
+      "actual_gap": 4.0
+    },
+    {
+      "label": "diagram-gap-N34-value-3",
+      "shape_rect": [
+        517.75,
+        137.27,
+        541.0,
+        294.33
+      ],
+      "text_rect": [
+        513.75,
+        122.27,
+        545.0,
+        135.27
+      ],
+      "minimum_gap": 2.0,
+      "actual_gap": 2.0
+    },
+    {
+      "label": "diagram-gap-N34-category-3",
+      "shape_rect": [
+        517.75,
+        137.27,
+        541.0,
+        294.33
+      ],
+      "text_rect": [
+        513.75,
+        298.33,
+        545.0,
+        311.33
+      ],
+      "minimum_gap": 4.0,
+      "actual_gap": 4.0
+    },
+    {
+      "label": "diagram-gap-N35-0",
+      "shape_rect": [
+        413.0,
+        421.0,
+        447.0,
+        455.0
+      ],
+      "text_rect": [
+        418.0,
+        458.0,
+        442.0,
+        470.0
+      ],
+      "minimum_gap": 3.0,
+      "actual_gap": 3.0
+    },
+    {
+      "label": "diagram-gap-N35-1",
+      "shape_rect": [
+        448.0,
+        421.0,
+        482.0,
+        455.0
+      ],
+      "text_rect": [
+        453.0,
+        458.0,
+        477.0,
+        470.0
+      ],
+      "minimum_gap": 3.0,
+      "actual_gap": 3.0
+    },
+    {
+      "label": "diagram-gap-N35-2",
+      "shape_rect": [
+        483.0,
+        421.0,
+        517.0,
+        455.0
+      ],
+      "text_rect": [
+        488.0,
+        458.0,
+        512.0,
+        470.0
+      ],
+      "minimum_gap": 3.0,
+      "actual_gap": 3.0
+    },
+    {
+      "label": "diagram-gap-N35-3",
+      "shape_rect": [
+        518.0,
+        421.0,
+        552.0,
+        455.0
+      ],
+      "text_rect": [
+        523.0,
+        458.0,
+        547.0,
+        470.0
+      ],
+      "minimum_gap": 3.0,
+      "actual_gap": 3.0
+    }
+  ],
+  "minimum_diagram_geometry_gap": 2.0,
+  "diagram_boundary_crossings": []
 }

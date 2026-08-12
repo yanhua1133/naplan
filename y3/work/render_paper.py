@@ -11,7 +11,7 @@ from pathlib import Path
 import fitz
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from content_factory import build_paper
+from content_factory import PAPER_COUNT, build_paper
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -47,6 +47,8 @@ INVENTORY = None
 class Audit:
     def __init__(self):
         self.entries = []
+        self.geometry_entries = []
+        self.visual_entries = []
 
     def record(self, label, spare, scale, font_size):
         entry = {
@@ -58,6 +60,41 @@ class Audit:
         self.entries.append(entry)
         if spare < -0.01 or scale < 0.999:
             raise RuntimeError(f"Text overflow or scaling: {entry}")
+
+    def record_visual(self, label, kind, page_number, rect):
+        self.visual_entries.append({
+            "label": label,
+            "kind": kind,
+            "page": page_number,
+            "rect": [round(value, 2) for value in fitz.Rect(rect)],
+        })
+
+    def record_geometry_gap(self, label, shape_rect, text_rect, minimum_gap=1.0):
+        shape_rect = fitz.Rect(shape_rect)
+        text_rect = fitz.Rect(text_rect)
+        intersection = shape_rect & text_rect
+        horizontal_overlap = min(shape_rect.x1, text_rect.x1) - max(shape_rect.x0, text_rect.x0)
+        vertical_overlap = min(shape_rect.y1, text_rect.y1) - max(shape_rect.y0, text_rect.y0)
+        if not intersection.is_empty:
+            gap = -min(intersection.width, intersection.height)
+        elif horizontal_overlap > 0:
+            gap = max(text_rect.y0 - shape_rect.y1, shape_rect.y0 - text_rect.y1)
+        elif vertical_overlap > 0:
+            gap = max(text_rect.x0 - shape_rect.x1, shape_rect.x0 - text_rect.x1)
+        else:
+            horizontal_gap = max(shape_rect.x0 - text_rect.x1, text_rect.x0 - shape_rect.x1, 0)
+            vertical_gap = max(shape_rect.y0 - text_rect.y1, text_rect.y0 - shape_rect.y1, 0)
+            gap = math.hypot(horizontal_gap, vertical_gap)
+        entry = {
+            "label": label,
+            "shape_rect": [round(value, 2) for value in shape_rect],
+            "text_rect": [round(value, 2) for value in text_rect],
+            "minimum_gap": round(float(minimum_gap), 2),
+            "actual_gap": round(float(gap), 2),
+        }
+        self.geometry_entries.append(entry)
+        if gap < minimum_gap:
+            raise RuntimeError(f"Diagram label overlaps or crowds geometry: {entry}")
 
 
 AUDIT = Audit()
@@ -120,7 +157,7 @@ def response_markup(question):
     if kind == "mcq":
         columns = 2 if len(question["options"]) <= 4 else 3
         return option_markup(question["options"], columns)
-    if kind in {"circle", "open", "spelling"}:
+    if kind in {"circle", "open", "spelling", "dictation"}:
         return '<div style="margin-top:4pt;border-bottom:1px solid #87aaaa;height:13pt"></div>'
     if kind == "cloze":
         words = " &nbsp; • &nbsp; ".join(html.escape(str(word)) for word in question["word_bank"])
@@ -161,27 +198,23 @@ def draw_language_pages(doc):
             draw_question_card(page, item, start + index + 1, rect, 7.8, 7.4)
 
     page = add_page(doc, "Conventions of Language", "Questions 26–50 · Spelling")
-    html_box(page, fitz.Rect(32, 78, 563, 103), "<b>Questions 26–40:</b> Listen to each word. Write the complete word on the numbered line.", "spelling-directions-1", 7.6)
-    left_x, right_x = 34, 300
-    row_h = 31
-    for offset, item in enumerate(language[25:40]):
-        column = 0 if offset < 8 else 1
-        row = offset if offset < 8 else offset - 8
-        x0 = left_x if column == 0 else right_x
-        y0 = 108 + row * row_h
-        draw_number(page, offset + 26, x0 + 9, y0 + 10, 7)
-        page.draw_line(fitz.Point(x0 + 22, y0 + 16), fitz.Point(x0 + 245, y0 + 16), color=LINE, width=0.7)
-    html_box(page, fitz.Rect(32, 370, 563, 395), "<b>Questions 41–45:</b> Correct the underlined word.", "spelling-directions-2", 7.6)
-    for index, item in enumerate(language[40:45]):
-        rect = fitz.Rect(32, 398 + index * 48, 563, 442 + index * 48)
-        draw_question_card(page, item, index + 41, rect, 7.6, 7.4)
-    html_box(page, fitz.Rect(32, 642, 563, 667), "<b>Questions 46–50:</b> Find the misspelt word and write it correctly.", "spelling-directions-3", 7.6)
-    for index, item in enumerate(language[45:50]):
-        column = index % 2
-        row = index // 2
+    html_box(
+        page,
+        fitz.Rect(32, 78, 563, 106),
+        "26–40: write each dictated word. 41–45: write the underlined word correctly. 46–50: find the misspelt word and write it correctly.",
+        "spelling-directions",
+        7.6,
+    )
+    spelling = language[25:50]
+    rows = 13
+    top, bottom = 108, 808
+    row_height = (bottom - top) / rows
+    for index, item in enumerate(spelling):
+        column = index // rows
+        row = index % rows
         x0 = 32 + column * 267
-        rect = fitz.Rect(x0, 670 + row * 44, x0 + 255, 710 + row * 44)
-        draw_question_card(page, item, index + 46, rect, 7.4, 7.4)
+        rect = fitz.Rect(x0, top + row * row_height, x0 + 255, top + (row + 1) * row_height - 3)
+        draw_question_card(page, item, index + 26, rect, 7.4, 7.4)
 
 
 def passage_markup(passage):
@@ -205,7 +238,9 @@ def draw_data_visual(page, passage, rect):
         groups, remainder = divmod(value, 5)
         tally = " ".join(["||||/"] * groups + (["|" * remainder] if remainder else []))
         tally_rows.append(f"<tr><td>{html.escape(label)}</td><td>{tally}</td></tr>")
-    html_box(page, table_rect, "<table border='1' cellpadding='2'><tr><th>Sport</th><th>Tally</th></tr>" + "".join(tally_rows) + "</table>", "diagram-tally", 6.8)
+    category_heading = html.escape(passage["data"].get("category_heading", "Choice"))
+    value_heading = html.escape(passage["data"].get("value_heading", "Tally"))
+    html_box(page, table_rect, f"<table border='1' cellpadding='2'><tr><th>{category_heading}</th><th>{value_heading}</th></tr>" + "".join(tally_rows) + "</table>", "diagram-tally", 6.8)
     x0, y0 = rect.x0 + 250, rect.y1 - 96
     page.draw_line(fitz.Point(x0 + 30, y0), fitz.Point(x0 + 30, y0 + 72), color=INK, width=0.7)
     page.draw_line(fitz.Point(x0 + 30, y0 + 72), fitz.Point(rect.x1 - 8, y0 + 72), color=INK, width=0.7)
@@ -214,14 +249,30 @@ def draw_data_visual(page, passage, rect):
         height = 56 * value / max_value
         bx = x0 + 42 + index * 56
         page.draw_rect(fitz.Rect(bx, y0 + 72 - height, bx + bar_width, y0 + 72), color=TEAL, fill=PALE)
-        html_box(page, fitz.Rect(bx - 4, y0 + 73, bx + bar_width + 4, y0 + 86), html.escape(label), f"diagram-label-data-{index}", 6.8, "center")
+        html_box(page, fitz.Rect(bx - 11, y0 + 73, bx + 45, y0 + 91), html.escape(label), f"diagram-label-data-{index}", 6.8, "center")
 
 
 def draw_reading_pages(doc):
     for passage_index, passage in enumerate(PAPER["reading_passages"]):
         questions = passage["questions"]
         page = add_page(doc, "Reading", f"{passage['title']} · Questions {questions[0]['id'][1:]}–{questions[-1]['id'][1:]}")
-        text_rect = fitz.Rect(32, 78, 563, 286 if passage["type"] != "data" else 310)
+        passage_bottoms = {
+            "timetable": 228,
+            "notice": 242,
+            "poem": 238,
+            "directions": 246,
+            "letter": 252,
+            "form": 276,
+            "procedure": 286,
+            "data": 310,
+            "review": 286,
+            "narrative": 286,
+            "information": 286,
+            "paired": 286,
+            "opinion": 286,
+            "explanation": 286,
+        }
+        text_rect = fitz.Rect(32, 78, 563, passage_bottoms.get(passage["genre"], 286))
         page.draw_rect(text_rect, color=LINE, fill=LIGHT, width=0.55, radius=0.04)
         html_box(page, text_rect + (10, 8, -10, -8), passage_markup(passage), f"passage-{passage['id']}", 8.0)
         draw_data_visual(page, passage, text_rect)
@@ -239,19 +290,22 @@ def draw_writing_page(doc):
     page.draw_rect(fitz.Rect(32, 82, 563, 195), color=LINE, fill=LIGHT, width=0.6, radius=0.04)
     html_box(page, fitz.Rect(46, 94, 548, 130), f"<b>{writing['prompt']}</b>", "writing-prompt", 10.0)
     ideas = "".join(f"<li>{html.escape(item)}</li>" for item in writing["ideas"])
-    html_box(page, fitz.Rect(46, 133, 548, 190), f"Your story may be amusing or serious.<ul>{ideas}</ul>", "writing-ideas", 7.8)
+    introduction = "Build a convincing argument." if writing["mode"] == "persuasive" else "Your story may be amusing or serious."
+    html_box(page, fitz.Rect(46, 133, 548, 190), f"{introduction}<ul>{ideas}</ul>", "writing-ideas", 7.8)
     reminders = "".join(f"<li>{html.escape(item)}</li>" for item in writing["reminders"])
     html_box(page, fitz.Rect(34, 207, 563, 278), f"<b>Remember</b><ul>{reminders}</ul>", "writing-reminders", 7.6)
     html_box(page, fitz.Rect(34, 286, 563, 305), "<b>Planning notes</b>", "writing-planning", 8.0)
     for y in range(312, 420, 22):
         page.draw_line(fitz.Point(36, y), fitz.Point(560, y), color=(0.76, 0.84, 0.84), width=0.45)
-    html_box(page, fitz.Rect(34, 430, 563, 449), "<b>Begin your narrative</b>", "writing-start", 8.0)
+    start_label = "Begin your persuasive text" if writing["mode"] == "persuasive" else "Begin your narrative"
+    html_box(page, fitz.Rect(34, 430, 563, 449), f"<b>{start_label}</b>", "writing-start", 8.0)
     for y in range(458, 805, 23):
         page.draw_line(fitz.Point(36, y), fitz.Point(560, y), color=(0.76, 0.84, 0.84), width=0.45)
 
 
 def draw_small_visual(page, visual, rect, label):
     kind = visual["kind"]
+    AUDIT.record_visual(label, kind, page.number + 1, rect)
     page.draw_rect(rect, color=LINE, fill=(1, 1, 1), width=0.45)
     if kind == "l_grid":
         rows, cols, cut = visual["rows"], visual["cols"], visual["cut"]
@@ -279,7 +333,23 @@ def draw_small_visual(page, visual, rect, label):
     elif kind == "top_view":
         page.draw_circle(rect.tl + (rect.width / 2, rect.height / 2), min(rect.width, rect.height) * .25, color=INK, fill=PALE)
     elif kind == "fractions":
-        html_box(page, rect + (6, 5, -6, -5), "A  ■□□□ &nbsp; B  ■■□□□□ &nbsp; C  ■■■□□□<br>D  ■■□□□ &nbsp; E  ■■■□□□□□", f"diagram-{label}", 7.0, "center")
+        patterns = [("A", 1, 4), ("B", 2, 6), ("C", 3, 6), ("D", 2, 5), ("E", 3, 8)]
+        cell = min(8.5, (rect.width - 46) / 8, (rect.height - 18) / 5)
+        start_y = rect.y0 + (rect.height - len(patterns) * (cell + 2)) / 2
+        for row, (name, shaded, total) in enumerate(patterns):
+            y0 = start_y + row * (cell + 2)
+            label_rect = fitz.Rect(rect.x0 + 7, y0 - 1, rect.x0 + 22, y0 + cell + 2)
+            html_box(page, label_rect, name, f"diagram-{label}-{name}", 6.8, "center")
+            start_x = rect.x0 + 25
+            grid_rect = fitz.Rect(start_x, y0, start_x + total * cell, y0 + cell)
+            AUDIT.record_geometry_gap(f"diagram-gap-{label}-{name}", grid_rect, label_rect, 2.0)
+            for index in range(total):
+                page.draw_rect(
+                    fitz.Rect(start_x + index * cell, y0, start_x + (index + 1) * cell, y0 + cell),
+                    color=INK,
+                    fill=TEAL if index < shaded else (1, 1, 1),
+                    width=0.55,
+                )
     elif kind == "money_table":
         values = visual["values"]
         html_box(page, rect + (5, 5, -5, -5), "<table border='1' cellpadding='2'>" + "".join(f"<tr><td>{chr(65+i)}</td><td>${value:.2f}</td></tr>" for i, value in enumerate(values)) + "</table>", f"diagram-{label}", 6.8)
@@ -293,6 +363,8 @@ def draw_small_visual(page, visual, rect, label):
         page.draw_line(centre, centre + (math.cos(hour_angle) * radius * .5, math.sin(hour_angle) * radius * .5), color=INK, width=1.4)
     elif kind == "room_map":
         rooms = ["entry", "office", visual["target"], "store"]
+        if len(set(rooms)) != len(rooms):
+            raise RuntimeError(f"Room-map labels must be unique: {rooms}")
         width = rect.width / len(rooms)
         for index, room in enumerate(rooms):
             cell = fitz.Rect(rect.x0 + index * width, rect.y0, rect.x0 + (index + 1) * width, rect.y1)
@@ -301,7 +373,26 @@ def draw_small_visual(page, visual, rect, label):
     elif kind == "letters":
         html_box(page, rect + (5, 7, -5, -5), f"{visual['answer']} &nbsp; F &nbsp; G &nbsp; J", f"diagram-{label}", 12, "center")
     elif kind == "equal_area":
-        html_box(page, rect + (5, 4, -5, -4), "A ■■■■ &nbsp; B ■■■<br>C ■■■■ &nbsp; D ■■■■■", f"diagram-{label}", 8.0, "center")
+        patterns = [("A", 4), ("B", 3), ("C", 4), ("D", 5)]
+        cell = min(10.5, (rect.width - 46) / 5)
+        row_gap = max(5, (rect.height - 2 * cell) / 3)
+        for index, (name, count) in enumerate(patterns):
+            row, column = divmod(index, 2)
+            area_width = rect.width / 2
+            x0 = rect.x0 + column * area_width + 8
+            y0 = rect.y0 + row_gap + row * (cell + row_gap)
+            label_rect = fitz.Rect(x0, y0 - 1, x0 + 14, y0 + cell + 2)
+            html_box(page, label_rect, name, f"diagram-{label}-{name}", 6.8, "center")
+            square_area = fitz.Rect(x0 + 16, y0, x0 + 16 + count * cell, y0 + cell)
+            AUDIT.record_geometry_gap(f"diagram-gap-{label}-{name}", square_area, label_rect, 2.0)
+            for square in range(count):
+                square_x = x0 + 16 + square * cell
+                page.draw_rect(
+                    fitz.Rect(square_x, y0, square_x + cell, y0 + cell),
+                    color=INK,
+                    fill=TEAL,
+                    width=0.55,
+                )
     elif kind == "cubes":
         count = visual["count"]
         for index in range(count):
@@ -324,38 +415,56 @@ def draw_small_visual(page, visual, rect, label):
         values = [("Before", visual["high"]), ("After", visual["low"])]
         for index, (caption, value) in enumerate(values):
             cx = rect.x0 + rect.width * (.28 if index == 0 else .72)
-            top, bottom = rect.y0 + 14, rect.y1 - 20
-            page.draw_rect(fitz.Rect(cx - 4, top, cx + 4, bottom), color=INK, fill=None, width=0.7)
+            top, bottom = rect.y0 + 14, rect.y1 - 36
+            tube_rect = fitz.Rect(cx - 4, top, cx + 4, bottom)
+            bulb_rect = fitz.Rect(cx - 8, bottom - 3, cx + 8, bottom + 13)
+            tick_rect = fitz.Rect(cx + 5, top, cx + 10, bottom)
+            geometry_rect = tube_rect | bulb_rect | tick_rect
+            caption_rect = fitz.Rect(cx - 30, rect.y1 - 17, cx + 30, rect.y1 - 2)
+            AUDIT.record_geometry_gap(f"diagram-gap-{label}-{index}", geometry_rect, caption_rect, 4.0)
+            page.draw_rect(tube_rect, color=INK, fill=None, width=0.7)
             page.draw_circle(fitz.Point(cx, bottom + 5), 8, color=INK, fill=PALE)
             fill_top = bottom - (bottom - top) * value / 35
             page.draw_rect(fitz.Rect(cx - 2, fill_top, cx + 2, bottom + 5), color=TEAL, fill=TEAL, width=0.4)
             for tick in range(0, 36, 5):
                 y = bottom - (bottom - top) * tick / 35
                 page.draw_line(fitz.Point(cx + 5, y), fitz.Point(cx + 10, y), color=INK, width=0.4)
-            html_box(page, fitz.Rect(cx - 30, rect.y1 - 17, cx + 30, rect.y1 - 2), f"{caption} {value}°C", f"diagram-{label}-{index}", 6.8, "center")
+            html_box(page, caption_rect, f"{caption} {value}°C", f"diagram-{label}-{index}", 6.8, "center")
     elif kind == "number_line":
         values = visual["values"]
+        plot_rect = fitz.Rect(rect.x0 + 15, rect.y0 + 19, rect.x1 - 15, rect.y0 + 31)
         page.draw_line(fitz.Point(rect.x0 + 15, rect.y0 + 25), fitz.Point(rect.x1 - 15, rect.y0 + 25), color=INK, width=0.7)
         for index, value in enumerate(values):
             x = rect.x0 + 20 + index * (rect.width - 40) / 3
             page.draw_line(fitz.Point(x, rect.y0 + 19), fitz.Point(x, rect.y0 + 31), color=INK, width=0.7)
-            html_box(page, fitz.Rect(x - 15, rect.y0 + 32, x + 15, rect.y1 - 2), str(value), f"diagram-{label}-{index}", 6.8, "center")
+            label_rect = fitz.Rect(x - 15, rect.y0 + 34, x + 15, rect.y1 - 2)
+            AUDIT.record_geometry_gap(f"diagram-gap-{label}-{index}", plot_rect, label_rect, 3.0)
+            html_box(page, label_rect, str(value), f"diagram-{label}-{index}", 6.8, "center")
     elif kind in {"scales", "backward_line", "total_table"}:
         if kind == "scales":
             for index, value in enumerate(visual["values"]):
                 x0 = rect.x0 + 18 + index * rect.width / 2
                 x1 = rect.x0 + (index + 1) * rect.width / 2 - 10
-                bottom, top = rect.y1 - 18, rect.y0 + 12
+                bottom, top = rect.y1 - 22, rect.y0 + 12
+                plot_rect = fitz.Rect(x0 + 16, top, x1 - 8, bottom)
+                label_rect = fitz.Rect(x0, rect.y1 - 17, x1, rect.y1 - 2)
+                AUDIT.record_geometry_gap(f"diagram-gap-{label}-{index}", plot_rect, label_rect, 5.0)
                 page.draw_line(fitz.Point(x0 + 20, bottom), fitz.Point(x0 + 20, top), color=INK, width=0.8)
                 for tick in range(0, 61, 10):
                     y = bottom - (bottom - top) * tick / 60
                     page.draw_line(fitz.Point(x0 + 16, y), fitz.Point(x0 + 25, y), color=INK, width=0.45)
                 pointer_y = bottom - (bottom - top) * value / 60
                 page.draw_line(fitz.Point(x0 + 20, pointer_y), fitz.Point(x1 - 8, pointer_y), color=TEAL, width=1.4)
-                html_box(page, fitz.Rect(x0, rect.y1 - 16, x1, rect.y1 - 2), f"{'AB'[index]} {value} kg", f"diagram-{label}-{index}", 6.8, "center")
+                html_box(page, label_rect, f"{'AB'[index]} {value} kg", f"diagram-{label}-{index}", 6.8, "center")
             return
         elif kind == "backward_line":
-            text = "○ — ○ — ○ — ○"
+            y = rect.y0 + rect.height / 2
+            left, right = rect.x0 + 22, rect.x1 - 22
+            page.draw_line(fitz.Point(left, y), fitz.Point(right, y), color=INK, width=0.7)
+            for index in range(4):
+                x = left + index * (right - left) / 3
+                page.draw_circle(fitz.Point(x, y), 5.2, color=INK, fill=(1, 1, 1), width=0.7)
+            return
         else:
             text = f"Known: {', '.join(map(str, visual['known']))} &nbsp; Total: {visual['total']}"
         html_box(page, rect + (5, 8, -5, -5), text, f"diagram-{label}", 7.0, "center")
@@ -365,20 +474,55 @@ def draw_small_visual(page, visual, rect, label):
         for index, (bar_label, value) in enumerate(zip(labels, values)):
             width = (rect.width - 30) / len(labels)
             x0 = rect.x0 + 15 + index * width
-            height = (rect.height - 23) * value / max_value
-            page.draw_rect(fitz.Rect(x0 + 4, rect.y1 - 14 - height, x0 + width - 4, rect.y1 - 14), color=TEAL, fill=PALE)
-            html_box(page, fitz.Rect(x0, rect.y1 - 13, x0 + width, rect.y1 - 1), html.escape(str(bar_label)), f"diagram-{label}-{index}", 6.8, "center")
+            plot_bottom = rect.y1 - 18
+            plot_top = rect.y0 + 15
+            height = (plot_bottom - plot_top) * value / max_value
+            bar_top = plot_bottom - height
+            bar_rect = fitz.Rect(x0 + 4, bar_top, x0 + width - 4, plot_bottom)
+            value_rect = fitz.Rect(x0, max(rect.y0, bar_top - 15), x0 + width, bar_top - 2)
+            category_rect = fitz.Rect(x0, rect.y1 - 14, x0 + width, rect.y1 - 1)
+            AUDIT.record_geometry_gap(f"diagram-gap-{label}-value-{index}", bar_rect, value_rect, 2.0)
+            AUDIT.record_geometry_gap(f"diagram-gap-{label}-category-{index}", bar_rect, category_rect, 4.0)
+            page.draw_rect(bar_rect, color=TEAL, fill=PALE)
+            html_box(page, value_rect, html.escape(str(value)), f"diagram-{label}-value-{index}", 6.8, "center")
+            html_box(page, category_rect, html.escape(str(bar_label)), f"diagram-{label}-{index}", 6.8, "center")
     elif kind == "spinners":
         blue_angles = [150, 90, 45, 120]
         for index, angle in enumerate(blue_angles):
             centre = fitz.Point(rect.x0 + 25 + index * (rect.width - 50) / 3, rect.y0 + rect.height / 2 - 3)
             radius = min(17, rect.height * .28)
+            circle_rect = fitz.Rect(centre.x - radius, centre.y - radius, centre.x + radius, centre.y + radius)
+            label_rect = fitz.Rect(centre.x - 12, centre.y + radius + 3, centre.x + 12, centre.y + radius + 15)
+            AUDIT.record_geometry_gap(f"diagram-gap-{label}-{index}", circle_rect, label_rect, 3.0)
             page.draw_circle(centre, radius, color=INK, fill=None, width=0.7)
             start = fitz.Point(centre.x, centre.y - radius)
             page.draw_sector(centre, start, angle, color=TEAL, fill=PALE, width=0.7)
-            html_box(page, fitz.Rect(centre.x - 12, centre.y + radius + 2, centre.x + 12, centre.y + radius + 14), f"{'ABCD'[index]}", f"diagram-{label}-{index}", 6.8, "center")
+            html_box(page, label_rect, f"{'ABCD'[index]}", f"diagram-{label}-{index}", 6.8, "center")
     elif kind == "coins":
-        html_box(page, rect + (4, 5, -4, -4), f"$2 × {visual['twos']} &nbsp;&nbsp; $1 × {visual['ones']}", f"diagram-{label}", 8, "center")
+        max_per_row = 5
+        rows = []
+        for value, count in [("$2", visual["twos"]), ("$1", visual["ones"])]:
+            while count:
+                row_count = min(max_per_row, count)
+                rows.append((value, row_count))
+                count -= row_count
+        radius = min(
+            10.5,
+            (rect.width - 16) / (max_per_row * 2.35),
+            (rect.height - 14) / (len(rows) * 2.55),
+        )
+        row_spacing = rect.height / (len(rows) + 1)
+        for row_index, (value, count) in enumerate(rows):
+            group_y = rect.y0 + (row_index + 1) * row_spacing
+            total_width = (count - 1) * radius * 2.35 + radius * 2
+            start_x = rect.x0 + (rect.width - total_width) / 2 + radius
+            for coin_index in range(count):
+                centre = fitz.Point(start_x + coin_index * radius * 2.35, group_y)
+                coin_rect = fitz.Rect(centre.x - radius, centre.y - radius, centre.x + radius, centre.y + radius)
+                if not rect.contains(coin_rect):
+                    raise RuntimeError(f"Coin diagram exceeds its visual region: {label} {coin_rect} not in {rect}")
+                page.draw_circle(centre, radius, color=INK, fill=PALE, width=0.65)
+                html_box(page, fitz.Rect(centre.x - radius, centre.y - 8, centre.x + radius, centre.y + 8), value, f"diagram-{label}-{row_index}-{coin_index}", 6.8, "center")
     else:
         html_box(page, rect + (5, 5, -5, -5), "Diagram", f"diagram-{label}", 6.8, "center")
 
@@ -446,7 +590,10 @@ def draw_answers(doc):
     draw_answer_page(doc, "Reading · R1–R20", reading[:20])
     draw_answer_page(doc, "Reading · R21–R39", reading[20:])
     draw_answer_page(doc, "Numeracy · N1–N18", numeracy[:18])
-    extra = "<b>Writing review:</b> Check for a clear setting, characters, complication and ending; organised paragraphs; precise vocabulary; complete sentences; controlled punctuation; and carefully checked spelling."
+    if PAPER["writing"]["mode"] == "persuasive":
+        extra = "<b>Writing review:</b> Check for a clear position, organised reasons, relevant examples, linking words and a strong conclusion; then check sentence structure, punctuation and spelling."
+    else:
+        extra = "<b>Writing review:</b> Check for a clear setting, characters, complication and ending; organised paragraphs; precise vocabulary; complete sentences; controlled punctuation; and carefully checked spelling."
     draw_answer_page(doc, "Numeracy · N19–N36", numeracy[18:], extra)
 
 
@@ -473,8 +620,39 @@ def validate_content():
             assert len(set(item["options"])) == len(item["options"])
         if item["kind"] == "select_two":
             assert len(item["answer"]) == 2 and all(answer in item["options"] for answer in item["answer"])
-    assert [item["spelling_type"] for item in language[25:]] == [*(["dictation"] * 15), *(["underlined"] * 5), *(["identify"] * 5)]
+    assert [item.get("spelling_mode") for item in language[25:]] == ["dictation"] * 15 + ["correct_underlined"] * 5 + ["locate_error"] * 5
     return language, reading, numeracy
+
+
+def diagram_drawing_boundary_crossings(document, visual_entries, padding=1.0):
+    crossings = []
+    drawings_by_page = {}
+    for visual in visual_entries:
+        page_number = visual["page"]
+        page_drawings = drawings_by_page.setdefault(page_number, document[page_number - 1].get_drawings())
+        rect = fitz.Rect(visual["rect"])
+        outer = fitz.Rect(rect.x0 - padding, rect.y0 - padding, rect.x1 + padding, rect.y1 + padding)
+        for drawing in page_drawings:
+            drawing_rect = fitz.Rect(drawing["rect"])
+            if drawing_rect.is_empty or (drawing_rect & outer).is_empty:
+                continue
+            if outer.contains(drawing_rect) or drawing_rect.contains(outer):
+                continue
+            crossings.append({
+                "label": visual["label"],
+                "kind": visual["kind"],
+                "page": page_number,
+                "visual_rect": [round(value, 2) for value in rect],
+                "drawing_rect": [round(value, 2) for value in drawing_rect],
+            })
+    return crossings
+
+
+def assert_diagram_drawings_within_bounds(document, visual_entries):
+    crossings = diagram_drawing_boundary_crossings(document, visual_entries)
+    if crossings:
+        raise RuntimeError(f"Diagram drawing crosses its visual boundary: {crossings[:3]}")
+    return crossings
 
 
 def render_pages(pdf):
@@ -498,6 +676,7 @@ def render_one(paper_number, render_images=True):
     assert len(document) == 20
     draw_answers(document)
     assert len(document) == 26
+    boundary_crossings = assert_diagram_drawings_within_bounds(document, AUDIT.visual_entries)
     document.set_metadata({"title": PAPER["title"], "author": "Independent practice material", "subject": "Year 3 NAPLAN-style practice"})
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     if OUTPUT.exists():
@@ -536,6 +715,10 @@ def render_one(paper_number, render_images=True):
         "layout_entries": AUDIT.entries,
         "minimum_scale": min(entry["scale"] for entry in AUDIT.entries),
         "negative_spare_entries": [entry for entry in AUDIT.entries if entry["spare_height"] < 0],
+        "diagram_visuals": AUDIT.visual_entries,
+        "diagram_geometry_checks": AUDIT.geometry_entries,
+        "minimum_diagram_geometry_gap": min(entry["actual_gap"] for entry in AUDIT.geometry_entries),
+        "diagram_boundary_crossings": boundary_crossings,
     }
     LAYOUT_REPORT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {OUTPUT} · minimum scale {report['minimum_scale']:.4f}")
@@ -548,7 +731,7 @@ def main():
     parser.add_argument("--all", action="store_true")
     parser.add_argument("--no-render", action="store_true")
     args = parser.parse_args()
-    numbers = range(1, 21) if args.all else [args.paper or 1]
+    numbers = range(1, PAPER_COUNT + 1) if args.all else [args.paper or 1]
     for number in numbers:
         render_one(number, render_images=not args.no_render)
 

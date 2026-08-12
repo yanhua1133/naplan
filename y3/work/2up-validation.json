@@ -3,26 +3,28 @@
   "format": "A4 landscape, two logical source pages per sheet",
   "content_generation": false,
   "ocr": false,
-  "files": 20,
+  "files": 50,
   "pages_per_file": 13,
   "font_strategy": {
-    "prompt_multiplier": 1.42,
-    "spelling_prompt_multiplier": 1.38,
-    "option_multiplier": 1.42,
-    "passage_answer_multiplier": 1.42,
-    "compact_option_line_height": 1.02,
-    "spelling_line_height": 1.0,
+    "method": "fixed typographic hierarchy with no per-box font fitting or hidden scaling",
+    "minimum_effective_body_pt": 7.4,
+    "minimum_effective_diagram_pt": 6.85,
+    "source_body_pt": 11.2,
+    "source_option_pt": 10.8,
+    "source_diagram_pt": 9.7,
+    "source_writing_title_pt": 14.0,
     "whole_page_output_scale": 0.7067
   },
   "high_risk_visual_inspection": {
     "status": "passed",
     "region": "sheet 2 right half (source spelling page 4)",
-    "papers": 20,
+    "papers": 50,
     "render_scale": 2,
     "checks": [
-      "questions 26–40 show 15 blank dictation lines and no leaked answers",
-      "questions 41–45 each show one visible underlined misspelling",
-      "questions 46–50 each show one unmarked misspelling",
+      "questions 26–40 are dictation, 41–45 underlined correction, and 46–50 locate-and-correct",
+      "dictation items show a blank response line and do not leak the target word",
+      "correct-underlined items contain exactly one visible underlined error",
+      "all ten proofreading prompts and written correction lines remain readable",
       "no clipped prompt or answer box",
       "no prompt enters an adjacent item"
     ]
@@ -32,11 +34,23 @@
       "paper": 1,
       "output": "y3/output/2up/p01.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "1c62033c85c3d1324254cb547f9825885c9d6f01b7afc42311cd55f203677024",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "9c220bce262011218add931d3d94ddff5f86e86076b9fab46276fe8cb0c45412",
       "checks": [
         {
           "sheet": 1,
@@ -135,11 +149,23 @@
       "paper": 2,
       "output": "y3/output/2up/p02.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "5613da7212a3f98789e09de79c67cba8f095a52948b6512776fa411c93d34998",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "a3d79c3929e30638170ebd17dab71ace4c5d8178d614440e7c56dea393e289e1",
       "checks": [
         {
           "sheet": 1,
@@ -238,11 +264,23 @@
       "paper": 3,
       "output": "y3/output/2up/p03.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "4a9660820aabcbdc738b4820c77464fbe8f6c990b9b570ad25a165916750c438",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "c11ad911d7575e879115d56b89764b48dc2a2d25f14cb7319e4cebb569d60402",
       "checks": [
         {
           "sheet": 1,
@@ -341,11 +379,23 @@
       "paper": 4,
       "output": "y3/output/2up/p04.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "d981fda999c24b2938935ee08ebf6193347002c1b344801aab24b9e08602b3d6",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "5293013f1ea9413509366ad92176197232e2346e57998f84befef19bded14d15",
       "checks": [
         {
           "sheet": 1,
@@ -444,11 +494,23 @@
       "paper": 5,
       "output": "y3/output/2up/p05.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "fc3b62146ee6badc53608b16eef1c6685825311888f64ee9003efb4ed9548be4",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "7295f9f52736adabd7b432f1b18060bc9dca30d1573b8637f291cd4a74a094a5",
       "checks": [
         {
           "sheet": 1,
@@ -547,11 +609,23 @@
       "paper": 6,
       "output": "y3/output/2up/p06.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "744744b92ad76bff1dfab411474f404b92d477c7f9f9a535be9ed774b673ef3e",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "629a9247e3ff53a6ac31a750c404a0a2d7709cba39fe6f7e9cd73608ef414dbd",
       "checks": [
         {
           "sheet": 1,
@@ -650,11 +724,23 @@
       "paper": 7,
       "output": "y3/output/2up/p07.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "a56891aedf04846efda9a8368173700f3c3e82d70e2e3a7de1231a1759e68d83",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "9ae2a04354fbccc180db8926b62868acc8d3d9458400b9ce6a0849d3cb33fd07",
       "checks": [
         {
           "sheet": 1,
@@ -753,11 +839,23 @@
       "paper": 8,
       "output": "y3/output/2up/p08.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "65b1a4793618eb4a9ece4bb7e249396a61e75fc41c38cf2b5cb2fe10de571100",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "ebf9c7640c00b0aa1c6eea44b2674696279e06e00c5551196b2404d1fb62e4be",
       "checks": [
         {
           "sheet": 1,
@@ -856,11 +954,23 @@
       "paper": 9,
       "output": "y3/output/2up/p09.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "5097d3d0bcb85815b2a6ce43e4f2c57573ab7716f8c18a2dc40e928869774b30",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "dd235a65c42f19b9f07877d4f2405dfb3334f920fd319893910936359340536d",
       "checks": [
         {
           "sheet": 1,
@@ -959,11 +1069,23 @@
       "paper": 10,
       "output": "y3/output/2up/p10.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "ebbd01f1cb0ea91ae5d2fdfe818be379e9fa6c4660646e0f0cb32b3e0b834e10",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "22ac56a36198ba77102ba155fdeb233a10c915015adb25ed3b76332b279969e7",
       "checks": [
         {
           "sheet": 1,
@@ -1062,11 +1184,23 @@
       "paper": 11,
       "output": "y3/output/2up/p11.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "dee87290149c3d6f21b13d676bda09e128de00889b2a49c961f3af1b59915a9b",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "3f37403d9e18a965fbb712fd35f22c97c271ed362aa8f1d53ae939736814ff7d",
       "checks": [
         {
           "sheet": 1,
@@ -1165,11 +1299,23 @@
       "paper": 12,
       "output": "y3/output/2up/p12.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "62c522496e4ad704809724f335cf9412feef532364ae47619f7a4164883ad28f",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "2a2b4ebfdfe07fb649035ea241b8fd7bdbfb90fe6c5bda01608542cc22dfb5a8",
       "checks": [
         {
           "sheet": 1,
@@ -1268,11 +1414,23 @@
       "paper": 13,
       "output": "y3/output/2up/p13.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "e69e77adc1dc9a3df0a91e77a5a843a0bb43e9fef714fdace156899a7e5dcf8e",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "dec9596e5ac6b9d36018ba4f30ccce51b8b0d194a6f7d52cf0965e7b73ad0872",
       "checks": [
         {
           "sheet": 1,
@@ -1371,11 +1529,23 @@
       "paper": 14,
       "output": "y3/output/2up/p14.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "49f0abd9cfaa7ac9f6f5fcde5be3f97eaba2155bed94ace395f94282dae41e87",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "2c94aebc85d48c8aa5afd0b8264d7ea0c6435e0825614baba8fa07253259052f",
       "checks": [
         {
           "sheet": 1,
@@ -1474,11 +1644,23 @@
       "paper": 15,
       "output": "y3/output/2up/p15.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "eb2745b31499ef746cbf6fde20dd0d1243809710001bd1f594a2470d17b4fff4",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "22fc54f48eb7f3dfb6dd6ccbf327750b9ee7d244bfa736d58dbd73be045b0da5",
       "checks": [
         {
           "sheet": 1,
@@ -1577,11 +1759,23 @@
       "paper": 16,
       "output": "y3/output/2up/p16.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "9efd861c9996ee34aca5ecd3ad440726fe1ee6b7a0c94aabe0fdfe21c3537e3a",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "e321718cc08f3b3d3c9ff919412aee586c2b99589049b6301e7c5c10e88ecd13",
       "checks": [
         {
           "sheet": 1,
@@ -1680,11 +1874,23 @@
       "paper": 17,
       "output": "y3/output/2up/p17.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "64bed128eeb8e228aec1fe4ac92488365e8e5025f1c4037d1be55e002857e84b",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "7583b08ac59542bb2f489783ec0375a40030a42dbd1a72d4facc00e517b642dc",
       "checks": [
         {
           "sheet": 1,
@@ -1783,11 +1989,23 @@
       "paper": 18,
       "output": "y3/output/2up/p18.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "9269a7a732c9ed46d19713f34f169c14e899bfe91482b05e5e3c10ca6d0f0d27",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "d9499bd12186181f295cbc52bbc14fa05589423dc0cd2c65988dfaeb16c4cec7",
       "checks": [
         {
           "sheet": 1,
@@ -1886,11 +2104,23 @@
       "paper": 19,
       "output": "y3/output/2up/p19.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "7c6f11f27cec9cc99f155b0cb9b90e94e8fe8df508e7950543da807c5cd3d8b9",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "51477e5f28c6d13cea9ca0c716650ddbcc29234cde32aaf8fdb3962fe7748cfe",
       "checks": [
         {
           "sheet": 1,
@@ -1989,11 +2219,3473 @@
       "paper": 20,
       "output": "y3/output/2up/p20.pdf",
       "pages": 13,
-      "minimum_layout_scale": 0.9352,
+      "minimum_layout_scale": 1.0,
       "minimum_spelling_layout_scale": 1.0,
-      "minimum_effective_text_pt": 6.38,
-      "median_effective_text_pt": 7.43,
-      "sha256": "d2abbefcf49d912ad287ebca143bae96ca8cd88629f7e909cb144f8ef3c5f497",
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "6962fc4de7f134f7c959c1a5884373c43747597491b4f58e39aa104c8c14f89f",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 21,
+      "output": "y3/output/2up/p21.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "9d718b4c4ce923122f83f34318bdf924d14943188aec3b70c23c9c9bc2d2c99f",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 22,
+      "output": "y3/output/2up/p22.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "427cf8686c1d5ef8f3bd4c69665dbd557cce303878101bea6053b56f26fe1970",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 23,
+      "output": "y3/output/2up/p23.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "93345598958b673fddf7c0ca1846953f35147484d6133a49cf24abc3a9d85901",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 24,
+      "output": "y3/output/2up/p24.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "34b8420cabcb1f13344c71382759561e271fc0adc861690b185e7bddac369430",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 25,
+      "output": "y3/output/2up/p25.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "9c58727d52c60c6b05730c4d2c7e4bb63bc2888e2416906be8f56566777517c7",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 26,
+      "output": "y3/output/2up/p26.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "81cf8c515b486b91de1a3437aa7a80adb18a2b4c87ab5fa0c3c29b4a63147fe0",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 27,
+      "output": "y3/output/2up/p27.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "89c4a9b0a1d5cf11c3fa5bea4162736abd900a27308bd07160cacb67f3acc1a7",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 28,
+      "output": "y3/output/2up/p28.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "5c0899010c9cf8e38cda4bec53e22d3d162174e6c8b878ee471647bf8201656c",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 29,
+      "output": "y3/output/2up/p29.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "4de7c9a29933abb92033cc1875c9f1ac2599f67a1dd959c81fc6bf3a3c2c2d99",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 30,
+      "output": "y3/output/2up/p30.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "0bc23338eb61c6fda5e2e3dec2b25a7852cc4cf5c3357470035506ee882382a0",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 31,
+      "output": "y3/output/2up/p31.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "9489ca47fc51439e38f2959b3d2088bb915a3737382cd6820e657bbb65a32751",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 32,
+      "output": "y3/output/2up/p32.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "7e3fc43165361e44c1ccb023742c821f00717a3c6525ec782e3c9b8975c5250e",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 33,
+      "output": "y3/output/2up/p33.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "4e5f78f289fc0ac4d60d3b687b1d9d74d2c13de75463d437cfdd612146ddbe98",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 34,
+      "output": "y3/output/2up/p34.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "a76b7ea7526de419f7028ce17e18dcaa18290d7b345b1e6fd05db39b618f147a",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 35,
+      "output": "y3/output/2up/p35.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "9f097645d7b8d8dba71d45a63761c5762b216a0a15c1e1adaa82ffa440f58a8e",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 36,
+      "output": "y3/output/2up/p36.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "a55862657d0c9066c75b30a62b7545a8a1c500f22b7a3350db51d28912cb7fc8",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 37,
+      "output": "y3/output/2up/p37.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "4ad05f1c4c9c87ab288d64007fa8fac67ad0eff37012afff431ae4af502aee51",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 38,
+      "output": "y3/output/2up/p38.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "0c061ec4a20f5f105bb7fe8f4af5f6f13b9997cdc9541391b15ea44c77f63729",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 39,
+      "output": "y3/output/2up/p39.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "0622619b6544a1952d87cdb39c71c19b84df4ff79a8fe1aa38d17990bb79ebc5",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 40,
+      "output": "y3/output/2up/p40.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "a70c626ec92dfa4d4c9d1ea1f368db8b8c9bc3fcb125661db588cffbd1763fb7",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 41,
+      "output": "y3/output/2up/p41.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "bc93d350f9ac4667c9a6ad8dc712b5b9c6c82bf3d9f85d498c7466a4dc0da725",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 42,
+      "output": "y3/output/2up/p42.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "e8045b00cd2facee7eb2db19f4f01b605eaf2545a5cc940964137c2ab5f33b97",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 43,
+      "output": "y3/output/2up/p43.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "3c059b089ec55d4889ed411515526197546ff9261e7a611500a13b25c2da1bc3",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 44,
+      "output": "y3/output/2up/p44.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "10b973b5f15f2c1f0ba339351a02946046b55efddd0d0df78c4d738802e4aa6b",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 45,
+      "output": "y3/output/2up/p45.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "e1813974d59d1e2ce22e4a5361d6c43446236e476397fac2246384d6b0eac84c",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 46,
+      "output": "y3/output/2up/p46.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "2b377fec8145f7383b3cdecb4a7b69537556ff6d2d6ba0c12cf484f272e2ec2d",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 47,
+      "output": "y3/output/2up/p47.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "6af6fc0388bd9920b21b900bf815cdd6a6d794bbba36f575c24ea2e9f69b22d4",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 48,
+      "output": "y3/output/2up/p48.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "909446760a0ae30705e66561fc9a5972b7969be1c11a7c5b365852767a7cb716",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 49,
+      "output": "y3/output/2up/p49.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "29328d1a776bb5cd9ac44ce30b34124c1fd332e5834950a6aa644c3324f4bd6a",
+      "checks": [
+        {
+          "sheet": 1,
+          "source_pages": [
+            1,
+            2
+          ]
+        },
+        {
+          "sheet": 2,
+          "source_pages": [
+            3,
+            4
+          ]
+        },
+        {
+          "sheet": 3,
+          "source_pages": [
+            5,
+            6
+          ]
+        },
+        {
+          "sheet": 4,
+          "source_pages": [
+            7,
+            8
+          ]
+        },
+        {
+          "sheet": 5,
+          "source_pages": [
+            9,
+            10
+          ]
+        },
+        {
+          "sheet": 6,
+          "source_pages": [
+            11,
+            12
+          ]
+        },
+        {
+          "sheet": 7,
+          "source_pages": [
+            13,
+            14
+          ]
+        },
+        {
+          "sheet": 8,
+          "source_pages": [
+            15,
+            16
+          ]
+        },
+        {
+          "sheet": 9,
+          "source_pages": [
+            17,
+            18
+          ]
+        },
+        {
+          "sheet": 10,
+          "source_pages": [
+            19,
+            20
+          ]
+        },
+        {
+          "sheet": 11,
+          "source_pages": [
+            21,
+            22
+          ]
+        },
+        {
+          "sheet": 12,
+          "source_pages": [
+            23,
+            24
+          ]
+        },
+        {
+          "sheet": 13,
+          "source_pages": [
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "paper": 50,
+      "output": "y3/output/2up/p50.pdf",
+      "pages": 13,
+      "minimum_layout_scale": 1.0,
+      "minimum_spelling_layout_scale": 1.0,
+      "minimum_effective_text_pt": 6.85,
+      "median_effective_text_pt": 7.63,
+      "body_font_sizes": [
+        10.8,
+        11.2,
+        14.0
+      ],
+      "diagram_font_sizes": [
+        9.7
+      ],
+      "diagram_visuals": 20,
+      "diagram_geometry_checks": 29,
+      "minimum_diagram_geometry_gap": 2.0,
+      "diagram_boundary_crossings": 0,
+      "sha256": "6b94683c4bbaa27da6fd4e9fccf9a2be7f30ee7ca69a91dda8b1decf47373514",
       "checks": [
         {
           "sheet": 1,

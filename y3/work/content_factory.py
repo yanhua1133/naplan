@@ -1,37 +1,84 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
+
+from reading_factory import build_reading as build_diverse_reading
+from numeracy_variants import apply_numeracy_variant
 
 
 LETTERS = "ABCDEF"
 SPELLING_BANK_PATH = Path(__file__).with_name("spelling-bank.json")
+PAPER_COUNT = 50
 
 NAMES = [
     "Ava", "Noah", "Mia", "Leo", "Ruby", "Eli", "Zoe", "Kai", "Nina", "Arlo",
     "Ivy", "Owen", "Lila", "Finn", "Maya", "Hugo", "Sara", "Jude", "Tara", "Max",
+    "Ada", "Liam", "Evie", "Sam", "Cleo", "Luca", "Anya", "Remy", "Ella", "Toby",
+    "Freya", "Amir", "Poppy", "Miles", "Alice", "Felix", "Sienna", "Rowan", "Hazel", "Isaac",
+    "Olive", "Jasper", "Elsie", "Caleb", "Ayla", "Mila", "Rory", "Nadia", "Ethan", "Skye",
 ]
 PARTNERS = [
     "Ben", "Chloe", "Dylan", "Emma", "Grace", "Henry", "Isla", "Jack", "Layla", "Mason",
     "Nora", "Oscar", "Piper", "Quinn", "Riley", "Sofia", "Theo", "Uma", "Violet", "Will",
+    "Abel", "Bella", "Cody", "Daisy", "Evan", "Faye", "Gus", "Holly", "Imran", "Josie",
+    "Kiran", "Lucy", "Milo", "Nell", "Omar", "Paige", "Rafi", "Stella", "Tess", "Uri",
+    "Wade", "Xanthe", "Yara", "Zane", "April", "Blake", "Ciara", "Dean", "Esme", "Frank",
 ]
 ANIMALS = [
     "otter", "wombat", "penguin", "dolphin", "koala", "wallaby", "platypus", "possum", "echidna", "quokka",
     "turtle", "pelican", "cockatoo", "lizard", "bilby", "seal", "frog", "owl", "bandicoot", "kangaroo",
+    "emu", "dingo", "stingray", "seahorse", "lorikeet", "gecko", "crab", "swan", "butterfly", "beetle",
+    "magpie", "cuttlefish", "albatross", "wallaroo", "goanna", "manta ray", "parrot", "skink", "heron", "possum joey",
+    "dragonfly", "starfish", "potoroo", "tawny frogmouth", "sea lion", "sugar glider", "kingfisher", "mallee fowl", "blue-tongue lizard", "whale",
 ]
 OBJECTS = [
     "orange", "umbrella", "apple", "apron", "egg", "insect model", "octopus toy", "engine", "ice cube", "alarm clock",
     "atlas", "envelope", "igloo model", "orchid", "acorn", "elephant card", "ink bottle", "oven mitt", "arrow", "opal",
+    "easel", "owl badge", "avocado", "astronaut card", "emu feather", "ocean map", "ice pack", "elephant puzzle", "acacia leaf", "apricot",
+    "earphone case", "octopus badge", "insect poster", "orange ribbon", "artist's brush", "animal mask", "engine part", "olive branch", "island map", "alarm bell",
+    "empty jar", "eagle picture", "ink stamp", "orchid pot", "apple badge", "ant model", "ice tray", "emu postcard", "oyster shell", "arrow sign",
 ]
 PLACES = [
     "library", "garden", "museum", "jetty", "hall", "creek", "market", "workshop", "farm", "beach",
     "gallery", "reserve", "campsite", "theatre", "orchard", "station", "aquarium", "bakery", "lookout", "nursery",
+    "boathouse", "courtyard", "science room", "sports shed", "community centre", "bird hide", "harbour", "lighthouse", "greenhouse", "art studio",
+    "reading room", "school oval", "nature trail", "picnic ground", "visitor centre", "music room", "craft room", "riverbank", "boardwalk", "town square",
+    "camp kitchen", "ferry stop", "wildlife park", "plant house", "history room", "assembly area", "vegetable patch", "boat ramp", "school office", "shade house",
 ]
 TOYS = [
     "wooden train", "rag doll", "tin robot", "toy dinosaur", "music-box horse", "teddy bear", "model aeroplane", "puppet",
     "wind-up mouse", "toy dragon", "building-block figure", "toy boat", "plush koala", "toy astronaut", "marionette",
     "clockwork duck", "toy fire engine", "paper clown", "toy knight", "stuffed penguin",
+    "felt fox", "wooden crane", "toy submarine", "plush wombat", "clockwork rabbit", "model tram", "paper dragon", "toy helicopter", "sock monkey", "miniature bus",
+    "wooden whale", "felt astronaut", "wind-up beetle", "toy lighthouse", "plush echidna", "cardboard robot", "model ferry", "toy crocodile", "cloth mermaid", "wooden scooter",
+    "clockwork turtle", "toy rescue boat", "felt cockatoo", "model hot-air balloon", "plush quokka", "wooden spaceship", "toy delivery van", "paper puppet", "wind-up penguin", "stuffed bilby",
 ]
+
+EXTRA_DICTATION_WORDS = """
+above likely inside player sense break event higher middle present result sorry finally guess alone average brought certain longer movie original received tried worth exactly giving ground meeting sound source usually evidence reading round stand amount drive feeling green match model trust forward range review science trade various cannot character football lower quality style amazing involved itself language related stage title article decided entire perhaps release turned written choice cover increase seven simply staff built daily difficult figure modern starting version voice whose earth forget practice success towards waiting access below missing sleep table truth recent seeing straight wrote culture growth included respect response river speak standard tonight write album century charge effect eight except funny limited moving peace provided spent store tomorrow track watching weight addition ahead brown difference double expect normal radio western beginning certainly completely content cross despite focus nearly previous quickly region section speed contact positive welcome beyond extra leaving nature unless winning episode movement photo posted safety scene spend statement ability calling coach collection continued designed heavy knowledge subject train author claim generally interested leader material nobody product annual brain degree finished floor growing image meant opening opinion physical reach sports approach biggest dance master weekend awesome beach clearly effort ended impact learning older secret spring telling anyway bought choose dream easily grand necessary speaking sweet touch yesterday caught closed damage directly doubt drink driving greater overall shown basic captain effective effects fully highly holding plant reality advice agreement award block broken challenge comment equipment lived primary purpose showing theory avoid catch coast meaning
+""".split()
+
+EXTRA_DICTATION_WORDS += """
+corner distance drawing excited journey kindness thunder whisper anchor dancer doorway handle insect kitten narrow picnic sandwich velvet yellow daylight golden hungry jungle lesson morning number outside silver
+""".split()
+
+
+def spelling_target_words():
+    cached = [entry["word"] for entry in json.loads(SPELLING_BANK_PATH.read_text(encoding="utf-8"))["entries"]]
+    words = cached + EXTRA_DICTATION_WORDS
+    return list(dict.fromkeys(word for word in words if 4 <= len(word) <= 10 and word.isalpha()))
+
+
+SPELLING_TARGET_WORDS = spelling_target_words()
+DICTATION_BLOCKED_WORDS = {
+    "year", "conventions", "language", "practice", "paper", "questions", "spelling", "independent", "style",
+    "material", "complete", "each", "some", "ask", "listen", "choose", "correct", "error", "write", "word", "question",
+    "hear", "mark", "option", "select", "accurately", "written", "only", "acceptable", "version", "formed",
+    "properly", "which", "misspelt", "wrote", "today", "neatly", "class", "chart", "underlined",
+}
+SPELLING_DICTATION_WORDS = [word for word in SPELLING_TARGET_WORDS if word.casefold() not in DICTATION_BLOCKED_WORDS]
 
 
 def rotate(correct, distractors, shift):
@@ -81,6 +128,191 @@ def distinct_numbers(correct, candidates, count=3):
     raise ValueError("Not enough distinct numeric distractors")
 
 
+def misspellings(word):
+    positions = [max(1, len(word) // 3), max(1, (2 * len(word)) // 3), len(word) - 1, *range(1, len(word)), 0]
+    result = []
+    for index in positions:
+        candidate = word[:index] + word[index] + word[index:]
+        if candidate not in result:
+            result.append(candidate)
+        if len(result) == 3:
+            break
+    if len(result) != 3:
+        raise ValueError(f"Could not create three unambiguous misspellings for {word!r}")
+    return result
+
+
+def rotate_and_renumber(items, groups, prefix, form):
+    reordered = []
+    for start, end in groups:
+        group = items[start:end]
+        shift = form % len(group)
+        reordered.extend(group[shift:] + group[:shift])
+    for number, item in enumerate(reordered, start=1):
+        item["template_id"] = item.get("template_id", item["id"])
+        item["id"] = f"{prefix}{number}"
+    return reordered
+
+
+def diversify_language(items, paper_number):
+    form = (paper_number - 1) % 5
+    place = PLACES[paper_number - 1]
+    name = NAMES[paper_number - 1]
+    partner = PARTNERS[paper_number - 1]
+    items = rotate_and_renumber(items, [(0, 9), (9, 18), (18, 25), (25, 40), (40, 45), (45, 50)], "L", form)
+    for index, item in enumerate(items[:25]):
+        if item["template_id"] == "L2":
+            sentence, verb = [
+                (f"Near {name}'s tent, a wombat climbed over the log.", "climbed"),
+                (f"{name} opened the gate carefully.", "opened"),
+                (f"The class waited beside the {place}.", "waited"),
+                (f"{partner} carried the basket inside.", "carried"),
+                (f"At {name}'s pond, three ducks paddled across the water.", "paddled"),
+            ][form]
+            item.update({
+                "kind": "circle",
+                "prompt": f"Circle the verb in this sentence.<br><strong>{sentence}</strong>",
+                "answer": verb,
+                "explanation": f"<em>{verb.title()}</em> tells what happened in the sentence.",
+                "sentence": sentence,
+            })
+        elif item["template_id"] == "L7":
+            prompt, answers = [
+                (f"{name} saw ___ ant beside ___ leaf. ___ ant carried a crumb.", ["an", "a", "The"]),
+                (f"{name} drew ___ kite beside ___ oval. ___ oval was blue.", ["a", "an", "The"]),
+                (f"___ sun was bright, so {name} packed ___ umbrella and ___ hat.", ["The", "an", "a"]),
+                (f"{partner} found ___ egg in ___ nest. ___ egg was warm.", ["an", "a", "The"]),
+                (f"___ owl watched ___ mouse beside ___ old tree while {name} waited.", ["The", "a", "an"]),
+            ][form]
+            item.update({
+                "kind": "cloze",
+                "prompt": f"Complete the sentence using each word once.<br>{prompt}",
+                "answer": answers,
+                "explanation": "The articles match the following noun sounds, and <em>The</em> identifies the specific noun in context.",
+                "word_bank": ["a", "an", "The"],
+                "gaps": 3,
+            })
+        elif item["template_id"] == "L22":
+            correct, distractors, explanation = [
+                ("Dr Patel spoke to the doctor.", ["dr Patel spoke to the Doctor.", "Dr patel spoke to the doctor.", "Dr Patel spoke to the Doctor."], "The title and surname take capitals; the common profession noun does not."),
+                ("Aunt Maria visited us on Sunday.", ["aunt Maria visited us on Sunday.", "Aunt maria visited us on Sunday.", "Aunt Maria visited us on sunday."], "The family title used as a name, the person's name and the day need capitals."),
+                ("Our class walked along River Street.", ["Our Class walked along River Street.", "Our class walked along river Street.", "our class walked along River street."], "The sentence begins with a capital, and both words in the street name are capitalised."),
+                ("The festival begins in August.", ["the festival begins in August.", "The Festival begins in August.", "The festival begins in august."], "The first word and the month name take capitals; the common noun does not."),
+                ("Professor Chen flew to Perth.", ["professor Chen flew to Perth.", "Professor chen flew to Perth.", "Professor Chen flew to perth."], "The title, surname and place name require capitals."),
+            ][form]
+            replacement = mcq(item["id"], f"{name} is checking capital letters. Which sentence is correct?", correct, distractors, explanation, paper_number + index)
+            template_id = item["template_id"]
+            item.clear()
+            item.update(replacement)
+            item["template_id"] = template_id
+        item["variant_id"] = f"{item['template_id']}-v{form + 1}"
+        item["family"] = f"language-{item['template_id']}"
+        if item["kind"] == "mcq" and form in {2, 4} and index % 5 == form % 5:
+            item["kind"] = "open"
+            item.pop("options", None)
+            item.pop("answer_index", None)
+            item["prompt"] += "<br><b>Write your answer.</b>"
+    assert len(SPELLING_DICTATION_WORDS) >= PAPER_COUNT * 15
+    for index, item in enumerate(items[25:50], start=25):
+        word = item.get("spoken_word") or str(item["answer"])
+        if index < 40:
+            mode = "dictation"
+            local_index = index - 25
+            word = dictation_word(paper_number, local_index)
+            item["kind"] = "dictation"
+            item["prompt"] = ""
+            item["answer"] = word
+            item["spoken_word"] = word
+            item["spoken_sentence"] = f"Write the word {word}."
+            item["explanation"] = f"The dictated word is <em>{word}</em>."
+        else:
+            mode = "correct_underlined" if index < 45 else "locate_error"
+            original_wrong = item["incorrect_word"]
+            wrong = misspellings(word)[(paper_number + index) % 3]
+            assert item["prompt"].casefold().count(original_wrong.casefold()) == 1, (paper_number, item["id"], original_wrong)
+            sentence = item["prompt"].replace(original_wrong, wrong)
+            item["kind"] = "spelling"
+            item["answer"] = word
+            item["incorrect_word"] = wrong
+            item["correction"] = word
+            item["explanation"] = f"The correct spelling is <em>{word}</em>."
+            item.pop("options", None)
+            item.pop("answer_index", None)
+            item.pop("spoken_word", None)
+            if mode == "correct_underlined":
+                item["prompt"] = (
+                    f"In {name}'s sentence, write the underlined word correctly.<br>{sentence}"
+                )
+            else:
+                item["prompt"] = (
+                    f"Check {name}'s sentence. Find the misspelt word and write it correctly.<br>{sentence}"
+                )
+        item["spelling_mode"] = mode
+        item["variant_id"] = f"{item['template_id']}-{mode}-v{form + 1}"
+        item["family"] = f"spelling-{item['template_id']}-{mode}"
+    return items
+
+
+def diversify_reading(passages, paper_number):
+    form = (paper_number - 1) % 10
+    next_number = 1
+    for passage_index, passage in enumerate(passages):
+        questions = passage["questions"]
+        shift = form % len(questions)
+        questions = questions[shift:] + questions[:shift]
+        for local_index, item in enumerate(questions):
+            item["template_id"] = item.get("template_id", item["id"])
+            item["family"] = item.get("family", f"reading-{passage['family']}-{item['skill']}")
+            if item["kind"] == "mcq" and form in {1, 3} and local_index == passage_index % len(questions):
+                item["kind"] = "open"
+                item.pop("options", None)
+                item.pop("answer_index", None)
+                item["prompt"] += "<br><b>Write your answer.</b>"
+            item["id"] = f"R{next_number}"
+            next_number += 1
+        passage["questions"] = questions
+    return passages
+
+
+def diversify_numeracy(items, paper_number):
+    form = (paper_number - 1) % 5
+    groups = [(0, 5), (5, 9), (9, 15), (15, 19), (19, 23), (23, 27), (27, 33), (33, 36)]
+    context_leads = {
+        "N2": "{owner} recorded the two groups shown.",
+        "N4": "{owner} made the equal groups shown.",
+        "N6": "{owner} recorded this decreasing pattern.",
+        "N8": "{owner} marked a point on this grid.",
+        "N9": "{owner} wrote this number pattern.",
+        "N10": "{owner} is sorting solid objects.",
+        "N16": "{owner} is reading the clock shown.",
+        "N17": "{owner} is using this room map.",
+        "N18": "{owner} is checking mirror symmetry.",
+        "N19": "{owner} is planning a badge purchase.",
+        "N20": "{owner} built the four shapes shown.",
+        "N23": "{owner} wrote clues for a number.",
+        "N24": "{owner} joined the two solids shown.",
+        "N26": "{owner} is arranging equal groups.",
+        "N27": "{owner} recorded two temperatures.",
+        "N30": "{owner} is packing pencils.",
+        "N35": "{owner} is comparing the four spinners.",
+        "N36": "{owner} counted the coins shown.",
+    }
+    items = rotate_and_renumber(items, groups, "N", form)
+    for index, item in enumerate(items):
+        apply_numeracy_variant(item, form)
+        if item["template_id"] in context_leads:
+            template_number = int(item["template_id"][1:])
+            owner = NAMES[(paper_number - 1 + template_number * 7) % PAPER_COUNT]
+            lead = context_leads[item["template_id"]].format(owner=owner)
+            item["prompt"] = f"{lead}<br>{item['prompt']}"
+        if item["kind"] == "mcq" and form in {1, 3} and index % 6 == form:
+            item["kind"] = "open"
+            item.pop("options", None)
+            item.pop("answer_index", None)
+            item["prompt"] += "<br><b>Write your answer.</b>"
+    return items
+
+
 def build_language(paper_number):
     p = paper_number
     name = NAMES[p - 1]
@@ -95,40 +327,62 @@ def build_language(paper_number):
         ("make", "made"), ("take", "took"), ("write", "wrote"), ("drive", "drove"),
         ("choose", "chose"), ("break", "broke"), ("speak", "spoke"), ("wear", "wore"),
     ]
-    base, past = past_pairs[p - 1]
+    base, past = past_pairs[(p - 1) % len(past_pairs)]
     adverbs = [
         "quietly", "carefully", "briskly", "patiently", "softly", "neatly", "slowly", "cheerfully", "gently", "quickly",
         "calmly", "politely", "eagerly", "firmly", "brightly", "smoothly", "safely", "silently", "proudly", "steadily",
     ]
-    adverb = adverbs[p - 1]
+    adverb = adverbs[(p - 1) % len(adverbs)]
     q = []
     q.append(mcq("L1", f"{name} packed ___ {obj} for the visit.", "an", ["a", "the", "some"], f"{obj.title()} begins with a vowel sound, so the correct article is <em>an</em>.", p))
     q.append(question("L2", "circle", f"Circle the verb in this sentence.<br><strong>The {animal} climbed over the log.</strong>", "climbed", "<em>Climbed</em> tells what the animal did.", sentence=f"The {animal} climbed over the log."))
     q.append(mcq("L3", f"Yesterday, {name} ___ the rope before lunch.", past, [base, f"{base}s", f"will {base}"], f"The word <em>yesterday</em> requires the past-tense form <em>{past}</em>.", p + 3))
     q.append(question("L4", "circle", f"Circle the adverb in this sentence.<br><strong>{partner} carried the glass jar {adverb}.</strong>", adverb, f"<em>{adverb.title()}</em> tells how {partner} carried the jar.", sentence=f"{partner} carried the glass jar {adverb}."))
     q.append(mcq("L5", f"{name} placed ___ hat beside the bag.", "my", ["me", "I", "mine"], "<em>My</em> is the possessive determiner used before the noun <em>hat</em>.", p + 5))
-    q.append(mcq("L6", f"Wash your hands ___ you prepare the fruit.", "before", ["because", "although", "unless"], "<em>Before</em> shows the correct sequence in time.", p + 6))
+    q.append(mcq("L6", f"{name} should wash their hands ___ preparing the fruit.", "before", ["because", "although", "unless"], "<em>Before</em> shows the correct sequence in time.", p + 6))
     q.append(question("L7", "cloze", f"Complete the sentence using each word once.<br>{name} saw ___ ant beside ___ leaf. ___ ant carried a crumb.", ["an", "a", "The"], "Use <em>an</em> before <em>ant</em>, <em>a</em> before <em>leaf</em>, then <em>The</em> for the ant already mentioned.", word_bank=["a", "an", "the"], gaps=3))
     q.append(mcq("L8", f"___ will carry the boxes to the {place}.", f"{partner} and I", [f"Me and {partner}", f"Her and {partner}", f"{partner} and me"], "A compound subject uses the subject pronoun <em>I</em>.", p + 8))
-    q.append(mcq("L9", f"Choose a pear, a plum ___ a peach.", "or", ["but", "because", "although"], "<em>Or</em> joins alternatives in a list.", p + 9))
-    q.append(mcq("L10", f"The pencils, rulers and erasers were new. ___ were placed in a tray.", "They", ["It", "She", "Them"], "The plural pronoun <em>They</em> replaces the three plural nouns and is the subject of the sentence.", p + 10))
-    q.append(mcq("L11", "Which sentence is correct?", "They are waiting near the gate.", ["They is waiting near the gate.", "Them are waiting near the gate.", "They am waiting near the gate."], "The plural subject <em>They</em> agrees with <em>are</em>.", p + 11))
+    q.append(mcq("L9", f"{name} may choose a pear, a plum ___ a peach.", "or", ["but", "because", "although"], "<em>Or</em> joins alternatives in a list.", p + 9))
+    q.append(mcq("L10", f"At the {place}, the pencils, rulers and erasers were new. ___ were placed in a tray.", "They", ["It", "She", "Them"], "The plural pronoun <em>They</em> replaces the three plural nouns and is the subject of the sentence.", p + 10))
+    q.append(mcq("L11", f"{name} is checking four sentences. Which sentence is correct?", "They are waiting near the gate.", ["They is waiting near the gate.", "Them are waiting near the gate.", "They am waiting near the gate."], "The plural subject <em>They</em> agrees with <em>are</em>.", p + 11))
     q.append(mcq("L12", f"By the time {name} arrived, {partner} ___ the hole.", "had dug", ["digs", "will dig", "is digging"], "<em>Had dug</em> shows an action completed before another past action.", p + 12))
     q.append(mcq("L13", f"{name} and I are ready. ___ can begin now.", "We", ["Us", "They", "Them"], "<em>We</em> is the first-person plural subject pronoun.", p + 13))
     q.append(mcq("L14", f"Where did the {animal} hide___", "?", [".", "!", ","], "A direct question ends with a question mark.", p + 14))
-    q.append(mcq("L15", "Which contraction correctly means <em>we will</em>?", "we’ll", ["well", "we’l", "w’ell"], "The apostrophe in <em>we’ll</em> replaces the missing letters in <em>will</em>.", p + 15))
-    q.append(mcq("L16", "Where should the missing full stop go?<br><strong>We reached the gate A the path B turned left C beside the pond D</strong>", "A", ["B", "C", "D"], "The first sentence ends after <em>gate</em>; the next sentence begins with <em>The</em>.", 0))
+    q.append(mcq("L15", f"{name} wants to shorten <em>we will</em>. Which contraction is correct?", "we’ll", ["well", "we’l", "w’ell"], "The apostrophe in <em>we’ll</em> replaces the missing letters in <em>will</em>.", p + 15))
+    q.append(mcq(
+        "L16",
+        f"Where is the missing full stop?<br><strong>{name} reached the gate The path turned left beside the pond.</strong>",
+        "after gate",
+        ["after path", "after left", "after pond"],
+        "The first sentence ends after <em>gate</em>. The next sentence begins with <em>The path</em>.",
+        p + 16,
+    ))
     q.append(mcq("L17", "Which sentence is punctuated correctly?", f'“Wait for me,” called {name}.', [f'“Wait for me” called {name}.', f'Wait for me,” called {name}.', f'“Wait for me, called {name}.”'], "The spoken words need opening and closing quotation marks, with a comma before the reporting clause.", p + 17))
-    q.append(mcq("L18", f"This notebook is mine. Is that one ___?", "yours", ["your", "you", "you’re"], "<em>Yours</em> is the possessive pronoun that can stand without a noun after it.", p + 18))
+    q.append(mcq("L18", f"{name} said, ‘This notebook is mine. Is that one ___?’", "yours", ["your", "you", "you’re"], "<em>Yours</em> is the possessive pronoun that can stand without a noun after it.", p + 18))
     q.append(mcq("L19", f"Which sentence has the comma in the correct place?", f"After the bell rang, {name} entered the room.", [f"After, the bell rang {name} entered the room.", f"After the bell, rang {name} entered the room.", f"After the bell rang {name}, entered the room."], "A comma separates the introductory clause from the main clause.", p + 19))
-    q.append(mcq("L20", "Where should the apostrophe go?<br><strong>We can A t leave B yet C today D.</strong>", "A", ["B", "C", "D"], "The contraction <em>can’t</em> needs an apostrophe between <em>n</em> and <em>t</em>.", 0))
+    q.append(mcq(
+        "L20",
+        f"The apostrophe is missing from a contraction.<br><strong>{name} cant leave yet.</strong><br>Where should the apostrophe go?",
+        "between n and t in cant",
+        [f"after {name}", "after leave", "after yet"],
+        "The contraction <em>can’t</em> needs an apostrophe between <em>n</em> and <em>t</em>.",
+        p + 20,
+    ))
     q.append(mcq("L21", "Which sentence is a direct question?", f"Did {name} close the window?", [f"I wonder whether {name} closed the window.", f"Tell me if {name} closed the window.", f"We know that {name} closed the window."], "A direct question asks the reader for an answer and ends with a question mark.", p + 21))
-    q.append(mcq("L22", "Which sentence uses capital letters correctly?", f"Dr Patel spoke to the doctor.", ["dr Patel spoke to the Doctor.", "Dr patel spoke to the doctor.", "Dr Patel spoke to the Doctor."], "The title and surname take capitals; the common profession noun <em>doctor</em> does not.", p + 22))
+    q.append(mcq("L22", f"{name} is checking capital letters. Which sentence is correct?", f"Dr Patel spoke to the doctor.", ["dr Patel spoke to the Doctor.", "Dr patel spoke to the doctor.", "Dr Patel spoke to the Doctor."], "The title and surname take capitals; the common profession noun <em>doctor</em> does not.", p + 22))
     q.append(mcq("L23", "Which sentence needs quotation marks?", f"Please close the gate, said {partner}.", [f"{partner} closed the gate quietly.", f"The gate beside the shed was closed.", f"Closing the gate kept the {animal} safe."], "The first sentence contains the exact words spoken by a character.", p + 23))
-    q.append(mcq("L24", "Which sentence is punctuated correctly?", f"The girl’s boots were beside the boys’ bags.", [f"The girls boots were beside the boy’s bags.", f"The girls’ boots were beside the boys bag’s.", f"The girl’s boot’s were beside the boys bags."], "<em>Girl’s</em> shows one girl owns the boots; <em>boys’</em> shows several boys own the bags.", p + 24))
-    q.append(mcq("L25", f"Where should the missing closing quotation mark go?<br><strong>“I found the key A, said {name} B, as the door C opened D.</strong>", "A", ["B", "C", "D"], "The closing quotation mark belongs after the final spoken word <em>key</em> and before the reporting clause.", 0))
+    q.append(mcq("L24", f"{name} is checking apostrophes. Which sentence is punctuated correctly?", f"The girl’s boots were beside the boys’ bags.", [f"The girls boots were beside the boy’s bags.", f"The girls’ boots were beside the boys bag’s.", f"The girl’s boot’s were beside the boys bags."], "<em>Girl’s</em> shows one girl owns the boots; <em>boys’</em> shows several boys own the bags.", p + 24))
+    q.append(mcq(
+        "L25",
+        f"The closing quotation mark is missing.<br><strong>“I found the key, said {name}, as the door opened.</strong><br>Where should the closing quotation mark go?",
+        "after the comma following key",
+        ["after found", f"after {name}", "after opened"],
+        "The closing quotation mark belongs after the comma following the final spoken word <em>key</em> and before the reporting clause.",
+        p + 25,
+    ))
 
     bank = [entry["word"] for entry in json.loads(SPELLING_BANK_PATH.read_text(encoding="utf-8"))["entries"]]
+    bank.extend(EXTRA_DICTATION_WORDS)
     simple_bank = [word for word in bank if 4 <= len(word) <= 10 and word.isalpha()]
     start = (p - 1) * 15
     dictation = simple_bank[start:start + 15]
@@ -189,11 +443,49 @@ def build_language(paper_number):
     selected = [identify_sets[(p - 1 + offset * 3) % len(identify_sets)] for offset in range(5)]
     for offset, (correct, wrong, frame) in enumerate(selected, start=46):
         q.append(question(f"L{offset}", "spelling", frame.format(word=wrong), correct, f"The misspelt word is <em>{wrong}</em>; the correct spelling is <em>{correct}</em>.", spelling_type="identify", incorrect_word=wrong))
-    context = f"<em>{place.title()} task:</em> "
-    for item in q:
-        if item["kind"] != "dictation":
-            item["prompt"] = context + item["prompt"]
     return q
+
+
+_DICTATION_ASSIGNMENTS = None
+
+
+def build_dictation_assignments():
+    required = PAPER_COUNT * 15
+    assert len(SPELLING_DICTATION_WORDS) >= required
+    assignments = [SPELLING_DICTATION_WORDS[(index * 149) % required] for index in range(required)]
+    reserve = [word for word in SPELLING_DICTATION_WORDS[required:] if word not in assignments]
+    fixed_text = (
+        "Year 3 Conventions of Language Practice Paper Questions 26-50 Spelling Independent NAPLAN-style "
+        "practice material 26-40 write each dictated word 41-45 write the underlined word correctly "
+        "46-50 find the misspelt word and write it correctly Check sentence"
+    )
+    for paper_number in range(1, PAPER_COUNT + 1):
+        form = (paper_number - 1) % 5
+        items = rotate_and_renumber(
+            build_language(paper_number),
+            [(0, 9), (9, 18), (18, 25), (25, 40), (40, 45), (45, 50)],
+            "L",
+            form,
+        )
+        visible_text = " ".join([fixed_text, NAMES[paper_number - 1], *[item["prompt"] for item in items[40:50]]])
+        visible_words = set(re.findall(r"[A-Za-z]+", visible_text.casefold()))
+        for local_index in range(15):
+            linear_index = (paper_number - 1) * 15 + local_index
+            if assignments[linear_index].casefold() not in visible_words:
+                continue
+            replacement = next((word for word in reserve if word.casefold() not in visible_words), None)
+            assert replacement is not None, (paper_number, local_index, assignments[linear_index])
+            assignments[linear_index] = replacement
+            reserve.remove(replacement)
+    assert len(assignments) == required and len(set(assignments)) == required
+    return assignments
+
+
+def dictation_word(paper_number, local_index):
+    global _DICTATION_ASSIGNMENTS
+    if _DICTATION_ASSIGNMENTS is None:
+        _DICTATION_ASSIGNMENTS = build_dictation_assignments()
+    return _DICTATION_ASSIGNMENTS[(paper_number - 1) * 15 + local_index]
 
 
 FORCE_CONTEXTS = [
@@ -207,168 +499,74 @@ FORCE_CONTEXTS = [
     ("toy wheel", "glass", "coarse mat"), ("small puck", "tile", "foam sheet"),
     ("wooden disc", "plastic", "rough cloth"), ("bead", "metal", "felt"),
     ("toy truck", "laminated card", "carpet"), ("block", "smooth board", "sandpaper"),
+    ("toy train", "polished timber", "coarse mat"), ("wooden bead", "acrylic sheet", "felt cloth"),
+    ("bottle", "smooth tile", "rough canvas"), ("toy plane", "laminated card", "woollen rug"),
+    ("small wheel", "glass panel", "cork sheet"), ("plastic lid", "polished board", "hessian"),
+    ("toy bus", "vinyl sheet", "thick carpet"), ("rubber ball", "smooth concrete", "coarse towel"),
+    ("wooden peg", "metal tray", "foam mat"), ("toy submarine", "plastic board", "rough fabric"),
+    ("small cylinder", "waxed card", "rubber sheet"), ("toy helicopter", "glass tile", "felt mat"),
+    ("wooden ring", "laminated desk", "coarse cloth"), ("plastic counter", "polished stone", "wool mat"),
+    ("toy van", "smooth cardboard", "rough carpet"), ("wooden marble", "ceramic tile", "foam sheet"),
+    ("small roller", "metal plate", "hessian mat"), ("toy scooter", "vinyl board", "coarse fabric"),
+    ("plastic cube", "smooth timber", "rubber mat"), ("wooden button", "glass sheet", "felt cloth"),
+    ("toy ferry", "polished tile", "rough canvas"), ("small disc", "acrylic panel", "wool rug"),
+    ("toy tractor", "laminated card", "cork mat"), ("wooden spool", "smooth metal", "thick towel"),
+    ("plastic wheel", "waxed paper", "coarse carpet"), ("toy crane", "glass panel", "foam mat"),
+    ("wooden cube", "polished board", "rough hessian"), ("toy hockey puck", "ceramic tile", "felt sheet"),
+    ("toy tram", "smooth plastic", "woollen cloth"), ("wooden token", "metal tray", "rubber mat"),
 ]
 
 
 def build_reading(paper_number):
-    p = paper_number
-    name = NAMES[p - 1]
-    partner = PARTNERS[p - 1]
-    item, smooth, rough = FORCE_CONTEXTS[p - 1]
-    passages = []
-
-    info_title = f"Why a {item} slows down"
-    info_text = (
-        f"A force is a push or a pull. When a moving {item} touches a surface, friction acts in the opposite direction to its movement. "
-        f"Friction makes the {item} slow down. A smooth surface such as {smooth} usually creates less friction than {rough}. "
-        "With very little friction, an object travels farther before stopping. The amount of friction also depends on how firmly two surfaces press together. "
-        "Friction is useful too: it helps shoes grip the ground and bicycle brakes stop wheels. Without enough friction, people could slip and tyres could slide. "
-        "Too much friction can be unhelpful because moving parts may heat up or wear away, so machines sometimes use oil to reduce it."
-    )
-    info_q = [
-        mcq("R1", f"What makes the moving {item} slow down?", "friction acting against its movement", ["gravity pulling it sideways", "light warming the surface", "sound pushing it forward"], "The text says friction acts opposite to movement and slows the object.", p),
-        mcq("R2", f"What would most likely happen if there were very little friction?", f"The {item} would travel farther before stopping.", [f"The {item} would become heavier.", f"The {item} would change colour.", f"The {item} would stop at once."], "The text directly links little friction with travelling farther.", p + 1),
-        question("R3", "true_false", "Mark each statement True or False.", [True, False, True], "Friction can help brakes; rough surfaces do not usually create less friction; friction acts against movement.", statements=["Friction can help bicycle brakes work.", f"{rough.title()} usually creates less friction than {smooth}.", "Friction acts against a moving object."]),
-        mcq("R4", "Which surface would probably let the object travel farthest?", smooth, [rough, "a thick towel", "a rubber mat"], f"The text identifies {smooth} as the smoother, lower-friction surface.", p + 3),
-        mcq("R5", "Which diagram shows the applied force and friction acting in opposite directions?", "push →    ← friction", ["push →    friction →", "push ←    friction ←", "push ↓    friction ↓"], "Friction acts opposite to the applied movement force.", p + 4, visual={"kind": "force_arrows"}),
-        mcq("R6", "Which pair of statements is correct?<br>1 The text explains how friction changes movement.<br>2 The text gives examples of useful friction.<br>3 The text tells a fictional adventure.", "1 and 2", ["1 and 3", "2 and 3", "3 only"], "The text explains movement and gives useful examples; it is not fiction.", p + 5),
-    ]
-    passages.append({"id": "P1", "title": info_title, "type": "information", "text": info_text, "questions": info_q})
-
-    trials = 3 + p % 3
-    procedure_title = f"Testing surfaces with a {item}"
-    procedure_intro = f"This experiment compares how far the same {item} travels across {smooth}, paper and {rough}. Use the same ramp each time."
-    steps = [
-        "Place the ramp at the marked height.",
-        f"Put {smooth} at the bottom of the ramp.",
-        f"Release the {item} without pushing it.",
-        "Measure and record the distance travelled.",
-        f"Repeat the trial {trials} times for each surface, then compare the results.",
-    ]
-    procedure_q = [
-        question("R7", "order", "Number these steps from 1 to 4.", [2, 4, 1, 3], "First set the ramp, then place the surface, release the object and measure the distance.", choices=[steps[1], steps[3], steps[0], steps[2]]),
-        mcq("R8", "How many times is each surface tested?", str(trials), [str(trials - 1), str(trials + 1), str(trials * 3)], f"The final step says to repeat the trial {trials} times for each surface.", p + 8),
-        mcq("R9", "What type of text is this?", "a procedure", ["a narrative", "a book review", "a poem"], "A purpose, equipment and ordered steps are features of a procedure.", p + 9),
-        mcq("R10", "Why are several surfaces tested?", "to compare how each surface affects the distance", ["to make the ramp taller each time", "to change the size of the object", "to avoid measuring any result"], "Changing the surface and measuring the distance allows a fair comparison.", p + 10),
-        mcq("R11", f"Which material would be the best replacement for {rough}?", "a woollen mat", ["a glass sheet", "smooth foil", "polished plastic"], "A woollen mat is rough like the material it replaces.", p + 11),
-        mcq("R12", f"Using both texts, where should the {item} travel the shortest distance?", rough, [smooth, "in the air", "on no surface"], f"The information text says rough surfaces create more friction, so {rough} should stop the object sooner.", p + 12, cross_text=True),
-    ]
-    passages.append({"id": "P2", "title": procedure_title, "type": "procedure", "intro": procedure_intro, "steps": steps, "questions": procedure_q})
-
-    aerobic = ["jogging", "swimming", "cycling", "fast walking", "skipping"][p % 5]
-    strength = ["climbing", "lifting light weights", "push-ups", "carrying groceries", "rowing"][p % 5]
-    flexibility = ["stretching", "yoga", "gentle bends", "dance stretches", "reaching exercises"][p % 5]
-    health_title = f"{name}'s guide to three kinds of fitness"
-    health_text = (
-        f"During a health lesson at the {PLACES[p - 1]}, {name}'s class learned that a sedentary person spends long periods sitting and moving very little. Regular activity helps the heart, muscles and joints. "
-        f"Aerobic activities such as {aerobic} make the heart beat faster. Strength activities such as {strength} make muscles work against resistance. "
-        f"Flexibility activities such as {flexibility} help joints move through a comfortable range. Each type has a different purpose, so doing only one type leaves out other benefits. "
-        "Children can build activity into ordinary days by walking, playing active games and helping with safe physical jobs. Activity should suit the person's ability and surroundings. "
-        "A balanced week includes all three kinds, water, sleep and time to rest."
-    )
-    health_q = [
-        mcq("R13", "What does <strong>sedentary</strong> mean in this text?", "spending much time sitting and moving very little", ["training for a race every day", "moving safely in deep water", "stretching every muscle"], "The first sentence defines the word directly.", p + 13),
-        question("R14", "match", "Match each fitness type to its description.", ["makes the heart beat faster", "makes muscles work against resistance", "helps joints move comfortably"], "The text gives a separate function for aerobic, strength and flexibility activities.", left=["aerobic", "strength", "flexibility"], right=["helps joints move comfortably", "makes the heart beat faster", "makes muscles work against resistance"]),
-        mcq("R15", "Which activity is aerobic?", aerobic, [strength, flexibility, "sitting quietly"], f"The text names {aerobic} as an aerobic activity.", p + 15),
-        question("R16", "cloze", "Complete the sentence using two words from the box.<br>A balanced week includes ___ activity and time to ___.", ["regular", "rest"], "The text recommends regular activity as well as rest.", word_bank=["regular", "rest", "sedentary", "resistance", "range"], gaps=2),
-        mcq("R17", "Which statement is most likely true of a fit person?", "They can use heart, muscles and joints in different activities.", ["They never need to rest.", "They do only one kind of activity.", "They sit still for most of every day."], "The text recommends a balance of activities that support different parts of the body.", p + 17),
-        mcq("R18", "What is the main message of the text?", "Different kinds of activity help the body in different ways.", ["Only competitive sport improves fitness.", "Rest should replace all exercise.", "Muscles are the only part of fitness."], "The text explains three fitness types and the benefit of balancing them.", p + 18),
-    ]
-    passages.append({"id": "P3", "title": health_title, "type": "information", "text": health_text, "questions": health_q})
-
-    sports = ["soccer", "netball", "swimming", "tennis"]
-    counts = [5 + p % 4, 8 + p % 5, 4 + (p * 2) % 5, 6 + (p * 3) % 5]
-    survey_title = f"Favourite class sports — {name}'s class"
-    survey_text = f"In {name}'s class, each student chose one favourite sport. The tally table and bar graph show the same {sum(counts)} answers collected by {partner}."
-    survey_q = [
-        question("R19", "match", "Match each sport to its number of votes.", [str(value) for value in counts], "Each value is read from the tally table.", left=sports, right=[str(value) for value in counts[2:] + counts[:2]], visual={"kind": "tally", "labels": sports, "values": counts}),
-        mcq("R20", "Why was a tally table used?", "to record each response as it was collected", ["to explain the rules of each sport", "to show where games are played", "to rank players by skill"], "Tallies are a quick way to record responses during a survey.", p + 20),
-        mcq("R21", "What do the two axes of the bar graph show?", "sports and numbers of votes", ["days and temperatures", "players and scores", "distances and times"], "The categories are sports and the scale counts votes.", p + 21),
-        mcq("R22", "Why is the bar graph useful?", "It makes the vote totals easy to compare.", ["It gives instructions for playing.", "It changes the survey answers.", "It shows every student's name."], "Bar lengths allow the category totals to be compared quickly.", p + 22),
-        mcq("R23", "Which question was most likely asked in the survey?", "Which sport is your favourite?", ["How old is your coach?", "What time does school begin?", "How far is your home from school?"], "The table records one favourite sport from each student.", p + 23),
-        mcq("R24", "Using both fitness and survey texts, which pair are team sports?", "soccer and netball", ["swimming and tennis", "soccer and swimming", "netball and tennis"], "Soccer and netball are normally played by teams; the other listed activities can be individual.", p + 24, cross_text=True, visual={"kind": "bar_chart", "labels": sports, "values": counts}),
-    ]
-    passages.append({"id": "P4", "title": survey_title, "type": "data", "text": survey_text, "data": {"labels": sports, "values": counts}, "questions": survey_q})
-
-    day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"][p % 7]
-    trait = ["bright", "kind", "quick", "calm", "bold", "wise", "merry"][p % 7]
-    rhyme_title = f"{name} reads: The child of {day}"
-    rhyme_lines = [
-        f"{day}'s child wakes with the sun,",
-        f"Ready for work and ready for fun;",
-        f"With a {trait} little smile and a helpful way,",
-        f"The child brings cheer to the end of the day.",
-        "When a task is tangled, the child will try,",
-        "And ask a good question instead of asking why;",
-        f"Then {name} hears evening settle, gentle and mild,",
-        f"Around the dreams of {day}'s child.",
-    ]
-    rhyme_q = [
-        mcq("R25", "What does <strong>ready for work and ready for fun</strong> suggest?", "The child is willing to take part in different activities.", ["The child refuses to help.", "The child sleeps through the day.", "The child is afraid of games."], "The line shows willingness to join both duties and enjoyable activities.", p + 25),
-        question("R26", "cloze", "Complete the sentence using two words from the box.<br>The child is ___ and brings ___ to others.", [trait, "cheer"], "The poem directly describes the child's smile and the cheer brought to others.", word_bank=[trait, "cheer", "sleep", "anger", "silence"], gaps=2),
-        mcq("R27", f"In the title, <strong>{day}</strong> refers to", "a day of the week", ["a month of the year", "a place in a town", "a kind of weather"], f"{day} is one of the seven days of the week.", p + 27),
-        mcq("R28", "What type of text is this?", "a poem", ["a procedure", "a news report", "an advertisement"], "The text is arranged in lines and uses rhyme and rhythm.", p + 28),
-        mcq("R29", "Why was this poem most likely written?", "to describe a child's character in an enjoyable rhyme", ["to teach how to repair a toy", "to report a sporting result", "to list rules for a classroom"], "The poem gives a playful description rather than instructions or factual reporting.", p + 29),
-    ]
-    passages.append({"id": "P5", "title": rhyme_title, "type": "poem", "lines": rhyme_lines, "questions": rhyme_q})
-
-    book_title = [
-        "Odd Animals", "Amazing Machines", "Secrets of the Sea", "Wild Weather", "Hidden Habitats", "Brilliant Bridges", "Night Creatures", "Curious Caves", "Tiny Inventors", "Great Garden Mysteries",
-        "Remarkable Reptiles", "Inside Volcanoes", "Clever Camouflage", "Unusual Journeys", "Wonderful Wetlands", "Beneath the City", "Fantastic Fossils", "Busy Bee Worlds", "Surprising Space", "Strange but True",
-    ][p - 1]
-    author = [
-        "Tessa Green", "Mark Liu", "Priya Shah", "Daniel Frost", "Amelia Ward", "Jon Bell", "Sofia King", "Ravi Stone", "Lucy Chen", "Omar Reed",
-        "Ella James", "Ben Ortiz", "Mina Park", "Theo Brown", "Nora White", "Samir Khan", "Grace Young", "Leo Martin", "Ruby Clark", "Hana Scott",
-    ][p - 1]
-    included = ["surprising facts", "labelled pictures", "short explanations"]
-    absent = ["a recipe", "a fictional diary"]
-    stars = 3 + p % 3
-    review_text = (
-        f"<strong>{book_title}</strong> by {author}<br>"
-        f"This information book contains {included[0]}, {included[1]} and {included[2]}. Its chapters move from simple examples to less familiar ones. "
-        "The opening chapter gives readers enough background to understand the later examples. The captions make the pictures easy to understand, and small fact boxes add details without interrupting the main explanation. "
-        "The index is useful for finding a topic again. Some pages use words that younger readers may need to look up, and the final chapter feels too short. Even so, curious readers will probably return to the pictures and facts more than once. "
-        f"Rating: {'★' * stars}{'☆' * (5 - stars)}"
-    )
-    review_q = [
-        mcq("R30", "Who wrote the book being reviewed?", author, [NAMES[p - 1] + " Lee", PARTNERS[p - 1] + " Jones", "The reviewer"], "The author's name appears directly below the title.", p + 30),
-        mcq("R31", "What is the main purpose of the review?", "to give information and an opinion about the book", ["to retell every chapter", "to sell equipment", "to teach a science experiment"], "A review summarises features and gives judgements about quality.", p + 31),
-        question("R32", "select_two", "Which two topics are <strong>not</strong> included in the book?", absent, "The review lists facts, pictures and explanations, but it does not mention a recipe or a fictional diary.", options=[included[0], absent[0], included[1], "chapter headings", absent[1], included[2]]),
-        mcq("R33", "What criticism does the reviewer make?", "Some words are difficult and the final chapter is too short.", ["The book has no pictures.", "Every chapter repeats the same page.", "The title is missing."], "These two limitations are stated in the review.", p + 33),
-        mcq("R34", "What does the star rating show?", f"The reviewer gives the book {stars} out of 5.", ["The book has five authors.", "The book contains five chapters.", "The reviewer read it five times."], "A star rating records the reviewer's overall judgement out of five.", p + 34),
-    ]
-    passages.append({"id": "P6", "title": f"Review: {book_title}", "type": "review", "text": review_text, "questions": review_q})
-
-    lost_item = ["silver whistle", "painted badge", "small compass", "red notebook", "brass key"][p % 5]
-    narrative_title = ["The awkward discovery", "The muddy clue", "The unexpected parcel", "The stubborn knot", "The missing label"][p % 5]
-    narrative_text = (
-        f"{name} carried a heavy box into the {PLACES[p - 1]}. A loose corner caught on the doorway, and three dusty folders slid onto the floor. "
-        f"While stacking them, {name} noticed a {lost_item} beneath the lowest folder. It was labelled with {partner}'s name. "
-        f"{name} remembered seeing {partner} earlier, but could not remember which group had left first. Calling across the crowded room would only interrupt everyone. "
-        f"{name} wanted to return it at once, but the crowded room made the search difficult. Instead of guessing, {name} placed the object safely on the desk and asked the supervisor to check the visitor list. "
-        f"The supervisor found a contact note and sent a short message. Soon {partner} returned, relieved to see the missing object. The unpleasant job of moving the box had led to a welcome surprise."
-    )
-    narrative_q = [
-        question("R35", "match", "Match each describing word to the noun it describes.", ["box", "folders", "room"], "The narrative says <em>heavy box</em>, <em>dusty folders</em> and <em>crowded room</em>.", left=["heavy", "dusty", "crowded"], right=["room", "box", "folders"]),
-        question("R36", "order", "Number these events from 1 to 4.", [3, 1, 4, 2], "The box catches first, the object is found, the list is checked, and the owner returns.", choices=["The supervisor checked the visitor list.", "The box caught on the doorway.", f"{partner} returned for the object.", f"{name} found the {lost_item}."]),
-        mcq("R37", f"Which word best describes {name}?", "responsible", ["careless", "selfish", "impatient"], f"{name} protects the object and checks who owns it instead of guessing.", p + 37),
-        mcq("R38", f"Why was it difficult for {name} to return the object immediately?", "The room was crowded and the owner was not easy to find.", ["The object was too large to lift.", "The supervisor refused to help.", "The visitor list had been destroyed."], "The narrative explains that the crowded room made the search difficult.", p + 38),
-        mcq("R39", f"Why is <strong>{narrative_title}</strong> a suitable title?", "An inconvenient task leads to an unexpected discovery.", ["The story explains how to build a box.", "The characters compete in a race.", "The story is mainly about bad weather."], "The title links the awkward task with the discovered object and happy outcome.", p + 39),
-    ]
-    passages.append({"id": "P7", "title": f"{name}'s story: {narrative_title}", "type": "narrative", "text": narrative_text, "questions": narrative_q})
-    for passage in passages:
-        context = f"<em>{passage['title']}:</em> "
-        for item in passage["questions"]:
-            item["prompt"] = context + item["prompt"]
-    return passages
+    return build_diverse_reading(paper_number, NAMES, PARTNERS, ANIMALS, OBJECTS, PLACES)
 
 
 def build_writing(paper_number):
+    form = (paper_number - 1) % 5
     toy = TOYS[paper_number - 1]
     place = PLACES[paper_number - 1]
+    if form == 1:
+        topic = ["a vegetable garden", "a shaded play area", "a class pet", "a lunchtime music club", "a weekly nature walk"][paper_number % 5]
+        return {
+            "title": "A change for our school",
+            "prompt": f"Write a persuasive text explaining whether a school near the {place} should have {topic}.",
+            "mode": "persuasive",
+            "illustration": "school",
+            "ideas": ["State your opinion clearly.", "Give several convincing reasons.", "Use examples to support your reasons.", "Finish by reminding the reader of your view."],
+            "reminders": ["Plan an introduction, reasons and conclusion.", "Group related ideas into paragraphs.", "Use persuasive words and complete sentences.", "Check spelling and punctuation."],
+        }
+    if form == 2:
+        return {
+            "title": "The unexpected message",
+            "prompt": f"Write a narrative about a message that appears in the {place} and changes an ordinary day.",
+            "mode": "narrative",
+            "illustration": "message",
+            "ideas": ["Who discovers the message?", "What does the message say?", "Why is it surprising or important?", "How is the problem resolved?"],
+            "reminders": ["Plan the setting, characters, complication and ending.", "Use paragraphs to organise events.", "Choose precise verbs and describing words.", "Check spelling, punctuation and sentence boundaries."],
+        }
+    if form == 3:
+        activity = ["reading outdoors", "visiting a museum", "learning to cook", "playing team games", "caring for wildlife"][paper_number % 5]
+        return {
+            "title": "The best class activity",
+            "prompt": f"Write a persuasive text explaining why {activity} would be valuable for a class visiting the {place}.",
+            "mode": "persuasive",
+            "illustration": "activity",
+            "ideas": ["Explain what students would learn.", "Describe how the activity could be organised.", "Give reasons it would be enjoyable or useful.", "Answer one possible concern."],
+            "reminders": ["State a clear position.", "Organise reasons into paragraphs.", "Use linking words and persuasive language.", "Check spelling and punctuation."],
+        }
+    if form == 4:
+        return {
+            "title": "Everything went backwards",
+            "prompt": f"Write a narrative about a day when everything in the {place} began happening backwards.",
+            "mode": "narrative",
+            "illustration": "backwards",
+            "ideas": ["What is the first strange thing that happens?", "How do the characters react?", "What complication follows?", "How does the day return to normal?"],
+            "reminders": ["Plan a clear beginning, complication and ending.", "Use paragraphs to show changes in time or place.", "Choose details that make the event believable.", "Check spelling, punctuation and sentence boundaries."],
+        }
     return {
         "title": "The toy that came to life",
         "prompt": f"Write a narrative about a {toy} that suddenly comes to life in a {place}.",
+        "mode": "narrative",
         "illustration": "toy",
         "ideas": [
             f"What can the {toy} do when it becomes alive?",
@@ -433,7 +631,7 @@ def build_numeracy(paper_number):
         ("7", "6", "5"), ("5", "4", "3"), ("7", "2", "1"), ("6", "5", "4"), ("7", "5", "3"),
         ("6", "2", "1"), ("7", "4", "5"), ("5", "3", "2"), ("7", "6", "1"), ("6", "4", "1"),
     ]
-    digits = list(digit_sets[p - 1])
+    digits = list(digit_sets[(p - 1) % len(digit_sets)])
     candidates = sorted({int(a + b + c) for a in digits for b in digits for c in digits if len({a, b, c}) == 3 and int(c) % 2 == 1 and int(a + b + c) < 800}, reverse=True)
     correct9 = candidates[0]
     other_numbers = sorted({int("".join(order)) for order in __import__("itertools").permutations(digits) if int("".join(order)) != correct9}, reverse=True)
@@ -462,8 +660,8 @@ def build_numeracy(paper_number):
     finish_minutes = clock_hour * 60 + clock_minute + 30
     finish_time = f"{finish_minutes // 60}:{finish_minutes % 60:02d}"
     add_mcq(16, "The clock shows the starting time. What time is half an hour later?", finish_time, [f"{clock_hour}:15", f"{clock_hour + 1}:30", f"{max(1, clock_hour - 1)}:30"], "Add 30 minutes to the time shown.", visual={"kind": "clock", "hour": clock_hour, "minute": clock_minute})
-    rooms = ["library", "office", "art room", "hall", "garden"]
-    target_room = rooms[p % 5]
+    rooms = ["library", "art room", "hall", "garden", "music room"]
+    target_room = rooms[p % len(rooms)]
     add_mcq(17, "Walk east along the corridor. After passing the office, which room comes next?", target_room, [room for room in rooms if room != target_room], "The map order shows the named room immediately after the office when moving east.", visual={"kind": "room_map", "target": target_room})
     symmetry_letter = ["A", "H", "I", "M", "O", "T", "U", "V", "W", "X"][p % 10]
     add_mcq(18, "Which capital letter looks unchanged after reflection in a vertical mirror line?", symmetry_letter, ["F", "G", "J"], f"Capital {symmetry_letter} has vertical line symmetry in the printed form shown.", visual={"kind": "letters", "answer": symmetry_letter})
@@ -520,16 +718,13 @@ def build_numeracy(paper_number):
     twos, ones = 5 + p % 6, 4 + p % 5
     total36 = twos * 2 + ones
     add_open(36, f"A stack contains {twos} two-dollar coins and {ones} one-dollar coins. What is the total value?", f"${total36}", f"{twos} × $2 + {ones} × $1 = ${total36}.", visual={"kind": "coins", "twos": twos, "ones": ones})
-    context = f"<em>{NAMES[p - 1]}'s {PLACES[p - 1]} task:</em> "
-    for item in q:
-        item["prompt"] = context + item["prompt"]
     return q
 
 
 def build_paper(paper_number):
-    if not 1 <= paper_number <= 20:
-        raise ValueError("paper_number must be between 1 and 20")
-    return {
+    if not 1 <= paper_number <= PAPER_COUNT:
+        raise ValueError(f"paper_number must be between 1 and {PAPER_COUNT}")
+    paper = {
         "paper_number": paper_number,
         "title": f"Year 3 NAPLAN-Style Practice Paper {paper_number:02d}",
         "language": build_language(paper_number),
@@ -537,10 +732,15 @@ def build_paper(paper_number):
         "writing": build_writing(paper_number),
         "numeracy": build_numeracy(paper_number),
     }
+    paper["language"] = diversify_language(paper["language"], paper_number)
+    paper["reading_passages"] = diversify_reading(paper["reading_passages"], paper_number)
+    paper["numeracy"] = diversify_numeracy(paper["numeracy"], paper_number)
+    paper["form"] = (paper_number - 1) % 5
+    return paper
 
 
 def build_all_papers():
-    return [build_paper(number) for number in range(1, 21)]
+    return [build_paper(number) for number in range(1, PAPER_COUNT + 1)]
 
 
 if __name__ == "__main__":
